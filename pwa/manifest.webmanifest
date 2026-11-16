@@ -1,0 +1,19 @@
+{
+  "name": "随机生成器",
+  "short_name": "随机生成器",
+  "description": "离线随机生成器：随机表、分组、组合生成 NPC，结果可收藏并写备注",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0d1013",
+  "theme_color": "#171c22",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

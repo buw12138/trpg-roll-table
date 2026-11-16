@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="离线随机生成器：建随机表、分组管理、掷表、组合生成 NPC，结果可收藏并写备注。数据保存在本地，可导出导入。">
+<title>随机生成器</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23171c22'/%3E%3Cpath d='M16 4l10 6v12l-10 6-10-6V10z' fill='none' stroke='%23d8a854' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='2.2' fill='%23d8a854'/%3E%3C/svg%3E">
+<!--{{HEAD}}-->
+<style>
+/*{{CSS}}*/
+</style>
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand">
+      <button class="icon-btn menu-btn" data-act="sidebar-toggle" title="打开表列表" aria-label="表列表">
+        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <span class="brand-mark" aria-hidden="true">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l7.5 4.5v9L12 21l-7.5-4.5v-9z"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/></svg>
+      </span>
+      <div class="brand-text">
+        <input id="setname" class="setname" spellcheck="false" autocomplete="off" aria-label="表组名称">
+        <span class="tagline">随机生成器 · 离线跑团用</span>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="icon-btn" data-act="palette" title="跳转到表（Ctrl+K）" aria-label="搜索">
+        <svg class="icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M16 16l4 4"/></svg>
+      </button>
+      <button class="btn ghost small" data-act="io">
+        <svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="M8 10l4 4 4-4"/><path d="M4 19h16"/></svg>
+        <span>导入 / 导出</span>
+      </button>
+      <div class="font-ctl" title="结果字号">
+        <button class="icon-btn" data-act="font-dec" aria-label="缩小字号">A−</button>
+        <span id="font-scale">100%</span>
+        <button class="icon-btn" data-act="font-inc" aria-label="放大字号">A+</button>
+      </div>
+      <button class="icon-btn" id="theme-btn" data-act="theme" title="主题" aria-label="主题"></button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar"></aside>
+    <div class="sidebar-backdrop" data-act="sidebar-toggle"></div>
+    <main id="main" class="main"></main>
+  </div>
+
+  <nav id="mobile-tabs" class="mobile-tabs"></nav>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+
+<script>
+/*{{JS}}*/
+</script>
+<!--{{SW}}-->
+</body>
+</html>

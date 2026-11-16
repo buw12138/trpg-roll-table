@@ -1,0 +1,8556 @@
+{
+  "schemaVersion": 3,
+  "id": "set_h6ie5m7kkh5",
+  "name": "跑团即兴核心包",
+  "updatedAt": "2026-11-16T09:09:01.484Z",
+  "contentVersion": "A1-2026-11-16",
+  "folders": [
+    {
+      "id": "fd_rjrbnakkkh7",
+      "name": "01 人物与 NPC",
+      "parentId": null,
+      "collapsed": false
+    },
+    {
+      "id": "fd_m30gpztkkh7",
+      "name": "姓名组件",
+      "parentId": "fd_rjrbnakkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_42w5v5dkkh7",
+      "name": "外貌与细节",
+      "parentId": "fd_rjrbnakkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_d6butbakkh7",
+      "name": "性格与动机",
+      "parentId": "fd_rjrbnakkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_tmdpw4lkkh7",
+      "name": "身份与关系",
+      "parentId": "fd_rjrbnakkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_pty56mpkkh7",
+      "name": "02 地点与场景",
+      "parentId": null,
+      "collapsed": false
+    },
+    {
+      "id": "fd_fonq2imkkh7",
+      "name": "城镇与市集",
+      "parentId": "fd_pty56mpkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_xhe5wzgkkh7",
+      "name": "酒馆与旅店",
+      "parentId": "fd_pty56mpkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_a6axpgdkkh7",
+      "name": "荒野与道路",
+      "parentId": "fd_pty56mpkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_s8alvwjkkh7",
+      "name": "地牢与遗迹",
+      "parentId": "fd_pty56mpkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_pzu6dwnkkh7",
+      "name": "03 战斗描述",
+      "parentId": null,
+      "collapsed": false
+    },
+    {
+      "id": "fd_153q1tukkh7",
+      "name": "命中",
+      "parentId": "fd_pzu6dwnkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_os7a14ukkh7",
+      "name": "未命中与防御",
+      "parentId": "fd_pzu6dwnkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_fk26z62kkh7",
+      "name": "致命一击",
+      "parentId": "fd_pzu6dwnkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_898akvfkkh7",
+      "name": "怪物反应",
+      "parentId": "fd_pzu6dwnkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_1imzbm0kkh7",
+      "name": "环境与干扰",
+      "parentId": "fd_pzu6dwnkkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_3az7tjukkh7",
+      "name": "04 事件与遭遇",
+      "parentId": null,
+      "collapsed": false
+    },
+    {
+      "id": "fd_fz1ef6rkkh7",
+      "name": "旅途与营地",
+      "parentId": "fd_3az7tjukkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_c2daxctkkh7",
+      "name": "任务委托",
+      "parentId": "fd_3az7tjukkh7",
+      "collapsed": false
+    },
+    {
+      "id": "fd_83m080ykkh7",
+      "name": "尸体搜刮",
+      "parentId": "fd_3az7tjukkh7",
+      "collapsed": false
+    }
+  ],
+  "tables": [
+    {
+      "id": "t_46p2c1nkkh7",
+      "name": "名·男性",
+      "folderId": "fd_m30gpztkkh7",
+      "tags": [
+        "NPC",
+        "姓名"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_xxqm6r7kkh7",
+          "text": "奥德里克",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lba20pfkkh7",
+          "text": "托本",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_beibdo7kkh7",
+          "text": "加雷斯",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bbe5ofkkkh7",
+          "text": "埃蒙",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yy6s4x2kkh7",
+          "text": "洛萨",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_07o7k5skkh7",
+          "text": "卡西安",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_um8q0oikkh7",
+          "text": "布罗克",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8ampxvdkkh7",
+          "text": "费恩",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3ktrjx8kkh7",
+          "text": "厄尔文",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6hgfetxkkh7",
+          "text": "塔木",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_w8muowikkh7",
+          "text": "赫伯",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fj362v3kkh7",
+          "text": "塞德里",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2umfbp2kkh7",
+          "text": "戈登",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ejdvpalkkh7",
+          "text": "伊沃",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ri0d6tvkkh7",
+          "text": "雷夫",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_f6sunw9kkh7",
+          "text": "米凯尔",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_n5r8isxkkh7",
+      "name": "名·女性",
+      "folderId": "fd_m30gpztkkh7",
+      "tags": [
+        "NPC",
+        "姓名"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_bv5aluzkkh7",
+          "text": "莉安",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_q4k92jfkkh7",
+          "text": "瑟拉",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9vbot9kkkh7",
+          "text": "伊芙琳",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2onzur5kkh7",
+          "text": "苔丝",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qq48bg1kkh7",
+          "text": "薇拉",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qglr8h1kkh7",
+          "text": "妲莉亚",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_v19nio6kkh7",
+          "text": "赛琳娜",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1zp3jgbkkh7",
+          "text": "米拉",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_l05jm3akkh7",
+          "text": "奥莉薇",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5hh8a96kkh7",
+          "text": "贝莉",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_81oiijakkh7",
+          "text": "卡珊",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_mv78dsmkkh7",
+          "text": "奈儿",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_aqev94dkkh7",
+          "text": "塔玛",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_pxu217ekkh7",
+          "text": "尤莉",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_goe4eyikkh7",
+          "text": "瑞娅",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_z91iqpzkkh7",
+          "text": "桑妮",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_vazalykkkh7",
+      "name": "家族名",
+      "folderId": "fd_m30gpztkkh7",
+      "tags": [
+        "NPC",
+        "姓名"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_fe7asgakkh7",
+          "text": "灰堡",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5s4qjf5kkh7",
+          "text": "铁林",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5o03b95kkh7",
+          "text": "银溪",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_c6xa6jokkh7",
+          "text": "黑羽",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_35ilif5kkh7",
+          "text": "石心",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_m3ejxzskkh7",
+          "text": "晨星",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9foidozkkh7",
+          "text": "渡鸦",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bkb13bnkkh7",
+          "text": "霜刃",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xmu5zvskkh7",
+          "text": "铜锤",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_sd1git2kkh7",
+          "text": "白鹿",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6otha1wkkh7",
+          "text": "夜歌",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_s7xxq9tkkh7",
+          "text": "远山",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zswprkykkh7",
+          "text": "荆棘",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_27x393nkkh7",
+          "text": "静水",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_15mg915kkh7",
+          "text": "旧桥",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dpys4hjkkh7",
+          "text": "低地",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_iw5w6cjkkh7",
+      "name": "绰号",
+      "folderId": "fd_m30gpztkkh7",
+      "tags": [
+        "NPC",
+        "姓名"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_mtw532nkkh7",
+          "text": "独眼",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_pypqiw7kkh7",
+          "text": "断剑",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8e5nfsakkh7",
+          "text": "夜莺",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3yor1lykkh7",
+          "text": "铁胃",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bmnvh5dkkh7",
+          "text": "无声",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1f8w1rykkh7",
+          "text": "红手",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jqkui23kkh7",
+          "text": "灰狐",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_plv1v66kkh7",
+          "text": "老鸦",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_poppyuukkh7",
+          "text": "三指",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_k2ylv1lkkh7",
+          "text": "醉狼",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0k5mej7kkh7",
+          "text": "半截",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3hv99hlkkh7",
+          "text": "火舌",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4o74h1bkkh7",
+          "text": "冷灶",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_f95ch76kkh7",
+          "text": "铜牙",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ndkqewmkkh7",
+          "text": "长脚",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ny5u0fhkkh7",
+          "text": "哑嗓",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_sfzv9kbkkh7",
+      "name": "头衔",
+      "folderId": "fd_m30gpztkkh7",
+      "tags": [
+        "NPC",
+        "姓名"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_kam0v9wkkh7",
+          "text": "守备队长",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7pwn40ckkh7",
+          "text": "税务官",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9f0yqrkkkh7",
+          "text": "码头管账",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_nb9fy3kkkh7",
+          "text": "退役百夫长",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vsduoi5kkh7",
+          "text": "巡回执事",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_iwzi5drkkh7",
+          "text": "行会账房",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4uwm5vskkh7",
+          "text": "钟楼守夜人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_x2wj9kkkkh7",
+          "text": "驿站长",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_hwpy377kkh7",
+          "text": "采邑书记",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wn7zsfekkh7",
+          "text": "猎场看守",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xdmu73fkkh7",
+          "text": "济贫院管带",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4wgd3pykkh7",
+          "text": "私盐掮客",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_x9jh0pakkh7",
+      "name": "姓名",
+      "folderId": "fd_m30gpztkkh7",
+      "tags": [
+        "NPC",
+        "姓名"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_k2x94sfkkh7",
+          "text": "{名·男性}·{家族名}",
+          "weight": 6,
+          "range": null
+        },
+        {
+          "id": "e_2u43d3rkkh7",
+          "text": "{名·女性}·{家族名}",
+          "weight": 6,
+          "range": null
+        },
+        {
+          "id": "e_2et5so5kkh7",
+          "text": "{名·男性}·{家族名}「{绰号}」",
+          "weight": 2,
+          "range": null
+        },
+        {
+          "id": "e_9yjflr0kkh7",
+          "text": "「{绰号}」{名·女性}",
+          "weight": 2,
+          "range": null
+        },
+        {
+          "id": "e_iu8wulrkkh7",
+          "text": "{头衔}　{名·男性}·{家族名}",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bs07rsakkh7",
+          "text": "{名·女性}，没有姓，只叫这个名字",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_9j552jjkkh7",
+      "name": "外貌·显著特征",
+      "folderId": "fd_42w5v5dkkh7",
+      "tags": [
+        "NPC",
+        "外貌"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_jn14ddtkkh7",
+          "text": "左脸一道从眉骨到下颌的旧疤，笑的时候疤先动",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8cpg61kkkh7",
+          "text": "说话时右眼像在计算什么，左眼却很少眨",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_n8eqlbekkh7",
+          "text": "一头白发扎得极紧，露出青色的头皮",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wh5qov9kkh7",
+          "text": "右手小指僵着，弯不下去",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_q2zqp0ikkh7",
+          "text": "皮肤白得不像常年在外的，脖子却是晒红的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_hvlty79kkh7",
+          "text": "眉毛只剩半边，另一边是画上去的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_768s717kkh7",
+          "text": "鼻梁塌过，呼吸带一点轻响",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_om0ib37kkh7",
+          "text": "耳垂上有个穿旧的孔，什么也没戴",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6xixo7pkkh7",
+          "text": "下巴上三道平行的细疤，像被什么抓过",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_oalgaaskkh7",
+          "text": "睫毛很长，衬得眼睛过分温和",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_m5zvoeakkh7",
+          "text": "手上常年有洗不净的靛蓝，指缝最深",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5tef8bdkkh7",
+          "text": "颈侧一块烫伤，形状规整得像烙印",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vv6d7g9kkh7",
+          "text": "走神时嘴唇会无声地动，像在念数",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_k536mhekkh7",
+          "text": "眼白泛黄，看久了让人心里发毛",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vsaq6o7kkh7",
+          "text": "半张脸用旧布遮着，说是牙疼",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_iwvk9cmkkh7",
+          "text": "左耳缺了一小块，边缘是圆的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_a2srl2lkkh7",
+          "text": "手腕上有一圈比别处浅的印，像长期戴过什么",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xp9tc5xkkh7",
+          "text": "头发里掺着一缕白，从额角一路劈到脑后",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_n31o004kkh7",
+          "text": "指甲缝里有红色的东西，洗过了还是红的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_llho45wkkh7",
+          "text": "笑起来只有一边嘴角动，另一边纹丝不动",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_wv6lghjkkh7",
+      "name": "衣着",
+      "folderId": "fd_42w5v5dkkh7",
+      "tags": [
+        "NPC",
+        "外貌"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_m2k4agwkkh7",
+          "text": "一件洗到发白的粗布外套，肘部补丁摞着补丁",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g25y2iakkh7",
+          "text": "城里裁缝做的深色长衣，袖口却磨破了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2jf9zirkkh7",
+          "text": "皮甲外罩着亚麻衫，扣子少了两颗，用麻绳系着",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_nannozckkh7",
+          "text": "斗篷过于宽大，走路时下摆扫地",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_tw8opzakkh7",
+          "text": "靴子是新的，衣服是旧的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6ff5vg1kkh7",
+          "text": "领口别着一枚褪色的铜扣，像是纪念物",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_rtix8p0kkh7",
+          "text": "腰间缠着三圈布带，把东西都塞在里面",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lgggpzbkkh7",
+          "text": "围裙上遍布烧焦的小孔",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_03yv4l6kkh7",
+          "text": "挂着一条洗得发硬的围巾，夏天也不摘",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_q2z229ukkh7",
+          "text": "手指上套着两个不合尺寸的戒指",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_92km9m3kkh7",
+          "text": "一身干净的制服，熨得笔挺，袖口却有墨迹",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lyeg4vrkkh7",
+          "text": "衣服上别着七八根针，随手就取",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_831g8xwkkh7",
+          "text": "长袍下摆沾着泥，从膝盖以下全是",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9v7audjkkh7",
+          "text": "戴着一顶过大的帽子，帽檐压得极低",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_brgjfvwkkh7",
+          "text": "罩着厚厚的皮围裙，肩膀处沁着油光",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fg85tzskkh7",
+          "text": "衣襟里露出一截链子，坠子藏在里面",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_roctfyqkkh7",
+      "name": "体态与声音",
+      "folderId": "fd_42w5v5dkkh7",
+      "tags": [
+        "NPC",
+        "外貌"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_v8gryw0kkh7",
+          "text": "站着时重心偏在左脚，右肩低半寸",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cxd7ac4kkh7",
+          "text": "走路没有声音，在碎石上也是",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_82v4wumkkh7",
+          "text": "说话前先深吸一口气，然后一口气说完",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_mho8v9okkh7",
+          "text": "声音很轻，逼得人往前凑",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_00jf2gpkkh7",
+          "text": "坐着也不放松，背挺得像根柱子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9tm943ekkh7",
+          "text": "手一直在动，不是摸袖口就是按桌面",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_h4zv59kkkh7",
+          "text": "笑起来声音短促，像被掐断",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vq67u6tkkh7",
+          "text": "说话带很重的喉音，每个字都闷在胸腔里",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1qs4ajhkkh7",
+          "text": "习惯踮着脚，跟人说话时微微俯身",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bsory4okkh7",
+          "text": "站着时双手交叠在身前，像在等吩咐",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4m8q49skkh7",
+          "text": "动作很慢，慢到让人不耐烦，却从不出错",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_s8rl8m5kkh7",
+          "text": "声音沙哑，句子断了会自己咳一下接上",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_c6cqoxskkh7",
+          "text": "走路时肩膀先转过去，人再跟上",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_agnm3w6kkh7",
+          "text": "停顿很多，每个停顿都像在等别人接话",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_wffsgsbkkh7",
+      "name": "惯用动作",
+      "folderId": "fd_42w5v5dkkh7",
+      "tags": [
+        "NPC",
+        "外貌"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_js0t2jckkh7",
+          "text": "紧张时用拇指反复擦杯沿",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_hib9ku1kkh7",
+          "text": "思考时把戒指转到手心",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yi7hkd2kkh7",
+          "text": "开口前先用手指在桌上敲三下",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_t42xcw3kkh7",
+          "text": "听到不信的话，会先笑一声再说话",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_matwxurkkh7",
+          "text": "递东西时习惯用两只手",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_44hwwi2kkh7",
+          "text": "进门必先看门框上方",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ah2d3wjkkh7",
+          "text": "数东西时用拇指一个一个按过去",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8uzkxsfkkh7",
+          "text": "摸下巴时总停在左边",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2hnyy1vkkh7",
+          "text": "坐久了会把靴尖在桌腿上蹭",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g7dhgl0kkh7",
+          "text": "说完话习惯补一句「你随意」",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_npu40q8kkh7",
+          "text": "与人说话时慢慢往后退半步",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_se93h7jkkh7",
+          "text": "咬牙时太阳穴会跳",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_i14juu7kkh7",
+          "text": "抽刀前先弹一下刀背",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5hzm493kkh7",
+          "text": "把袖子往上撸两次，哪怕袖子本来就不长",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_k5gas7bkkh7",
+          "text": "见到钱会先舔一下拇指",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qq24l3lkkh7",
+          "text": "听人说话时点头，但频率不对",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_kb2y2ipkkh7",
+      "name": "随身物件",
+      "folderId": "fd_42w5v5dkkh7",
+      "tags": [
+        "NPC",
+        "物件"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_d1gjqr3kkh7",
+          "text": "腰间挂着一串不属于他的钥匙，足有二十几把",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_232z7bekkh7",
+          "text": "一个装过药的小瓷瓶，标签被撕掉了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_hj4or83kkh7",
+          "text": "半块硬得能敲人的面包，用布包着",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fsot9rgkkh7",
+          "text": "一枚磨平了图案的铜币，穿孔穿了绳",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_j0ygj4jkkh7",
+          "text": "一叠折了七八次的信纸，边角都软了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g5enkx3kkh7",
+          "text": "一把只有三根齿的梳子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_sga5z5ukkh7",
+          "text": "秤砣大小的石头，说是家乡的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_q24qbhrkkh7",
+          "text": "一把没有鞘的短刀，刃口有豁",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7qcoxjbkkh7",
+          "text": "一串骨珠，其中一颗明显是别的材质",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_p39dr72kkh7",
+          "text": "火镰、火石、火绒，装在牛角里",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zi75ojnkkh7",
+          "text": "一张手绘的地图，画到一半断了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bw9et8qkkh7",
+          "text": "一截蜡烛，烧到只剩两指长",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_o12lwi6kkh7",
+          "text": "装着细砂的布袋，掂起来有点沉",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9ix9031kkh7",
+          "text": "一小卷线，针插在线轴上",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_rj6c7j3kkh7",
+          "text": "一枚贵族的印，边角磕掉了一块",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_x1edt3ikkh7",
+          "text": "三颗骰子，其中一颗灌了铅",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8wpfdn8kkh7",
+          "text": "一只空的鸟笼，笼门是开着的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_v5ox470kkh7",
+          "text": "一面巴掌大的铜镜，镜面花得照不清人",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_cdq4tm7kkh7",
+      "name": "气质",
+      "folderId": "fd_d6butbakkh7",
+      "tags": [
+        "NPC",
+        "性格"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_hjlrmrzkkh7",
+          "text": "让人放松，像待了很久的老椅子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_kmksk2skkh7",
+          "text": "一进屋，房间里的声音会小一点",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qbx4q8kkkh7",
+          "text": "客气到让人不敢麻烦他",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_07sbt9ekkh7",
+          "text": "带着一股不容置疑的疲态",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_574c58ekkh7",
+          "text": "锋利，话不多但每句都带钩",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jf8md6rkkh7",
+          "text": "像个随时准备道歉的人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ag4utxgkkh7",
+          "text": "温吞，什么都答应，什么都不办",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_i1a20q1kkh7",
+          "text": "有一股没处使的劲，坐着也像要走",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zqjh7t0kkh7",
+          "text": "干净利落，做什么都一次做完",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_eam31l4kkh7",
+          "text": "让人觉得他在等你先开口",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_syqiyalkkh7",
+          "text": "阴晴不定，但不解释",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_kz6xbkakkh7",
+          "text": "老实得让人起疑",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_krtg5alkkh7",
+      "name": "价值观",
+      "folderId": "fd_d6butbakkh7",
+      "tags": [
+        "NPC",
+        "性格"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_k8fdgeikkh7",
+          "text": "欠了就得还，哪怕是欠死人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_igex29pkkh7",
+          "text": "秩序比公正重要，因为秩序能维持",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_z6720vikkh7",
+          "text": "承诺只对具体的人有效，不对名义有效",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cv4fl9zkkh7",
+          "text": "活着比体面重要，但只到他自己的那条线",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_deq2f3gkkh7",
+          "text": "手艺就是人格，做坏了的东西不肯出手",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_mvv0abykkh7",
+          "text": "不信誓言，只信已经发生的事",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vhkqwj7kkh7",
+          "text": "宁可被恨，也不愿被同情",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gzyn9y0kkh7",
+          "text": "规矩是要守的，但规矩可以商量",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6k33dw6kkh7",
+          "text": "帮人能帮到哪算哪，不背责任",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zebml1hkkh7",
+          "text": "家里人的事，怎么都算对",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fr847ifkkh7",
+          "text": "有恩必记，有仇不一定报",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_d65l1xpkkh7",
+          "text": "谁出的钱多，谁的道理长",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_a6rc4e6kkh7",
+      "name": "动机",
+      "folderId": "fd_d6butbakkh7",
+      "tags": [
+        "NPC",
+        "动机"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_cw930rakkh7",
+          "text": "攒够钱赎回被抵押的祖宅",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7b38l9okkh7",
+          "text": "找十年前在雪夜里走失的妹妹",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ydk5ciokkh7",
+          "text": "把一封没写完的信送到收信人手上",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9zjhffgkkh7",
+          "text": "想在死前看见自己的名字被人念一遍",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dr5qum3kkh7",
+          "text": "躲一个不该惹的人，躲到对方忘了为止",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g9bhyk9kkh7",
+          "text": "查清那场火烧起来时，谁把门从外面锁了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gq20zfpkkh7",
+          "text": "证明自己不是家族里那个废物",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cfpk5yhkkh7",
+          "text": "把一件不该被挖出来的东西重新埋回去",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ftvgqo0kkh7",
+          "text": "收集所有失传的手艺，一条也不肯漏",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ke0nubtkkh7",
+          "text": "让某个人在众人面前承认当年的事",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8jcaksnkkh7",
+          "text": "只是离开这个地方，去哪儿都行",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vsv1jookkh7",
+          "text": "替死去的人把话说完",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8mex9u9kkh7",
+          "text": "弄明白自己是谁生的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7iv0ybfkkh7",
+          "text": "还清一笔从没跟人提过的债",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_y5ag3n5kkh7",
+          "text": "让弟弟别再走自己走过的路",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7fpatbkkkh7",
+          "text": "找一个能放心闭眼的地方",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_frjxujukkh7",
+      "name": "秘密",
+      "folderId": "fd_d6butbakkh7",
+      "tags": [
+        "NPC",
+        "动机"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_jgp6586kkh7",
+          "text": "他其实不认识自己口中的那位雇主",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_kqngi9pkkh7",
+          "text": "那笔钱不是他挣的，是他捡的，失主还活着",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qmvlonykkh7",
+          "text": "他说的那个村子，十几年前就没了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_c1egz7okkh7",
+          "text": "他右手一直戴着东西，只是被袖子盖住了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_tpmw9lakkh7",
+          "text": "他会在夜里一个人对着墙说话",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fgo5368kkh7",
+          "text": "他的名字是借来的，真的那个已经埋了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_n274be4kkh7",
+          "text": "他给两边都递过消息，两边都以为他只忠于自己",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zk13p9ikkh7",
+          "text": "他怕的是深水，不是血",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_y4zjywykkh7",
+          "text": "他曾经在一场瘟疫里做过把关的人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_es4epidkkh7",
+          "text": "他偷偷养着一个人，那个人不该还活着",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_oebl43ikkh7",
+          "text": "他记得所有人的账，包括不该记得的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_k2cbubvkkh7",
+          "text": "他有个孩子，没人知道在哪儿",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lp9cnackkh7",
+          "text": "他从来没杀过人，但所有人都以为他杀过",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_58dcxxckkh7",
+          "text": "他手上那枚戒指是从尸体上取下来的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_c1b3mlhkkh7",
+          "text": "他每晚都要确认门闩三次",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_199oln6kkh7",
+          "text": "他其实识字，只是从不在人前写",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dh36wmwkkh7",
+          "text": "他欠的那个人的债，是用命算的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jo0n4zekkh7",
+          "text": "他一直在等一封信，等了十年",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_gkug5mbkkh7",
+      "name": "弱点",
+      "folderId": "fd_d6butbakkh7",
+      "tags": [
+        "NPC",
+        "性格"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_0tibccpkkh7",
+          "text": "见不得孩子在面前哭",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_pxoorgbkkh7",
+          "text": "酒一入口就守不住话",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7xpmq7bkkh7",
+          "text": "太信自己那双眼睛",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_hxmpqinkkh7",
+          "text": "对旧日的同伴有求必应",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xu56gn5kkh7",
+          "text": "受不得别人说他手不干净",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zjdn7ozkkh7",
+          "text": "一听人提起他母亲就失态",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3ccyivkkkh7",
+          "text": "坐上赌桌就停不下来",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vxnlhngkkh7",
+          "text": "不会拒绝递过来的活儿",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_f4i78kqkkh7",
+          "text": "怕被当成外人，所以什么都说",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ve2n81rkkh7",
+          "text": "见血会短暂地愣一下",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6bjhyjukkh7",
+          "text": "身上有旧伤，阴雨天右臂动不了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2zajpa9kkh7",
+          "text": "太好面子，宁死不肯求人",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_4yiwkmxkkh7",
+      "name": "口癖",
+      "folderId": "fd_d6butbakkh7",
+      "tags": [
+        "NPC",
+        "性格"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_6tzme13kkh7",
+          "text": "每句话结尾加一句「愿炉火不灭」",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ys6uydakkh7",
+          "text": "开口前先咳两声",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5mbzojgkkh7",
+          "text": "管所有人都叫「小家伙」",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4mnwjyzkkh7",
+          "text": "喜欢用「这么说吧」开头",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_weihc6tkkh7",
+          "text": "说到一半会停下来数手指",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wt5i6tskkh7",
+          "text": "总把「我年轻那会儿」挂在嘴边",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_adslqgwkkh7",
+          "text": "一紧张就反复擦杯子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_s625yo9kkh7",
+          "text": "用反问句回答一切问题",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xzi6bv5kkh7",
+          "text": "说话时压低嗓子，像在分享秘密",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_mtzcepmkkh7",
+          "text": "每三句话引一句谚语",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7a9g5s0kkh7",
+          "text": "句尾总带一句「你懂我意思吧」",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_46j2bfykkh7",
+          "text": "提到钱就改用他乡的土话",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ilzwh37kkh7",
+          "text": "说完自己的话总要补一句「不过也不一定」",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yeodw50kkh7",
+          "text": "把所有人都称为「那位」",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_3fyjvkfkkh7",
+      "name": "职业",
+      "folderId": "fd_tmdpw4lkkh7",
+      "tags": [
+        "NPC",
+        "身份"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_bsvti2wkkh7",
+          "text": "皮匠，摊子摆在街角，兼修马具",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xvh8knukkh7",
+          "text": "药铺学徒，认得草，不认得人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g4zzgzgkkh7",
+          "text": "守夜人，管三条街的灯",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_e5n4dwekkh7",
+          "text": "卸货工，只在夜里上工",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yzogbfpkkh7",
+          "text": "抄写员，字漂亮，手常年发凉",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_pppl2ojkkh7",
+          "text": "走街的货郎，担子里什么都有一点",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9p2vyzvkkh7",
+          "text": "退役的弓手，现在替人看仓",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vdqmlzgkkh7",
+          "text": "债务中间人，替人算，也替人催",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_55b5yejkkh7",
+          "text": "厨子，只在别人家办席时出现",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5i5jpy4kkh7",
+          "text": "掘墓人，附带替人看守祠堂",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_od2ss1hkkh7",
+          "text": "兽医，比治人的那位更让人信",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_l26e27bkkh7",
+          "text": "车夫，认识所有近路和小路",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0dk3svakkh7",
+          "text": "采石场的记账，有两本账",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2230d8ykkh7",
+          "text": "客栈跑堂，记得每个客人的口味",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_w5887kvkkh7",
+          "text": "教堂杂役，会唱但不会读",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_b571j5rkkh7",
+          "text": "盐商的手下，腰间总挂一把秤",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_d6m0qjikkh7",
+          "text": "前乐师，手指断了两根后改了行",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zmoxlwjkkh7",
+          "text": "更夫，敲梆子只是个幌子",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_v4svnmhkkh7",
+      "name": "派系",
+      "folderId": "fd_tmdpw4lkkh7",
+      "tags": [
+        "NPC",
+        "身份"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_m4ewouckkh7",
+          "text": "城里的行会，规矩多，护人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zjm8lvckkh7",
+          "text": "码头的装卸帮，认人不认法",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7fwj8wokkh7",
+          "text": "教会的外围，做慈善，也做别的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2ay1kpakkh7",
+          "text": "领主的税吏班子，谁都不喜欢",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_rh78c4ikkh7",
+          "text": "一群没有名字的自由骑手",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ep86j4skkh7",
+          "text": "商会，账面上干干净净",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_k438m92kkh7",
+          "text": "旧王朝的残党，只在酒桌上说话",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jgdxvfakkh7",
+          "text": "本地的地头蛇，收钱办事",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_m2pjs5wkkh7",
+          "text": "学院来的人，来调查，不说明来意",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g8u2ccekkh7",
+          "text": "谁给钱跟谁，但没有固定主子",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_34x87nikkh7",
+      "name": "对玩家·初始态度",
+      "folderId": "fd_tmdpw4lkkh7",
+      "tags": [
+        "NPC",
+        "态度"
+      ],
+      "dice": "1d20",
+      "entries": [
+        {
+          "id": "e_qe9a8l1kkh7",
+          "text": "一见如故，主动让座，还请你喝一杯",
+          "weight": 1,
+          "range": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "e_2cvaws9kkh7",
+          "text": "客气，愿意帮忙，但要你先开口",
+          "weight": 1,
+          "range": [
+            3,
+            4
+          ]
+        },
+        {
+          "id": "e_b5cf938kkh7",
+          "text": "冷淡，问一句答一句",
+          "weight": 1,
+          "range": [
+            5,
+            6
+          ]
+        },
+        {
+          "id": "e_andz014kkh7",
+          "text": "明显在打量你，尤其是你的靴子和手",
+          "weight": 1,
+          "range": [
+            7,
+            8
+          ]
+        },
+        {
+          "id": "e_bvpcb07kkh7",
+          "text": "戒备，说话绕着弯，不肯给准话",
+          "weight": 1,
+          "range": [
+            9,
+            10
+          ]
+        },
+        {
+          "id": "e_h592y2jkkh7",
+          "text": "把你当普通客人，该收钱收钱",
+          "weight": 1,
+          "range": [
+            11,
+            12
+          ]
+        },
+        {
+          "id": "e_nmxwjoskkh7",
+          "text": "不太耐烦，话里暗示你该走了",
+          "weight": 1,
+          "range": [
+            13,
+            14
+          ]
+        },
+        {
+          "id": "e_ea883txkkh7",
+          "text": "直接问你是什么人，为什么来",
+          "weight": 1,
+          "range": [
+            15,
+            16
+          ]
+        },
+        {
+          "id": "e_y4uulitkkh7",
+          "text": "敌意，话里带刺，手没离开过腰",
+          "weight": 1,
+          "range": [
+            17,
+            18
+          ]
+        },
+        {
+          "id": "e_b2n4crckkh7",
+          "text": "认定你欠他什么，一开口就要说法",
+          "weight": 1,
+          "range": [
+            19,
+            19
+          ]
+        },
+        {
+          "id": "e_3ujsgyykkh7",
+          "text": "已经决定动手，只是想先让你放松",
+          "weight": 1,
+          "range": [
+            20,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t_0o8erlqkkh7",
+      "name": "人际关系钩子",
+      "folderId": "fd_tmdpw4lkkh7",
+      "tags": [
+        "NPC",
+        "关系"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_41195zvkkh7",
+          "text": "他欠城里某个放贷人一大笔钱，利息已经开始滚",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lchzmyhkkh7",
+          "text": "他妹妹在城东的洗衣房做工，两人三年没说话",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_d3dbvzrkkh7",
+          "text": "他替一位不愿露面的老爷送东西，从不问里面是什么",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ndqe5rgkkh7",
+          "text": "他和守备队的一个小队长是结拜兄弟，但很久没联系",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g5oymwgkkh7",
+          "text": "有个女人每月来收一次钱，两人从不多说一句",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qchm9sikkh7",
+          "text": "他的师父还活着，瘫在床上，等他回去",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lrj6cj3kkh7",
+          "text": "他和隔壁铺子的老板共用一面墙，也共用一段旧怨",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9kgzehqkkh7",
+          "text": "他的儿子在矿上，半年没有消息",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cyf8umukkh7",
+          "text": "他曾把一个孩子送出城，那孩子现在回来了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_d8q5anhkkh7",
+          "text": "他认识你身上的某件东西，认得很准",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9mbtaerkkh7",
+          "text": "他替死者保管着一份名单",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_nq1xqxskkh7",
+          "text": "他和当局有约定，具体内容不能提",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ltcvvf6kkh7",
+          "text": "他每月十五去城外一趟，不带东西也不带人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7cfqe14kkh7",
+          "text": "他的债主昨天死了，死得很不是时候",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_f5xuzbzkkh7",
+          "text": "他照顾着三个不是自己生的孩子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_rkwm8qwkkh7",
+          "text": "有人托他打听你，他已经收了钱",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_c25ft9lkkh7",
+      "name": "当前行为",
+      "folderId": "fd_tmdpw4lkkh7",
+      "tags": [
+        "NPC",
+        "行为"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_s075rwgkkh7",
+          "text": "正蹲在路边给一只鞋换底，身边摆着个小皮匠摊",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_b79on9vkkh7",
+          "text": "正把一车萝卜码整齐，码到第三层就塌一次",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_j6w73lgkkh7",
+          "text": "靠在门框上啃干饼，看见人来先把饼收进怀里",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6sntto1kkh7",
+          "text": "正同人争一匹布的长度，尺子攥得死紧",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_isjnwkgkkh7",
+          "text": "在井边洗一件带血的衣裳，水换了三遍",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bkytj8fkkh7",
+          "text": "正往墙上贴一张告示，贴歪了也不管",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_d34jyyhkkh7",
+          "text": "坐在台阶上给一把刀换柄上的绳",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cleem0hkkh7",
+          "text": "举着灯在屋檐下找什么，脖子仰得很酸",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vjxmg52kkh7",
+          "text": "正哄一匹不肯进棚的骡子，声音低得像求人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gq24b4okkh7",
+          "text": "拿木棍在泥地上画路线，画了又抹",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3nuatu6kkh7",
+          "text": "正在数一小堆铜钱，数到一半又从头数",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2jj53vxkkh7",
+          "text": "靠着墙打盹，手里还攥着账本",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0j36wu1kkh7",
+          "text": "正把一个醉汉往门外拖，动作很熟练",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_pqfuuugkkh7",
+          "text": "给一只瘦猫分半条鱼，自己吃另一半",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zl5qyr7kkh7",
+          "text": "正和人低声谈价，一边谈一边看四周",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cw2hipokkh7",
+          "text": "拎着两桶水，走三步歇一步",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bt6zgy8kkh7",
+          "text": "正把一只死掉的鸟从网里解出来",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8hp4905kkh7",
+          "text": "在门口拦人，挨个问话，问得极慢",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0cs3glvkkh7",
+          "text": "正磨一把剪刀，磨得极认真",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4e0vx3pkkh7",
+          "text": "把一摞旧纸一张张摊开晾，风一来就按住",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_kzju3qgkkh7",
+      "name": "城镇·规模与氛围",
+      "folderId": "fd_fonq2imkkh7",
+      "tags": [
+        "地点",
+        "城镇"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_nldo5f5kkh7",
+          "text": "两条主街，一条河，走完用不了半个时辰",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ndklgiwkkh7",
+          "text": "城墙只有一段，剩下的地方用木栅补着",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_725uqy4kkh7",
+          "text": "大到能藏住人，小到瞒不住事",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9imrzmkkkh7",
+          "text": "街道以碎石铺成，雨后能陷进半只靴子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bv5880nkkh7",
+          "text": "一座被烧过一半的城，新房子直接盖在焦墙上",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2kpmpwdkkh7",
+          "text": "集市是露天的，散场后只剩一地的菜叶和狗",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_s2elk1ukkh7",
+          "text": "城里到处在施工，木架比房子多",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_eekpr6rkkh7",
+          "text": "靠一座石桥分成两半，两边互不往来",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_asfs86vkkh7",
+          "text": "有钟楼，但钟只在出事的时候响",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_badpwwokkh7",
+          "text": "城墙外就是荒地，放羊的孩子比兵多",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dghjo0zkkh7",
+          "text": "巷子极窄，两个人错身要侧着走",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_79flv6gkkh7",
+          "text": "空气里总有股河水与石灰混着的味道",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_azw06hekkh7",
+          "text": "街上挂满晾着的布，风一过像一片旗",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zse1aqckkh7",
+          "text": "城的中心不是广场，是一口井",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_eypvpo0kkh7",
+          "text": "入夜后街上就空了，只有灯和狗",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_p9l7vonkkh7",
+          "text": "新来的都住在东门，老户不往那边去",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_458i5w9kkh7",
+      "name": "城镇·产业与地标",
+      "folderId": "fd_fonq2imkkh7",
+      "tags": [
+        "地点",
+        "城镇"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_s32re56kkh7",
+          "text": "城北是磨坊区，风向一变全城都是面粉味",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xcc4eh3kkh7",
+          "text": "一处温泉浴场，旧得只剩石槽，还在用",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_tb83687kkh7",
+          "text": "盐仓，门口永远站着两个人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lk93cptkkh7",
+          "text": "一座半塌的桥，桥墩上刻着没人认得的字",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cgffldskkh7",
+          "text": "皮革作坊在下风处，皮子摊在河边沤",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_m4dn1xokkh7",
+          "text": "铸铁的炉子一年只开三个月，别的时候关着",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_81w7zjfkkh7",
+          "text": "城中心钟楼下有块石板，谁都不肯站在上面",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_b8e2cd2kkh7",
+          "text": "一座废弃的剧场，现在是流民的住处",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_q0z3vjikkh7",
+          "text": "采石场在西边，运石的车把路压出两道深沟",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_e3y4lphkkh7",
+          "text": "老教堂，屋顶修过三次，钟还在",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_n51hholkkh7",
+          "text": "官仓，账面上比实际满",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_kmku8mokkh7",
+          "text": "码头只有三条船常来，第四条是走私的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wlsu25okkh7",
+          "text": "一处练兵场，现在用来晒粮",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_o0dgclbkkh7",
+          "text": "城外的绞架，木头上刻满了字",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zayi4makkh7",
+          "text": "药圃，篱笆上晾着认得和不认得的草",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wj2a9bbkkh7",
+          "text": "井边的墙上有一块碑，字被人刮掉了一半",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_sviiy5ikkh7",
+      "name": "城镇·当前麻烦",
+      "folderId": "fd_fonq2imkkh7",
+      "tags": [
+        "地点",
+        "城镇"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_vn7o0uxkkh7",
+          "text": "井水最近发苦，没人敢喝，也没人查",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ufxaaqakkh7",
+          "text": "三个孩子在同一周走失，说法各不相同",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jtvp7wbkkh7",
+          "text": "官仓盘账，仓里的粮比账上少了一半",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bpmp8h1kkh7",
+          "text": "城里有瘟疫的传言，没人承认有人病死",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gho5c1qkkh7",
+          "text": "一伙人开始收过路钱，收得很有规矩",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3fchph7kkh7",
+          "text": "大车夜里进城，天亮前就走，不留单子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_93w6fj5kkh7",
+          "text": "领主半年没露面，管事说的话一天比一天硬",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fl7ssifkkh7",
+          "text": "一群外来人在城外扎营，说是等船",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jsjumpfkkh7",
+          "text": "收了粮，买不到盐，有人说盐被屯起来了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9libf02kkh7",
+          "text": "夜里有敲墙的声音，隔着墙找不出是谁",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dfji2prkkh7",
+          "text": "有人出钱收一种没人要的旧铜器",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_04onf39kkh7",
+          "text": "守备队换了新队长，第一件事是收缴武器",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_q0zu0inkkh7",
+          "text": "桥下发现尸体，官府说是失足",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_63m8cdhkkh7",
+          "text": "酒馆里有人打听你的名字",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_v9b6n8hkkh7",
+          "text": "磨坊主不再接活，说磨盘坏了，可磨盘是新的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_oicdy70kkh7",
+          "text": "城门口多了登记，登记簿不给人看",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_vwa3vsbkkh7",
+      "name": "市集·摊位与人群",
+      "folderId": "fd_fonq2imkkh7",
+      "tags": [
+        "地点",
+        "市集"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_dndp6fdkkh7",
+          "text": "卖干鱼的摊子，鱼腥味压过了旁边的香烛",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_k23uwvxkkh7",
+          "text": "一个只卖一种药的老人，药名写在木牌上",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_tdnx38jkkh7",
+          "text": "卖旧鞋的，把鞋底朝上摆得整整齐齐",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gd4ofiekkh7",
+          "text": "一群人围着一个说书的，说的正是昨天的事",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gxbxxx4kkh7",
+          "text": "卖刀鞘的摊子，鞘比刀多",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_e8kf3wkkkh7",
+          "text": "一个卖蜜饯的姑娘，秤总是偏一点",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_c1l1uotkkh7",
+          "text": "有人在摊后补锅，敲一下停一下",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_t88enkvkkh7",
+          "text": "卖绳子、钩子、扣子，什么小东西都有",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_j2ulwi8kkh7",
+          "text": "摊主在打瞌睡，摊上的东西一件不少",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g1sxqg4kkh7",
+          "text": "卖热汤的，锅边站一圈人不说话",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vcqqxadkkh7",
+          "text": "一群人围着看赌，中间那个人一直赢",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xubbchhkkh7",
+          "text": "一个卖鸟的，鸟都不叫",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3dog20tkkh7",
+          "text": "卖旧书的摊子，纸上有别人的批注",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_393jlqkkkh7",
+          "text": "卖肉的，案板上有一道很深的旧刀口",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7yo2837kkh7",
+          "text": "一个孩子在人群里穿来穿去，手上都是别人的钱袋",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_53r9lt0kkh7",
+          "text": "卖陶器的，把碎的那几只摆在最前面",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qklkxi0kkh7",
+          "text": "一个老太太卖草，草上还带着露水",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_w85hhipkkh7",
+          "text": "收头发的摊子，一捆一捆码在筐里",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_bd04f4fkkh7",
+      "name": "街道·细节与冲突",
+      "folderId": "fd_fonq2imkkh7",
+      "tags": [
+        "地点",
+        "街道"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_wlcgm73kkh7",
+          "text": "墙根全是尿渍和剥落的石灰",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jul8pwokkh7",
+          "text": "一辆车卡在巷口，两条街的人都堵住了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_su148zrkkh7",
+          "text": "二楼有人往街上倒水，下面骂了一句就走",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_j91ni2ikkh7",
+          "text": "三个孩子在踢一个缝了又缝的球",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_o4yo6bkkkh7",
+          "text": "有人在墙上画了个记号，很快被人涂掉",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zuy45cwkkh7",
+          "text": "一个醉汉坐在门槛上，谁拉都不走",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xvqiswwkkh7",
+          "text": "两个摊主为一只漏水的桶吵起来",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ydhcnu1kkh7",
+          "text": "巡街的从人群里穿过，没人抬头",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ryys2ejkkh7",
+          "text": "门牌都是新的，只有一家还留着旧门牌",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0q8ppkekkh7",
+          "text": "沟渠堵了，水积在路中央，浮着一层油",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zewmf1ckkh7",
+          "text": "有人在贴告示，另一个跟在后面撕",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jtegh53kkh7",
+          "text": "一条狗守着半扇门，谁靠近就低吼",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5k0e9lrkkh7",
+          "text": "拐角处有人蹲着，看谁路过都点头",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_oc5gpuskkh7",
+          "text": "一扇门半开着，里面没有灯，也没有声音",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dhf4wskkkh7",
+          "text": "街边的石阶被磨出一个凹坑",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_f5t0miukkh7",
+          "text": "一队人抬着东西往城外走，没人打招呼",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_go8amvgkkh7",
+      "name": "酒馆名",
+      "folderId": "fd_xhe5wzgkkh7",
+      "tags": [
+        "地点",
+        "酒馆",
+        "命名"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_osugq1jkkh7",
+          "text": "断桥酒馆",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_26j5cnkkkh7",
+          "text": "三只眼",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_b8v91mzkkh7",
+          "text": "老鸦与钥匙",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ciauhyskkh7",
+          "text": "慢锅",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_rrdi2fpkkh7",
+          "text": "半扇门",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gttir4jkkh7",
+          "text": "湿靴子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_f9zu757kkh7",
+          "text": "铜勺",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_d9f6ye9kkh7",
+          "text": "无人打烊",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0ijn3aikkh7",
+          "text": "灯下黑",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_pl5sh3fkkh7",
+          "text": "铁胃之家",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_56etz5ckkh7",
+          "text": "七枚钉子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_nuv4frxkkh7",
+          "text": "空杯",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3gdn3jukkh7",
+          "text": "麦与盐",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_f0eq4fqkkh7",
+          "text": "旧钟",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_azw8uvhkkh7",
+          "text": "醉骡子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6zd8v83kkh7",
+          "text": "墙里人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wcglq7dkkh7",
+          "text": "一盏半",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lejr402kkh7",
+          "text": "客满",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bhxqzlfkkh7",
+          "text": "归途",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ds7grhukkh7",
+          "text": "无名",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_h2n15ntkkh7",
+      "name": "酒馆·氛围",
+      "folderId": "fd_xhe5wzgkkh7",
+      "tags": [
+        "地点",
+        "酒馆"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_edj88blkkh7",
+          "text": "屋里比外面冷，炉子烧着但没有温度",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_okw2ijwkkh7",
+          "text": "烟浓得看不清对面的人脸",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g544vc9kkh7",
+          "text": "桌面上一层油，抹布擦过就留下一道",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gkbnbbjkkh7",
+          "text": "只有一张长桌，谁进来都得挨着坐",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jq7wneekkh7",
+          "text": "地板被踩出凹坑，走上去会响",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4mlwi0kkkh7",
+          "text": "灯很少，光源都聚在吧台一带",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zeil9k9kkh7",
+          "text": "有人在角落弹一个只有两根弦的乐器",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qjku851kkh7",
+          "text": "空气里是酒、汗、湿木头三样东西",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_62ljfx2kkh7",
+          "text": "后窗开着，风把灯影晃到墙上",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_t8hma3okkh7",
+          "text": "这里说话都压低，越说越低",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_rxic7dpkkh7",
+          "text": "墙上钉着旧物：一只靴子、一把刀、一张脸",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_c30li48kkh7",
+          "text": "炉边是最好的位置，也是最难抢的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_awiv48wkkh7",
+          "text": "有个人一直在笑，但没人接他的话",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_l0gci8vkkh7",
+          "text": "桌子都是拼的，高低不平",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_3xf727bkkh7",
+      "name": "酒馆·店主",
+      "folderId": "fd_xhe5wzgkkh7",
+      "tags": [
+        "地点",
+        "酒馆"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_c3zyn63kkh7",
+          "text": "一个断过腕子的女人，收钱时从不看人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_tb5nx4ekkh7",
+          "text": "一个胖到走路要扶墙的男人，算账极快",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zj14w6fkkh7",
+          "text": "一对夫妻，丈夫说话，妻子决定",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0xtk2i6kkh7",
+          "text": "一个话多的老头，讲的笑话自己先笑",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dg1x9uxkkh7",
+          "text": "一个从不坐下的年轻人，手上总在擦东西",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yjih7dakkh7",
+          "text": "一个独眼的女人，另一只眼睛看得很准",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_b9y7nrikkh7",
+          "text": "一个前军人，柜台下压着一把没上油的长刀",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_i6ltpadkkh7",
+          "text": "一个沉默的年轻人，答话只用点头摇头",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_88yhgoxkkh7",
+          "text": "一个身上有香料味的男人，不是本地人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1ejsbr3kkh7",
+          "text": "一个看起来很累的女人，孩子睡在柜台后",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_f7yfu23kkh7",
+          "text": "一个永远在煮东西的男人，锅里没有东西",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bhy6vaikkh7",
+          "text": "一个手臂上有旧烙印的人，收钱时习惯性遮住",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_11j186gkkh7",
+          "text": "一个戴面纱的女人，声音隔着布",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_d5pohvikkh7",
+          "text": "一个记账极细的男人，欠一条也要记",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8t6vez8kkh7",
+          "text": "一个脾气很坏的老太太，骂人很有章法",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_nx4yaeokkh7",
+          "text": "一个客气得反常的男人，账从来不错",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_ge5ctjnkkh7",
+      "name": "酒馆·顾客",
+      "folderId": "fd_xhe5wzgkkh7",
+      "tags": [
+        "地点",
+        "酒馆"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_okajrndkkh7",
+          "text": "角落里坐着一个不肯脱斗篷的人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5namr25kkh7",
+          "text": "四个车夫占着一张桌子，赌得很大",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g6uul0gkkh7",
+          "text": "一个抄写员在灯下写字，纸上已经写满了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4gy53ookkh7",
+          "text": "一对男女低声说话，说到一半各自看门口",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ngwne10kkh7",
+          "text": "一个醉得很厉害的人在讲同一件事",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_i58duemkkh7",
+          "text": "一群人在等一个人，等到灯都要灭了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_trmquackkh7",
+          "text": "一个孩子在桌下捡东西，捡了很久",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_883pm6bkkh7",
+          "text": "两个猎人，身上有血腥味，不太说话",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0wdz0k8kkh7",
+          "text": "一个商人，把箱子放在脚边，脚踩着",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lhfg59wkkh7",
+          "text": "一个老头独自下棋，两边都自己走",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_kwu5n58kkh7",
+          "text": "一个年轻女人坐在门边，谁也不看",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8p360lrkkh7",
+          "text": "一群人在赌一颗骰子，骰子有问题但没人说",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1c62u1qkkh7",
+          "text": "一个穿制服的人，脱了外衣但还是像在当值",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lu2un7kkkh7",
+          "text": "三个人在分一张纸，谁都不肯先放手",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6y4z9btkkh7",
+          "text": "一个靠在柱子上的人，一直在看你的手",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_88fikmukkh7",
+          "text": "一个睡着的客人，桌上的酒一口没动",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_n9qrtydkkh7",
+      "name": "酒馆·菜单",
+      "folderId": "fd_xhe5wzgkkh7",
+      "tags": [
+        "地点",
+        "酒馆"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_dcfuw0bkkh7",
+          "text": "炖了很久的根茎，配一块咬不动的面包",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_r2gwei0kkh7",
+          "text": "咸鱼，咸到需要配酒，酒又不便宜",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vskqrcvkkh7",
+          "text": "一锅什么都放的汤，今天的比昨天好",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_auwokmpkkh7",
+          "text": "烤小鸟，整只，骨头都能嚼",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_oi5x1bwkkh7",
+          "text": "麦粥，上面浮着一层油",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_at4c64mkkh7",
+          "text": "腌菜和硬奶酪，切得很薄",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_hzufjoqkkh7",
+          "text": "煮豆子，撒了一把说不清的香料",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6ukhma8kkh7",
+          "text": "一份肉，来源不明，煎得很香",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_m5bp9h0kkh7",
+          "text": "烤饼，里面夹着昨夜的剩菜",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fbgoouwkkh7",
+          "text": "一种很烈的酒，喝完喉咙像被擦过",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7pg6hhqkkh7",
+          "text": "淡得几乎像水的酒，胜在便宜",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0b5v5sgkkh7",
+          "text": "热的香料酒，喝完手指发麻",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_55ylqudkkh7",
+          "text": "一碟炒过的坚果，咸得让人一直想喝",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wxtfzzokkh7",
+          "text": "汤里有一块面包，泡得已经散了",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_yql2ntrkkh7",
+      "name": "酒馆·传闻",
+      "folderId": "fd_xhe5wzgkkh7",
+      "tags": [
+        "地点",
+        "酒馆",
+        "传闻"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_9ttrxyukkh7",
+          "text": "三个月里，已经有七个人在同一座桥上失踪",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_p31ekiqkkh7",
+          "text": "磨坊主夜里往河里倒的东西，绝不是面粉",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bh4m9u5kkh7",
+          "text": "北边的钟楼每逢新月就自己响",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_j4p09zlkkh7",
+          "text": "有人出高价收一种只在雨夜开花的草",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4o0toinkkh7",
+          "text": "老教堂的地下比地上多出一整层",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zxxhag8kkh7",
+          "text": "守备队长换了三任，每一任都说是自愿辞职",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_e5n18yukkh7",
+          "text": "集市上有人偷偷卖盖着王室印的封蜡",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fn9gqpokkh7",
+          "text": "领主的猎场里养着一样不该养的东西",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_659o7kpkkh7",
+          "text": "城外的营地里没有女人，也没有火",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7ni6t4pkkh7",
+          "text": "井里浮上来一只不是活物的手，看见的人不肯说第二遍",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8ve036gkkh7",
+          "text": "那场火烧起来的前一晚，有人提前把马牵走了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wf8riplkkh7",
+          "text": "收粮的人不称重，只按袋子数",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_v58zdblkkh7",
+          "text": "山里有条路，地图上没有，走过的人也不提",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_o1t94fwkkh7",
+          "text": "桥修了三次，每次都在同一个位置塌",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_tbi3urtkkh7",
+          "text": "教会收走了一批旧书，书的主人当晚就走了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5qezbjzkkh7",
+          "text": "有人花整整一袋银币，只买了一句「他不在」",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_imwpiqbkkh7",
+      "name": "酒馆·当晚事件",
+      "folderId": "fd_xhe5wzgkkh7",
+      "tags": [
+        "地点",
+        "酒馆",
+        "事件"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_gnar4iwkkh7",
+          "text": "一个外乡人推门进来，屋里立刻安静了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dn89ygbkkh7",
+          "text": "有人在角落吐了一地，没人去管",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_35gglxxkkh7",
+          "text": "两个人因为一张椅子动了手，很快被拉开",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7el5z89kkh7",
+          "text": "一个孩子跑进来喊了一句什么，又跑出去",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_p9d9evykkh7",
+          "text": "灯灭了半刻，再亮的时候少了一个人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2r5yimukkh7",
+          "text": "有人把一封信放在吧台上就走了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vs40vvikkh7",
+          "text": "一个客人把自己的酒分给所有人，然后哭了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lsg0tz8kkh7",
+          "text": "巡街的进来查人，只查一个人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_odxmi71kkh7",
+          "text": "有人在你背后叫了一个名字，你没听过",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fyabrz8kkh7",
+          "text": "后门被人敲了三下，节奏很固定",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ekj5639kkh7",
+          "text": "一个醉汉站起来要讲故事，被店主按住",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_s09e0jpkkh7",
+          "text": "有人拿刀割开自己的手掌，说要立誓",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3mr62n3kkh7",
+          "text": "一个女人进来问有没有见过一个孩子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ti65wp7kkh7",
+          "text": "角落里的人终于站起来，走到你的桌前",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_mop5zj3kkh7",
+      "name": "过夜",
+      "folderId": "fd_xhe5wzgkkh7",
+      "tags": [
+        "地点",
+        "酒馆"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_1jista6kkh7",
+          "text": "房间里只有一张床和一只不上锁的木箱",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ix9911lkkh7",
+          "text": "床板下垫的草有霉味，翻身会响",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_sdxfx2mkkh7",
+          "text": "隔壁的呼吸声整夜不停，但隔壁没有住人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fnta5i4kkh7",
+          "text": "窗子关不严，风整夜在缝里叫",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_e7x8506kkh7",
+          "text": "半夜有人试过门闩，试了三次",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yv5ew1wkkh7",
+          "text": "楼上有人来回走，从一头到另一头",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bdqtvykkkh7",
+          "text": "床上有别人的头发，不止一个人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_suuny9hkkh7",
+          "text": "灯油见底，火苗只有豆子大",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_kmk48b0kkh7",
+          "text": "墙上有指甲划出的痕迹，很深",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_mymjbupkkh7",
+          "text": "你睡到一半听见马厩那边有响动",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_isyash3kkh7",
+          "text": "早上门缝里塞进来一张叠成三角的纸",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qxu6o4vkkh7",
+          "text": "房钱已经付过，但店主说不记得",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_qc936pfkkh7",
+      "name": "天气",
+      "folderId": "fd_a6axpgdkkh7",
+      "tags": [
+        "地点",
+        "荒野"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_9xv5cmtkkh7",
+          "text": "细雨夹着冷风，衣服贴在身上一直不干",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_hqs8q6fkkh7",
+          "text": "日头毒辣，尘土浮在半空，呼吸发干",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_79hu1dwkkh7",
+          "text": "浓雾贴着地面爬，只看得见脚下三丈",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_51xquv8kkh7",
+          "text": "天色发青，闷雷滚了很久也不落雨",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7jg78stkkh7",
+          "text": "落着细碎的雪粒，风一来就横着走",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_sz2g19wkkh7",
+          "text": "风大得几乎站不稳，说话要背对着风",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qo67jyakkh7",
+          "text": "天晴，云高，晒得石头烫手",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_em79vcxkkh7",
+          "text": "起了沙，牙缝里一整天才清干净",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bnh11bbkkh7",
+          "text": "天冷得呼出的气在胡子上结霜",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_646yigakkh7",
+          "text": "雨刚停，什么都湿，什么都在滴水",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yyalb51kkh7",
+          "text": "夜里的风突然转了向，带着咸味",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_drhhrw0kkh7",
+          "text": "无风的阴天，闷得像有人按着你的胸口",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_wyzukc7kkh7",
+      "name": "地形与路况",
+      "folderId": "fd_a6axpgdkkh7",
+      "tags": [
+        "地点",
+        "荒野"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_s06p1jkkkh7",
+          "text": "一条沿山脊走的路，两侧都是斜坡",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vvykt7akkh7",
+          "text": "路被水冲断了，要绕过去得走半天",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qi4xd2rkkh7",
+          "text": "一片稀疏的林地，树都是同一种",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0tqciookkh7",
+          "text": "荒原，只有石头和沙，没有影子可躲",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_rcrejrtkkh7",
+          "text": "要过河，最浅的地方也没到腰",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_hhkwfbjkkh7",
+          "text": "一段旧石道，石缝里长出草",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4kf597ekkh7",
+          "text": "路上有车辙，很新，但前后都没有车",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_eyi06l3kkh7",
+          "text": "一片被火烧过的林子，黑得发亮",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jqkyxlakkh7",
+          "text": "一片沼泽，走一步退半步，脚下一直在响",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_w3qu8ockkh7",
+          "text": "一座石桥，一半还在，一半在水里",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6goy0lmkkh7",
+          "text": "一道谷地，回声比想象的大",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_t69tifskkh7",
+          "text": "一条山道，只容一匹马，不能并排",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_pz6t82vkkh7",
+          "text": "大片麦田，已经过了收割的日子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ygqmexnkkh7",
+          "text": "一段被拆掉的关墙，石头被人搬走用了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gdgn6e6kkh7",
+          "text": "一片圆形洼地，中间有一圈不长草的土",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_x6z4myvkkh7",
+          "text": "一条往下走的路，越走越窄",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_7t567ejkkh7",
+      "name": "路边细节",
+      "folderId": "fd_a6axpgdkkh7",
+      "tags": [
+        "地点",
+        "荒野"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_b8nl3sykkh7",
+          "text": "树干上钉着一块木牌，字被雨水洗得只剩一半",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_it29f6bkkh7",
+          "text": "路边的石头堆成一个不属于这里的形状",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_du50xkpkkh7",
+          "text": "一具动物的尸体，骨头被啃得很干净",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_pxsv1axkkh7",
+          "text": "有人在这里生过火，灰是冷的，脚印是新的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xib7a3akkh7",
+          "text": "一件挂在树杈上的衣服，扣子还在",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fpnxehekkh7",
+          "text": "一块被踩塌的麦田，面积刚好够一个人躺下",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yn24jmrkkh7",
+          "text": "一口枯井，井沿有新的磨损",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xeoshi4kkh7",
+          "text": "一根断掉的缰绳，断口很利",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_pnc7pxpkkh7",
+          "text": "一座路口的神龛，供的是不认识的东西",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_kxgt47skkh7",
+          "text": "一辆坏掉的车，车轮被拆走了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_00x7ov0kkh7",
+          "text": "一堆马粪，还冒着一点热气",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_hf7isp0kkh7",
+          "text": "篱笆上挂着布条，红的，很新",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g8wsdxykkh7",
+          "text": "一条被人反复走出来的小径，通往林子里",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bpot2ezkkh7",
+          "text": "路标被换了方向，钉子孔是新的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qig8gxukkh7",
+          "text": "一只鞋，只有一只，鞋头朝路外",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zdnv122kkh7",
+          "text": "有人在这里等过很久，地上有一圈踩实的土",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_8otluzmkkh7",
+      "name": "野外声音",
+      "folderId": "fd_a6axpgdkkh7",
+      "tags": [
+        "地点",
+        "荒野"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_f7wv5wfkkh7",
+          "text": "风穿过枯枝，声音像有人在低声数数",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4xofjw5kkh7",
+          "text": "很远的地方有狼嚎，只有一声",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_88k9liqkkh7",
+          "text": "树叶里一直有窸窣声，停不下来",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g8fnyoykkh7",
+          "text": "一匹马在夜里打响鼻，一响就不停",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_sti3nn5kkh7",
+          "text": "有水声，但找不出水在哪里",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2k76cp1kkh7",
+          "text": "鸟突然全飞走了，一点声音都不留",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_e9581xokkh7",
+          "text": "有人在远处咳嗽，咳了很久",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xqf71yqkkh7",
+          "text": "树枝折断的声音，很轻，但离得不远",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_naibfrvkkh7",
+          "text": "夜里有什么在绕着营地走，走得很慢",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8w9av2pkkh7",
+          "text": "岩石缝里有滴水的声音，一下一下",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gw6h7w7kkh7",
+          "text": "一声闷响，像重物落地，然后没动静了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zyodis1kkh7",
+          "text": "风里有铃声，很细，像很远的地方挂着铃",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_joac4b3kkh7",
+      "name": "露营",
+      "folderId": "fd_a6axpgdkkh7",
+      "tags": [
+        "地点",
+        "荒野"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_qnzadfakkh7",
+          "text": "火生不起来，柴都是湿的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9ovgy4vkkh7",
+          "text": "火太大，烧到靴子才把火压小",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0wr8kw6kkh7",
+          "text": "睡到一半听见有人在你耳朵边上数数",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zt797i8kkh7",
+          "text": "守夜的人睡着了，谁都不承认自己在守夜",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wke9c2ckkh7",
+          "text": "半夜有动物来翻过包袱，留了爪印",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_w9ymgwpkkh7",
+          "text": "火堆对面的空地上，有人坐过，土还是温的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jyicr4ukkh7",
+          "text": "起夜的人一直没回来",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_btj2vm9kkh7",
+          "text": "下了一夜的雨，早上没有一个人说好话",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_m8zbrubkkh7",
+          "text": "有个人一直在火上烤同一块饼，烤到焦了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g82vjsqkkh7",
+          "text": "有人说梦话，说了一个名字，第二天没人认",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_q1wo56zkkh7",
+          "text": "营地里的狗一直朝一个方向低吼",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ks2njigkkh7",
+          "text": "帐篷外的地上，多了一排很小的脚印",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_s3ytespkkh7",
+          "text": "早上发现包里少了一样东西，没人看见谁拿的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_orkuxr3kkh7",
+          "text": "火堆的灰里埋着一个不属于这里的东西",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_m386n1skkh7",
+      "name": "地牢·入口",
+      "folderId": "fd_s8alvwjkkh7",
+      "tags": [
+        "地点",
+        "地牢"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_bbqpdwpkkh7",
+          "text": "一道向下走的石阶，两侧没有扶手",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_tjqpxgakkh7",
+          "text": "井底有个侧洞，只能一个人侧身进去",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_sl0meowkkh7",
+          "text": "铁栅栏后面是空的，栅栏本身已经锈断",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1dfnvh0kkh7",
+          "text": "门口刻着一行字，被凿掉了一半",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_f72l7h2kkh7",
+          "text": "一段塌方，要清开才能过",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qu0byy3kkh7",
+          "text": "河水退下去后露出的洞口，还在滴水",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_900wuptkkh7",
+          "text": "一扇石门，门缝里有风出来",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_t9rpv3dkkh7",
+          "text": "地上有个往下塌的坑，边缘是圆的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0fww1obkkh7",
+          "text": "一座被挖开的墓，砖都不见了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_i6ct80ykkh7",
+          "text": "山壁上有一道裂缝，刚好够人挤进去",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3j9m3uwkkh7",
+          "text": "一条旧的排水渠，比想象中宽",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_adhau9vkkh7",
+          "text": "楼梯是木头的，走上去就断一段",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_kkao1dskkh7",
+          "text": "入口被人用石头堵过，堵得不结实",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ivcue0wkkh7",
+          "text": "门上有锁，锁是新的",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_pd3lydmkkh7",
+      "name": "地牢·房间类型",
+      "folderId": "fd_s8alvwjkkh7",
+      "tags": [
+        "地点",
+        "地牢"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_ngofu33kkh7",
+          "text": "一间前厅，地上有褪色的圆形图案",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_aps4swvkkh7",
+          "text": "长长的走廊，两侧是等距的门洞",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_kgypundkkh7",
+          "text": "储物间，架子都倒了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_spnn0o0kkh7",
+          "text": "祈祷室，长凳只剩两条腿",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xzcij84kkh7",
+          "text": "刑房，东西都还在，只是没有人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xss9tfvkkh7",
+          "text": "蓄水池，水面很平，看不见底",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_forw17ukkh7",
+          "text": "牢房区，门都开着",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_y4cieemkkh7",
+          "text": "一间圆形的屋子，说不出原来做什么用",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_w3yh7xfkkh7",
+          "text": "墓室，石棺盖被人推开了一寸",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_znk5g70kkh7",
+          "text": "厨房，锅还在灶上，锅里还有东西",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xg9jqrfkkh7",
+          "text": "兵营，靠墙一排没有铺盖的床",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g4j2veykkh7",
+          "text": "一间空屋，只有一面镜子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bbm4fiykkh7",
+          "text": "图书室，书都湿成了一块",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_erorwfekkh7",
+          "text": "楼梯间，通向更深处，也通向上面",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_937ho57kkh7",
+      "name": "地牢·房间细节",
+      "folderId": "fd_s8alvwjkkh7",
+      "tags": [
+        "地点",
+        "地牢"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_g5se73mkkh7",
+          "text": "墙面上有反复摸出的手印，全是同一只右手",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9geqlktkkh7",
+          "text": "地面刻着划痕，一道一道，像在数日子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yhemgz0kkh7",
+          "text": "一条锁链从墙里伸出来，末端是空的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ysrlrqzkkh7",
+          "text": "桌上有半杯水，杯壁还是湿的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1j3x5sckkh7",
+          "text": "天花板上挂着一排钩子，钩子上什么也没有",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_l5xzuw2kkh7",
+          "text": "墙角堆着旧衣服，叠得很整齐",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_n6d6dw9kkh7",
+          "text": "门口的地上有拖拽的痕迹，一路往里",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_imaouldkkh7",
+          "text": "一盏灯还亮着，油要见底了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_tofed7wkkh7",
+          "text": "一面墙是新砌的，砖缝比别处白",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_nhozt19kkh7",
+          "text": "地上一圈蜡烛，全烧到了同一个高度",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_l3onp98kkh7",
+          "text": "一幅画被挖走了眼睛的位置",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fa8qeb8kkh7",
+          "text": "一处干涸的水道，里面有几枚小骨头",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_syhq8f3kkh7",
+          "text": "石头上刻着一整排一模一样的名字",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_uctqn9okkh7",
+          "text": "一条绳子从上方垂下来，末端系着一个结",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3gbcui8kkh7",
+          "text": "门是从里面被顶住的，顶门的东西不见了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lid830skkh7",
+          "text": "地面湿滑，水在上面走出一条细线",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_0240dwmkkh7",
+      "name": "地牢·气味与声音",
+      "folderId": "fd_s8alvwjkkh7",
+      "tags": [
+        "地点",
+        "地牢"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_mu1er1lkkh7",
+          "text": "空气里是铁的锈味和陈水的腥味，脚下每一步都有回音",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3ykmi52kkh7",
+          "text": "一股甜味，甜得让人发晕，却找不到来源",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_obi7d8lkkh7",
+          "text": "闻起来像烧过的头发，安静得能听见自己的心跳",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_n5us3qwkkh7",
+          "text": "霉味从还在滴水的墙缝里出来，远处有一下一下的滴水声",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g85h6a4kkh7",
+          "text": "这里冷得没有味道，只有鼻子发疼，声音传得很硬",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_03ucs9dkkh7",
+          "text": "空气里有一缕很淡的香，像有人刚刚走过",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_62vm0likkh7",
+          "text": "什么味道都没有，干净得反常，也听不见任何虫鸣",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9uf02xukkh7",
+          "text": "血腥味很新，但不是从这个房间里出来的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_k01mf0ckkh7",
+          "text": "动物身上的膻味混着湿土，头顶有东西在慢慢移动",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_uyrzymakkh7",
+          "text": "远处有滴水落在金属上，回音一长一短",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7aqrxy0kkh7",
+          "text": "有东西在石头后面移动，很慢，一直在动",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_78lay5xkkh7",
+          "text": "有人在前一个房间一下一下地敲，节奏不变",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cm21u6hkkh7",
+          "text": "风穿过窄缝，发出像人呼吸一样的声音",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_v3zvzx4kkh7",
+          "text": "什么声音都没有，连自己的脚步都听不清",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gvs20rikkh7",
+          "text": "上面传来拖东西的声音，然后停了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_j7dx243kkh7",
+          "text": "有很轻的歌声，找不出方向",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_b7m8xgwkkh7",
+      "name": "地牢·陷阱与残骸",
+      "folderId": "fd_s8alvwjkkh7",
+      "tags": [
+        "地点",
+        "地牢"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_eom6yupkkh7",
+          "text": "地砖有一块颜色略深，边缘有细缝",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qn67l08kkh7",
+          "text": "门后挂着一具骨架，衣服还挂在骨头上",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_sqq6e97kkh7",
+          "text": "天花板上有裂缝，缝里塞着东西",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g09o50ukkh7",
+          "text": "一根绳子横在路中间，高度刚好绊脚",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6in6oztkkh7",
+          "text": "墙上的孔洞排成一排，孔口发黑",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9z15fabkkh7",
+          "text": "地上散落着几支断箭，箭杆上还有羽毛",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fkl4uehkkh7",
+          "text": "一盏吊灯，铁链断了一半，只用一丝连着",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_06ses1ikkh7",
+          "text": "一具尸体被压在石头下面，只露出手",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9kpdq2fkkh7",
+          "text": "石板上有烧焦的痕迹，形状是人形",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ppkffzgkkh7",
+          "text": "楼梯第三级是空的，下面就是尖刺",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8y5z30tkkh7",
+          "text": "一堆白骨，大多是小动物的，只有一具不是",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0ur08uokkh7",
+          "text": "一扇门的把手被人反复推过，磨得很亮",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_59q6nhmkkh7",
+          "text": "水面下隐约有反光，不是石头",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yrghgkvkkh7",
+          "text": "墙上有一块可以按下去的砖，按下去会有响动",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zc6n54tkkh7",
+          "text": "一条通道被人用碎石堵住，石头是新的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yvvwyeqkkh7",
+          "text": "地上一滩干掉的蜡，形状像有人在这里跪过",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_jfj174mkkh7",
+      "name": "地牢·壁画与刻痕",
+      "folderId": "fd_s8alvwjkkh7",
+      "tags": [
+        "地点",
+        "地牢"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_ipwhfzqkkh7",
+          "text": "一群人围着一个不是人的东西在跪",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_p5dwa8vkkh7",
+          "text": "一幅画分成两半，一半被全部刮掉",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_pbqj0mlkkh7",
+          "text": "画上的人都没有脸，只有一个是有的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0jilbzgkkh7",
+          "text": "一整面墙的名字，最后几个是新的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4agkm8dkkh7",
+          "text": "一句话被反复刻了几十遍，越刻越深",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xka4m33kkh7",
+          "text": "画着一只眼睛，位置在整面墙的正中",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3n5ayt0kkh7",
+          "text": "一行人向下走，最下面那个人在回头",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_t8r1d4rkkh7",
+          "text": "图案看起来像地图，但没有比例",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cj02d4rkkh7",
+          "text": "画着一场交易：一边是人，一边是看不出是什么的东西",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5zdrya5kkh7",
+          "text": "一个圆，圆里套圆，最里面是空的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_kwp9wczkkh7",
+          "text": "画着一扇门，门在他们那边的位置是开的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_s6ob3qdkkh7",
+          "text": "刻痕很浅，像用指甲划的，从地面一直向上",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_s8dtkx6kkh7",
+      "name": "地牢·可搜刮",
+      "folderId": "fd_s8alvwjkkh7",
+      "tags": [
+        "地点",
+        "地牢"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_8285h5wkkh7",
+          "text": "一只皮袋，里面是几枚发黑的银币",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8nuv6p4kkh7",
+          "text": "一把插在墙缝里的短刀，刀刃还有油",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_c2s8khskkh7",
+          "text": "一件叠好的外衣，口袋里有半张饼",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_mbjs84bkkh7",
+          "text": "一个小铁盒，锁着，摇一摇有声音",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vrstegkkkh7",
+          "text": "一串钥匙，钥匙上贴着看不懂的标签",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3357sfdkkh7",
+          "text": "一本湿透的册子，只有最后几页能看清",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g2ucnqukkh7",
+          "text": "一截蜡烛和火石，用油布包着",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0m99nyskkh7",
+          "text": "一枚戒指，内圈刻着两个字",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2pe92cvkkh7",
+          "text": "一瓶药，塞子被咬过",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cl23t9wkkh7",
+          "text": "一条银链子，坠子不见了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_mx057kckkh7",
+          "text": "一副骰子，灌了铅",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_53jajq0kkh7",
+          "text": "一面小镜子，背面刻着一个名字",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_kx2wtd7kkh7",
+          "text": "一个孩子的木马，缺了一条腿",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yqelsokkkh7",
+          "text": "一件带血的内衬，尺寸和这里的人都不一样",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_45koe61kkh7",
+      "name": "命中·挥砍",
+      "folderId": "fd_153q1tukkh7",
+      "tags": [
+        "战斗",
+        "命中"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_kuce3v8kkh7",
+          "text": "剑锋顺着皮甲的接缝划开，带出一串细密的血珠",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_69t3ly0kkh7",
+          "text": "刀从肩上斜着落下，划开一道整齐的口子",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_bu0qo87kkh7",
+          "text": "刃口蹭过肋骨，发出很轻的一声响",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_iazsjhnkkh7",
+          "text": "刀刃切进衣料和皮肉，像切一块熟透的果",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_j3f0j85kkh7",
+          "text": "一记横扫，血在空气里拉出一道弧",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_x1g02t6kkh7",
+          "text": "时间慢下来，刃口一路推到尽头，才看见血",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_pm3mqczkkh7",
+          "text": "刀势走偏了一点，仍然在臂上开了一条长口",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ybbkgjskkh7",
+          "text": "剑从甲片之间钻进去，卡了一下才抽出来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_f9vcx3jkkh7",
+          "text": "刃口划过小臂，袖子立刻被血粘在皮肤上",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ctsakuvkkh7",
+          "text": "一刀劈开对方举起的护腕，连里面的皮一起",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_oqbecxwkkh7",
+          "text": "剑锋挑过肩头，带起一块布和几线血",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_iym6u2zkkh7",
+          "text": "刃走到一半被人骨硌住，那一下的震动顺着刀柄传上来",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jj68j5ykkh7",
+          "text": "刀背擦过去，刃口紧跟着跟上，两条伤并成一条",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_nlbcjnmkkh7",
+          "text": "斜削过肋下，衣物裂开，血慢慢渗出来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_1or975ckkh7",
+          "text": "一刀切在膝盖上方，对方的重心立刻歪了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_crffrmskkh7",
+          "text": "刃口在腹侧划过，留下一道不深但很长的线",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_5gpawoekkh7",
+      "name": "命中·钝击",
+      "folderId": "fd_153q1tukkh7",
+      "tags": [
+        "战斗",
+        "命中"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_lan0dsgkkh7",
+          "text": "锤头砸在肩甲上，那半边身子明显矮了一截",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_cbblf6ukkh7",
+          "text": "棍子落在肋侧，声音闷得像拍打湿土",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_u47ry7ckkh7",
+          "text": "拳砸在脸上，鼻血立刻顺着下巴流下来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_0zqnxaikkh7",
+          "text": "盾牌边缘顶进胸口，人被顶得连退两步",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_w0tm5ajkkh7",
+          "text": "一记横扫打在小腿，骨头响了一声",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_gentbfckkh7",
+          "text": "脸颊连同下巴被砸得偏过去，眼里有一下什么都没有了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1qa2qsxkkh7",
+          "text": "棍端捅进腹部，人弯下去，半天直不起来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_u4wa2pgkkh7",
+          "text": "铁头砸在头盔上，声音在空地里荡开",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_t2lin2rkkh7",
+          "text": "肘部撞进肋间，对方喘了一口气没喘上来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_svds3sukkh7",
+          "text": "连枷缠上手臂，收的时候把皮肉一起带走",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_d9ky7xckkh7",
+          "text": "锤面正中胸口，衣服下面的胸骨像被压了一下",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_jyzs2kkkkh7",
+          "text": "这一下打在锁骨上，声音很脆，之后那个人就开始用另一只手",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6ev9w2fkkh7",
+          "text": "棍子扫过太阳穴，人晃了一下，站住了，但眼神散了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_whlwelmkkh7",
+          "text": "一记上撩，砸在下巴上，牙齿磕在一起",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_oohzaw5kkh7",
+      "name": "命中·穿刺",
+      "folderId": "fd_153q1tukkh7",
+      "tags": [
+        "战斗",
+        "命中"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_k1jly4akkh7",
+          "text": "剑尖没入肋骨之间，你拧了半圈才拔出来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_vxjoq83kkh7",
+          "text": "矛尖从甲缝里进去，只进了两指深，但已经够了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_un16u0gkkh7",
+          "text": "短剑直直插进大腿，抽出来时血是喷的",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_2otgfqskkh7",
+          "text": "尖头钉进肩膀，人被钉得向后靠了半步",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_z4js6f2kkh7",
+          "text": "刺进腹部，拔出来后对方的手一直按在那里",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_0crr9j6kkh7",
+          "text": "刃尖穿过手掌，钉在后面的木板上，人自己抽了出来",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_utf8ihfkkh7",
+          "text": "一下捅进腰侧，对方连叫都没叫出来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_j5zqx2nkkh7",
+          "text": "长矛从盾牌下方穿过，顶进小腿",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ji4r5ytkkh7",
+          "text": "匕尖挑开颈侧的皮，血顺着领口流进衣里",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_qex7gcakkh7",
+          "text": "剑尖在胸口划了一下，只留下一处破口",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_9uic0fakkh7",
+          "text": "一记直刺，从锁骨下方进去，很深",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_k2h3nprkkh7",
+          "text": "矛尖穿过护喉的下缘，那一声闷响之后，一切都在变慢",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_nlj3ib1kkh7",
+          "text": "刺中肋下，抽出来的时候带出一点别的东西",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ucmkdj1kkh7",
+          "text": "三棱锥在肩上开了个洞，血往外渗得很慢",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_jxz4k87kkh7",
+      "name": "命中·箭矢",
+      "folderId": "fd_153q1tukkh7",
+      "tags": [
+        "战斗",
+        "命中"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_ehsd90vkkh7",
+          "text": "箭矢擦着他耳际钉进身后的木柱，尾羽还在颤",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_dcng42skkh7",
+          "text": "一箭扎进大腿，箭杆跟着他的动作一起晃",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_f3asgqwkkh7",
+          "text": "箭从甲片缝隙里进去，只剩尾羽在外面",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_4envqjzkkh7",
+          "text": "箭钉在盾上，穿透了一半，尖端从另一面出来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_5zb2mmpkkh7",
+          "text": "一箭射中肩膀，那人往前一扑才没有倒下",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ncfpetjkkh7",
+          "text": "箭在半空中几乎看不见，等你听见响的时候，它已经在那里了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ia9rtgjkkh7",
+          "text": "箭穿过斗篷，把布和肉一起钉住",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_pws3hrfkkh7",
+          "text": "一支箭插进腰侧，他没马上发现，走了两步才停",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_zmy6getkkh7",
+          "text": "箭射穿了小腿，那人跪了下去",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ml3dn6ckkh7",
+          "text": "箭钉进头盔侧边，声音像敲了一下铁",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_qah4f62kkh7",
+          "text": "一箭从背后进，从锁骨下方出来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_4f1e9x0kkh7",
+          "text": "那一箭从人群的缝隙里过去，正好落在最不该落的地方",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_rpts87kkkh7",
+          "text": "箭在肩胛上开了个口，血顺着背流进腰带",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_l7awcrdkkh7",
+          "text": "箭羽擦过脸颊，留下一条红线，下一支已经上弦",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_l6raef3kkh7",
+      "name": "法术·火焰",
+      "folderId": "fd_153q1tukkh7",
+      "tags": [
+        "战斗",
+        "命中",
+        "法术"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_gjh3hnqkkh7",
+          "text": "火舌舔过他的袖口，空气里立刻弥漫开焦糊的布料味",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_1bcu3zwkkh7",
+          "text": "一团火在胸前炸开，衣服上的扣子四下飞",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_9m1qw0xkkh7",
+          "text": "火沿着地面烧过去，草在响，人在退",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_4p2gyb4kkh7",
+          "text": "火焰卷过手臂，皮肉上的水汽滋了一声",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_nwhbqiokkh7",
+          "text": "他的头发先烧起来，然后他才发现",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_vt3evyckkh7",
+          "text": "光从中心往外推，把所有影子都推到墙上，然后才听见声音",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0tjv6lbkkh7",
+          "text": "火在他脚边围成一个圈，圈外的人不敢进来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_9h8gm9kkkh7",
+          "text": "一团火贴着脸过去，那一边的眉毛没了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_4eco1omkkh7",
+          "text": "火焰咬住了护腕，金属开始发红",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_30kwkhbkkh7",
+          "text": "火星落进衣领，他在原地拍打了很久",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_8i1s9s8kkh7",
+          "text": "火从他身体一侧掠过，那半边衣服直接焦了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_8n5lenpkkh7",
+          "text": "整条走廊被火照成橘色，墙上的影子在动，不是人的动作",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_cgkzc4qkkh7",
+      "name": "法术·寒冰",
+      "folderId": "fd_153q1tukkh7",
+      "tags": [
+        "战斗",
+        "命中",
+        "法术"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_svp4hq9kkh7",
+          "text": "霜从他的袖口一路爬上肩膀，布变脆了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_qgyq8bxkkh7",
+          "text": "冰在他脚下铺开，鞋底发出细微的裂声",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_cuin7kkkkh7",
+          "text": "寒气贴上来，他的呼吸立刻变成白的",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_mnc1lkxkkh7",
+          "text": "冰凌扎进小腿，血从裂口里出来得很慢",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_p4ivu30kkh7",
+          "text": "低温让伤口周围的皮肤变成不正常的颜色",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_rczyxtmkkh7",
+          "text": "空气里所有的水汽在同一瞬间凝成霜，落下来像一场很小的雪",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_m9uwzq2kkh7",
+          "text": "一层薄冰盖住他的眼睛，他抬手去抹",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_q2x0oe4kkh7",
+          "text": "冰在甲片上结了一层，关节开始不听话",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_uzxng0gkkh7",
+          "text": "他呼出的气结在胡须上，很快连成一片",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_a1123sokkh7",
+          "text": "地面冻住了，他每退一步都在打滑",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_8sjvnb1kkh7",
+          "text": "寒气钻进衣领，那人整个背都弓起来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_2h85egnkkh7",
+          "text": "冰从地面长出来，围着他，把声音都关在外面",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_rstf3k3kkh7",
+      "name": "法术·闪电",
+      "folderId": "fd_153q1tukkh7",
+      "tags": [
+        "战斗",
+        "命中",
+        "法术"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_9jt11f5kkh7",
+          "text": "空气里先有股铁锈味，然后才是光",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_mp2hwu5kkh7",
+          "text": "电光在他肩上炸开，衣服上留下一道焦黑的纹",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_gglpk0vkkh7",
+          "text": "一道蓝白色的线穿过他手里那把剑",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_p63laq1kkh7",
+          "text": "他被电得僵住了半刻，头发直立着",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_fcz1j9bkkh7",
+          "text": "光从天上落下来，整间屋子白了一瞬，之后所有东西都带着轮廓的残影",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ee4u8l6kkh7",
+          "text": "电流顺着湿衣爬，他一直在抖",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_7wfdwkpkkh7",
+          "text": "雷声比光晚了很久，久到以为不会来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_4620lubkkh7",
+          "text": "电弧跳到金属上，那把刀开始发烫",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_tz25us7kkh7",
+          "text": "一下轻微的爆裂，他手上多了个焦黑的点",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_qzq9ep2kkh7",
+          "text": "电光在他脚下炸开，地面碎了，也焦了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_9o1qojskkh7",
+          "text": "他张了张嘴，声音没能出来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ne1yqbokkh7",
+          "text": "空气被烧空了，你听见的是它重新填进去的那一声",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_dcfyot0kkh7",
+      "name": "法术·黯蚀",
+      "folderId": "fd_153q1tukkh7",
+      "tags": [
+        "战斗",
+        "命中",
+        "法术"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_21f1hfikkh7",
+          "text": "伤口没有流血，边缘是干的，颜色也不对",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ea58lwekkh7",
+          "text": "皮肤从那一点开始变灰，往外扩",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_6t1k63fkkh7",
+          "text": "光在他身上被吃掉了，只剩下更暗的一块",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_90hh57ckkh7",
+          "text": "他按着胸口，那里什么也没有，但他一直按着",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_8z7dp6vkkh7",
+          "text": "那处伤口周围的皮肤在慢慢塌陷",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_nbgm8gpkkh7",
+          "text": "空气变冷，也变稀，声音传出来都变得不真实",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ot4qjqjkkh7",
+          "text": "血从伤口里出来，是黑色的",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_v31eovhkkh7",
+          "text": "那里的衣服完好，衣服下面的东西不是",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_rzzvweekkh7",
+          "text": "他一直看着自己的手，手背上有一块在消失",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ipjg3ikkkh7",
+          "text": "他咳了一声，咳出来的东西不该在身体里",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_uzdxd7skkh7",
+          "text": "那一小块地方连影子都没有",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_77n6kpskkh7",
+          "text": "房间里的光暗下去一寸，之后就没有再亮回来",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_q0u9h9mkkh7",
+      "name": "法术·光耀",
+      "folderId": "fd_153q1tukkh7",
+      "tags": [
+        "战斗",
+        "命中",
+        "法术"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_7jdxmqekkh7",
+          "text": "强光从正面打过去，他的影子被压到脚下",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_wwfnerzkkh7",
+          "text": "光烧过皮肤，留下的痕迹像晒了很久",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_q3ttka9kkh7",
+          "text": "他一瞬间看不见了，抬手挡在眼前",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_8p5k99qkkh7",
+          "text": "光落在他身上，衣服上的颜色退了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_6dsmgm2kkh7",
+          "text": "整片空间白得没有层次，你的眼睛隔了很久才恢复",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_yrd3ci2kkh7",
+          "text": "光从伤口里透出来，边缘开始焦黑",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_cchmu5ekkh7",
+          "text": "光斑在他脸上移动，跟着他的动作",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_gsn7n91kkh7",
+          "text": "那一击没有声音，只有一道白线划过去",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_iflmoblkkh7",
+          "text": "光钉在胸口，他呼吸的时候胸口在发亮",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_z8sdfo8kkh7",
+          "text": "他被光刺得一直在眨眼，眼泪流下来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_y8awtb7kkh7",
+          "text": "光照过的地方，皮肤开始起细小的裂纹",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_4o7hbedkkh7",
+          "text": "光在暗处炸开，把所有东西都照得过分清楚",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_bfx4xugkkh7",
+      "name": "法术·精神",
+      "folderId": "fd_153q1tukkh7",
+      "tags": [
+        "战斗",
+        "命中",
+        "法术"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_42tvxnhkkh7",
+          "text": "他的眼神忽然空了一下，像有人在里面推了他一把",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_8apts33kkh7",
+          "text": "他捂住耳朵，可那里没有声音",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_8lout2ckkh7",
+          "text": "他开始重复一句话，越说越快",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ulypwk1kkh7",
+          "text": "他看你的眼神变了，像在看另一个人",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_geb4i3pkkh7",
+          "text": "他站在原地，但你已经确定他不在这里了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_b5i9qm9kkh7",
+          "text": "他的手垂下去，武器掉在地上，他没有去捡",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_7ulaedgkkh7",
+          "text": "他往后退，退到墙边，然后贴着墙站住",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_eayvn9nkkh7",
+          "text": "他忽然开始道歉，对象不是你",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_y7lnpzlkkh7",
+          "text": "他的嘴角抽了一下，然后忘了自己想说什么",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_3q3vpntkkh7",
+          "text": "他看着自己的手，像第一次见到",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ebthmxjkkh7",
+          "text": "他嘴唇在动，但你听见的声音比他的嘴慢半拍",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_va2w1jqkkh7",
+          "text": "有一瞬间，他脸上出现了不属于他的表情",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_182u2gpkkh7",
+      "name": "命中描述",
+      "folderId": "fd_153q1tukkh7",
+      "tags": [
+        "战斗",
+        "命中",
+        "组合用"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_8fww1snkkh7",
+          "text": "{命中·挥砍}",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_3khmtpbkkh7",
+          "text": "{命中·钝击}",
+          "weight": 4,
+          "range": null
+        },
+        {
+          "id": "e_smwppwykkh7",
+          "text": "{命中·穿刺}",
+          "weight": 4,
+          "range": null
+        },
+        {
+          "id": "e_vfe3fc4kkh7",
+          "text": "{命中·箭矢}",
+          "weight": 4,
+          "range": null
+        },
+        {
+          "id": "e_87agpcckkh7",
+          "text": "{法术·火焰}",
+          "weight": 2,
+          "range": null
+        },
+        {
+          "id": "e_miodn6gkkh7",
+          "text": "{法术·寒冰}",
+          "weight": 2,
+          "range": null
+        },
+        {
+          "id": "e_9cr10kekkh7",
+          "text": "{法术·闪电}",
+          "weight": 2,
+          "range": null
+        },
+        {
+          "id": "e_5hzosvukkh7",
+          "text": "{法术·黯蚀}",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xr946b4kkh7",
+          "text": "{法术·光耀}",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_46lx2zfkkh7",
+          "text": "{法术·精神}",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_it0h39gkkh7",
+      "name": "未命中与擦伤",
+      "folderId": "fd_os7a14ukkh7",
+      "tags": [
+        "战斗",
+        "未命中"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_zehbsyykkh7",
+          "text": "他后撤半步，你的刀只削断了斗篷的一角",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_98y5pqlkkh7",
+          "text": "刀刃从他胸前两指处滑开，衣服裂了，人没事",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_9xiv02kkkh7",
+          "text": "他的护腕挡住了那一记，火星在两人之间散开",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_tattt2nkkh7",
+          "text": "你的剑擦过他的肩甲，发出很长的刮擦声",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_z7qu6rpkkh7",
+          "text": "箭头钉进他身后的门，木头裂开",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_9iwgtozkkh7",
+          "text": "你的一击落空，尽头的空气被带出一声轻响",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_bw6j2z9kkh7",
+          "text": "他的重心一偏，那一击只划破了外衣",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_c6n6ukhkkh7",
+          "text": "刀锋在他脸侧掠过，削掉了半截头发",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_5wbre82kkh7",
+          "text": "你的矛尖刺进盾面，卡住了一瞬",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_s1eoo5bkkh7",
+          "text": "他低头，你的横斩只扫到空气和他的帽檐",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_83y587kkkh7",
+          "text": "那一击被他用剑面卸开，力沿着斜面散掉了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_76hll8fkkh7",
+          "text": "你的刀背蹭到他的下巴，血出来一点，不致命",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_nxxmg98kkh7",
+          "text": "他在最后一刻侧了身，你的刃收势不及，砍进了墙",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_9skywb2kkh8",
+          "text": "你的箭钉在他的披风上，把他拉得转了半圈",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_9jinntykkh8",
+          "text": "他抬脚踢偏了你的手腕，刀锋划过地面",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_fti2554kkh8",
+          "text": "你的锤砸在他刚离开的位置，地砖碎了",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_5szhheykkh8",
+      "name": "格挡与招架",
+      "folderId": "fd_os7a14ukkh7",
+      "tags": [
+        "战斗",
+        "防御"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_ilcileckkh8",
+          "text": "两剑相击，震得你虎口发麻，他也被推开了半步",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_qjm6dh6kkh8",
+          "text": "金属撞在一起，火花在他脸前亮了一下",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_x7rnua8kkh8",
+          "text": "他举盾迎上来，整个人被压得膝弯了一寸",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_jp9vc5ikkh8",
+          "text": "枪杆横过来，挡下这一记，声音闷得发沉",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ncpjpb1kkh8",
+          "text": "他的剑斜着一带，把你的刀势引向地面",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_8txpgphkkh8",
+          "text": "两把刀咬在一起，谁都不肯先退，刃口开始卷",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_bl8wuytkkh8",
+          "text": "盾面正中接住锤头，他脚下的石板裂了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_hd1m1kdkkh8",
+          "text": "你的一击被他用剑脊硬接，剑身弯了一下又弹直",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_c5ccfxukkh8",
+          "text": "甲片挡住了刃口，只留下一道白痕",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_u7k7bdkkkh8",
+          "text": "他侧转手腕，把你的兵器卸到一边，重心没动",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_zh8h2c5kkh8",
+          "text": "铁与铁咬住，声音很长，像有人压低嗓子喊",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_5arg8r6kkh8",
+          "text": "他双手举刀横挡，人被震得后退，脚跟抵住了墙",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_5sc9c4ukkh8",
+          "text": "护手的边缘拦住了你的剑尖，差一分就进去了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_cfh86dpkkh8",
+          "text": "他用短刀架住，另一只手已经摸到了腰间",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_vd79to1kkh8",
+      "name": "闪避",
+      "folderId": "fd_os7a14ukkh7",
+      "tags": [
+        "战斗",
+        "防御"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_mhugi7dkkh8",
+          "text": "他整个人向侧面一折，你的兵器只碰到了空气",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_96019rzkkh8",
+          "text": "他往后仰，几乎躺平，再回来时已经站稳",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_apzpkxmkkh8",
+          "text": "他后退的时候没有看脚下，一步都没错",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ku4sl2nkkh8",
+          "text": "你的刀从他的腰带和皮肤之间穿过",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_jjzr71zkkh8",
+          "text": "他贴地滚开，起身时已经换了位置",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ts3wk63kkh8",
+          "text": "他一直在等这一下，让开时脸上没有表情",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_vika4njkkh8",
+          "text": "他在最后一刻偏头，那一击贴着他的耳朵过去",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_xedu3o4kkh8",
+          "text": "他肩膀一沉，人已经从你的另一侧过去了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_904ooobkkh8",
+          "text": "他往后退三步，每一步都退在同一个节奏上",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_o64bwr8kkh8",
+          "text": "他的斗篷被钉住，人从里面挣脱出来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_g405ezfkkh8",
+          "text": "他跳开后落在碎石上，一点声音都没出",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_apxp1cykkh8",
+          "text": "你得手的感觉传上来，但那只是他的衣袖",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_2dsnnk6kkh8",
+      "name": "致命一击·物理",
+      "folderId": "fd_fk26z62kkh7",
+      "tags": [
+        "战斗",
+        "重击"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_zatwjickkh8",
+          "text": "时间仿佛慢了半拍，斧刃整个嵌进了他的肩窝",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_00kru2xkkh8",
+          "text": "那一下从头到脚穿过他，之后他才开始往后退",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_5tbrcm4kkh8",
+          "text": "剑劈开了他举起的手臂，一直落到胸口",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_y6ut4shkkh8",
+          "text": "刃口进去的时候没有声音，出来的时候才有",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_valqssakkh8",
+          "text": "锤砸在太阳穴上，那个人没有倒，只是坐了下去",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_uj9zvqikkh8",
+          "text": "所有动作都停住了，只有他还站着，站了一会儿",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_weuvv32kkh8",
+          "text": "刀从锁骨处进去，直到刀柄，抽出来时你已经确定结果",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_64ddit1kkh8",
+          "text": "他低头看自己的胸口，然后抬头看你，那个表情你会记很久",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_rokb07xkkh8",
+          "text": "矛把他钉在地上，矛杆还在抖",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_v9vcyj7kkh8",
+          "text": "一剑横过颈侧，血像被倒出来一样",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_znilivwkkh8",
+          "text": "这一击把甲片整个打凹进去，凹进去的还有别的东西",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_53ffbh1kkh8",
+          "text": "斧背砸在膝上，那条腿弯向了不该弯的方向",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wsccol7kkh8",
+          "text": "你的刃从他的屏障里穿过去，像穿过一层布",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ndo82iykkh8",
+          "text": "箭从眼睛进去，他没有出声，只是把弓丢下了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_48h4yaskkh8",
+          "text": "那一声很轻，像有人在你耳边合上了一本书",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_hrmnyfokkh8",
+          "text": "他一动不动，你才发现自己已经把刀拔出来了",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_oglmxo5kkh8",
+      "name": "致命一击·法术",
+      "folderId": "fd_fk26z62kkh7",
+      "tags": [
+        "战斗",
+        "重击",
+        "法术"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_jivtaxqkkh8",
+          "text": "火焰在他身体里炸开，光从他的眼睛和嘴里出来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ztv5m1zkkh8",
+          "text": "冰从他的脚下长到头顶，他保持着一个动作不再变",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_c7snolpkkh8",
+          "text": "雷落下来的时候他还是完整的，之后就不是了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_a82xzumkkh8",
+          "text": "那一击之后，那里只剩一个更暗的形状",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_hr6frb2kkh8",
+          "text": "光把他从头到脚洗了一遍，衣物化为灰烬",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wh6uwhykkh8",
+          "text": "伤口周围的一切都在往内塌陷",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_m7vl0phkkh8",
+          "text": "声音先到，光后到，人最后才倒下去",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_hx243u6kkh8",
+          "text": "电流走遍他全身，他所有的肌肉同时收紧",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_l9lb582kkh8",
+          "text": "寒气把他冻在原地，风一吹，他倒了，碎成几块",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1tglud9kkh8",
+          "text": "你听见他最后想说什么，但那已经不是语言了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_7x8pchukkh8",
+          "text": "光从他背后穿出，在胸前留下一个干净的空洞",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wofuz5fkkh8",
+          "text": "他跪下去，然后脸朝下，什么也没有再说",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_sz4yjqdkkh8",
+      "name": "怪物受创·不死与异怪",
+      "folderId": "fd_898akvfkkh7",
+      "tags": [
+        "战斗",
+        "怪物"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_1cx318lkkh8",
+          "text": "它没有痛觉，只是歪着头看那个窟窿，像在看别人的伤",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_llgfap0kkh8",
+          "text": "它被打得退了一步，然后又上前一步，姿势完全一样",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_qizbz4fkkh8",
+          "text": "那个洞没有让它慢下来，只是让它更响了一些",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_nz8l028kkh8",
+          "text": "它的手臂断在半空，落地后还在动",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_9tn4nbskkh8",
+          "text": "它低头看了看自己被砍开的地方，像在检查",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_5uklb3zkkh8",
+          "text": "它笑了一声，声音不该从它的喉咙里出来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_bijj8frkkh8",
+          "text": "攻击穿过去，没有遇到任何阻碍，它却生气了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_11qgj88kkh8",
+          "text": "它把自己散开的一部分捡回来，按回去",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_w11al8rkkh8",
+          "text": "那处伤口冒出的东西不是血",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_gf7oxackkh8",
+          "text": "它退到墙边，墙上的影子比它先动",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_mj84lpakkh8",
+          "text": "它挨了一击，形状有一瞬间变得不对，然后恢复",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_v97e05nkkh8",
+          "text": "它把脸转向你，脸上的地方重新排列了一下",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_uibt6t0kkh8",
+          "text": "它开始发出低低的、有节奏的声音，像在数",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_te9igqbkkh8",
+          "text": "被砍下的那一截在空中变了方向",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_c59nn6ckkh8",
+          "text": "它站住不动，等你靠近，然后才动",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_dmvbhvdkkh8",
+          "text": "它身上的皮裂开，里面是另一层",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_0nxzsmpkkh8",
+      "name": "怪物受创·野兽与龙",
+      "folderId": "fd_898akvfkkh7",
+      "tags": [
+        "战斗",
+        "怪物"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_deoe72wkkh8",
+          "text": "它低吼一声，尾巴抽在墙上，石头掉下来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_lwbu9smkkh8",
+          "text": "它被砍中的地方毛都立起来，血顺着腿淌",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_lni1p2jkkh8",
+          "text": "它没有退，只是把头压低，喉咙里滚着声音",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_8dzyw0ykkh8",
+          "text": "一击落在肩上，它转了个圈，把爪子带过来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_nvp8ud9kkh8",
+          "text": "它的翅膜被划开一道，飞起来的时候明显歪了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_14oihoikkh8",
+          "text": "它痛得猛然翻身，把背贴在地上蹭",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_97h7rktkkh8",
+          "text": "它被击中之后不再看你，改看旁边的路",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_7pxfnk2kkh8",
+          "text": "它短促地叫了一声，那声音像在回应什么",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_9wnxo43kkh8",
+          "text": "它背上的鳞片裂了，底下是红的",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_bx1chqvkkh8",
+          "text": "它绕着圈子走，一边走一边闻自己的伤口",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ry1ymerkkh8",
+          "text": "它把被打中的那条腿收起来，用三条腿站着",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_52cyukkkkh8",
+          "text": "它吐了一口，地上的东西冒着烟",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_dgtlyp6kkh8",
+          "text": "它低下头舔伤口，抬起来时嘴上有血",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_5v3l4u6kkh8",
+          "text": "它往后退，臀先退，眼睛一直没离开你",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_8xsy2ylkkh8",
+          "text": "它身上的力气像是漏出去了，动作慢下来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_oy8djsskkh8",
+          "text": "它抖了抖身子，把那块被打伤的地方甩开",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_jki89txkkh8",
+      "name": "怪物受创·构装与元素",
+      "folderId": "fd_898akvfkkh7",
+      "tags": [
+        "战斗",
+        "怪物"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_9kkhje1kkh8",
+          "text": "构装发出齿轮打滑的声音，一条手臂停在半路",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_9x0aua0kkh8",
+          "text": "元素被劈开的地方立刻合拢，颜色淡了一层",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ofr1q0skkh8",
+          "text": "它身上掉下一块铁，落地的声音比想象的重",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_rp9ok56kkh8",
+          "text": "元素散开，又在你身后聚回来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_dprwmb1kkh8",
+          "text": "关节处冒出烟，它的动作开始有间隔",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_48tjhaakkh8",
+          "text": "那一击穿过去，只带走了一部分它的形体",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_n6w8dcokkh8",
+          "text": "构装的眼睛暗了一下，又亮起来，亮度变了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_y7jvgrykkh8",
+          "text": "元素贴上来，碰到的地方开始结霜",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_sdnvbszkkh8",
+          "text": "它身上传来断裂声，随后整个人矮了一截",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_z4qpscxkkh8",
+          "text": "元素被打散成一团雾，雾在缓慢地重新成形",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_mcy93wvkkh8",
+          "text": "铁壳被砸开，里面是空的，但它在动",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_hqypxa3kkh8",
+          "text": "它的形状变得不规则，边缘一直在变",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_sx0nhuskkh8",
+          "text": "构装转向你，动作中间卡了一下，然后继续",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_otshswfkkh8",
+          "text": "元素退开，退过的地方留下一道焦痕",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_p2ee0y3kkh8",
+          "text": "一处裂口没有合上，里面能看见一直在转的东西",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_wixwe70kkh8",
+          "text": "构装的另一半身体还在打，这一半已经不动了",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_5impxmekkh8",
+      "name": "受创反应",
+      "folderId": "fd_898akvfkkh7",
+      "tags": [
+        "战斗",
+        "怪物",
+        "组合用"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_0nzderxkkh8",
+          "text": "{怪物受创·不死与异怪}",
+          "weight": 3,
+          "range": null
+        },
+        {
+          "id": "e_zdyo5p2kkh8",
+          "text": "{怪物受创·野兽与龙}",
+          "weight": 3,
+          "range": null
+        },
+        {
+          "id": "e_9rtce0skkh8",
+          "text": "{怪物受创·构装与元素}",
+          "weight": 2,
+          "range": null
+        },
+        {
+          "id": "e_2vdf18lkkh8",
+          "text": "{怪物死亡}",
+          "weight": 2,
+          "range": null
+        },
+        {
+          "id": "e_2hz3o6gkkh8",
+          "text": "{士气崩溃与投降}",
+          "weight": 2,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_gwr2z3okkh8",
+      "name": "怪物死亡",
+      "folderId": "fd_898akvfkkh7",
+      "tags": [
+        "战斗",
+        "怪物"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_ge59nbckkh8",
+          "text": "它喉咙里挤出最后一声不像兽类的呜咽，然后不动了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_beyed3ykkh8",
+          "text": "它倒下去，压塌了一小片草，之后就没声音了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_j6f6hbkkkh8",
+          "text": "它的身体散开，慢慢失去形状，最后只剩地上一片痕迹",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_vwu2ce1kkh8",
+          "text": "它先是跪，然后向侧面倒下，眼睛还睁着",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_m390w5mkkh8",
+          "text": "齿轮的声音慢慢停下，最后一下很响",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_knm4gg1kkh8",
+          "text": "它的头歪向一边，所有的动作同时停了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_nm854vhkkh8",
+          "text": "它倒下的时候向你还伸着手，但没有伸到",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_wkcxyg0kkh8",
+          "text": "那团东西散成烟，烟没有散开，只是变淡",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_7xay1zjkkh8",
+          "text": "它的血很快渗进土里，很快就找不到了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_7y6gnbikkh8",
+          "text": "它倒下以后身体还在抽动，抽了很久才停",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_uwaq75zkkh8",
+          "text": "它的重量让地板陷下去一块，然后一切安静",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_1ne63q3kkh8",
+          "text": "最后那一下，它所有的皮都松了下来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_rlpr8dukkh8",
+          "text": "它倒在你脚边，你才看见它比想象的小",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_b2wsdzkkkh8",
+          "text": "它往后退，退到墙边，靠着墙滑下去",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_908ywm6kkh8",
+          "text": "它没有倒下，只是站着，然后慢慢地失去直立",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_bhpacfgkkh8",
+          "text": "它死后，那处伤口还在缓慢地变化",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_0pi2va8kkh8",
+      "name": "士气崩溃与投降",
+      "folderId": "fd_898akvfkkh7",
+      "tags": [
+        "战斗",
+        "怪物"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_r07wigdkkh8",
+          "text": "剩下的两个对视一眼，同时转身，连武器都扔了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_9u11zi5kkh8",
+          "text": "有人喊了一声什么，然后所有人都开始往后退",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ce4a49mkkh8",
+          "text": "他跪下来，把手里的东西举过头顶",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_gkd7vw6kkh8",
+          "text": "他们开始互相推搡，都想先通过那道门",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_1gyctmqkkh8",
+          "text": "一个人丢了盾，然后其他人陆续都丢了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_nycvhz3kkh8",
+          "text": "他们把武器堆在地上，人退到墙边，谁也不抬头",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_jbpq3y1kkh8",
+          "text": "有人开始哭，武器从手里滑下去",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_bcf843kkkh8",
+          "text": "他跪着往前爬了两步，说了一句听不懂的话",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_775sc6bkkh8",
+          "text": "他们开始争论，争执的声音越来越大",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_mllq7w0kkh8",
+          "text": "一个人转身就跑，跑得很快，没有回头",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_96dr9p5kkh8",
+          "text": "他们把伤员留在原地，自己走了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_zmlkxnlkkh8",
+          "text": "他举起双手，慢慢地、极其小心地把刀放在地上",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_bo05euzkkh8",
+          "text": "有人开始用母语喊，声音一次比一次高",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_j5i3vs7kkh8",
+          "text": "他们退到角落，挤在一起，没有人再往前一步",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_cedvtvekkh8",
+      "name": "环境互动",
+      "folderId": "fd_1imzbm0kkh7",
+      "tags": [
+        "战斗",
+        "环境"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_96b5onokkh8",
+          "text": "头顶的吊灯被砍断铁链，轰然砸进人堆里",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_in8f1cukkh8",
+          "text": "酒桶被撞开，酒在地上漫开，所有人的脚步都乱了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_3gsw1y7kkh8",
+          "text": "支架被砍断，堆着的箱子整个塌下来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_33k7341kkh8",
+          "text": "一盏油灯掉在地上，火沿着洒出的油爬",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_uic6p5ukkh8",
+          "text": "桌子被掀翻，上面的东西全飞了出去",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_dcrmkevkkh8",
+          "text": "屋顶的梁被砍出一道深口，灰簌簌落下",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_p3c0dy7kkh8",
+          "text": "货架倒下，把两个人压在下面",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_b6vybclkkh8",
+          "text": "绳索被切断，吊着的东西重重落地",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_rcul076kkh8",
+          "text": "门被撞开，门后站着的人措手不及",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_x34j7iykkh8",
+          "text": "一口锅翻倒，滚烫的东西泼了一地",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ff7bc2akkh8",
+          "text": "镜子被打碎，碎片飞出去，屋里到处都是光",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_l1uqzeskkh8",
+          "text": "马厩的门开了，马在里面炸了锅",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_jl2b2x7kkh8",
+          "text": "台阶被砍断一级，追上来的人一脚踩空",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_juqq0zfkkh8",
+          "text": "水槽被撞破，水冲出来，地面立刻滑了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_zlaopg7kkh8",
+          "text": "蜡烛被扫到布帘上，火一下蹿到了顶",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_iyrezeekkh8",
+          "text": "一堵薄墙被撞出洞，那边的人正抬着手",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_btdaxkukkh8",
+      "name": "战斗干扰",
+      "folderId": "fd_1imzbm0kkh7",
+      "tags": [
+        "战斗",
+        "环境"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_bixct8vkkh8",
+          "text": "头顶簌簌落下碎石——刚才那一击似乎震松了穹顶",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_clz5x34kkh8",
+          "text": "风向突然变了，烟全吹向一边，眼睛都睁不开",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_4oq23ktkkh8",
+          "text": "外面传来脚步声，不止一个人",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_lsqmerqkkh8",
+          "text": "地面忽然下陷半尺，所有人同时停了半拍",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_thxwwx6kkh8",
+          "text": "有人在远处喊，喊的是这边的名字",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_vmwa3plkkh8",
+          "text": "雨下大了，视线和脚下都开始不听话",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_1m3pby5kkh8",
+          "text": "一支不知从哪来的箭钉在两人之间",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_z93rjrykkh8",
+          "text": "火把被人打灭，只有门口还有光",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_77n1gp5kkh8",
+          "text": "有东西从上方落下，落在战斗的正中间",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_fgvy365kkh8",
+          "text": "门被从外面关上了，插销落下的声音很清楚",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ah1dqnjkkh8",
+          "text": "一匹马冲进场地，把所有人推开",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_ii95u6okkh8",
+          "text": "水面开始上涨，脚踝已经湿了",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_knyd71akkh8",
+          "text": "一声很响的、不像战斗的巨响从深处传来",
+          "weight": 5,
+          "range": null
+        },
+        {
+          "id": "e_hllt1r5kkh8",
+          "text": "有人从背后走过来，谁也不知道是哪一边的",
+          "weight": 5,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_45cuvmgkkh8",
+      "name": "旅途遭遇",
+      "folderId": "fd_fz1ef6rkkh7",
+      "tags": [
+        "事件",
+        "旅途"
+      ],
+      "dice": "1d20",
+      "entries": [
+        {
+          "id": "e_9shfninkkh8",
+          "text": "荒野上忽然很静，远处传来狼嚎，一声，然后没有第二声",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "e_5y4s6qjkkh8",
+          "text": "一支商队经过，驮着盐与布匹，护卫一直在看你",
+          "weight": 1,
+          "range": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "e_bhn6pzqkkh8",
+          "text": "路面变得泥泞难行，行程耽搁了半天",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ]
+        },
+        {
+          "id": "e_f2f3f8skkh8",
+          "text": "半埋在土里的遗迹入口，石门上刻着陌生的纹路",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ]
+        },
+        {
+          "id": "e_wlsj89rkkh8",
+          "text": "盗匪从林中现身，索取过路钱，说得很有礼貌",
+          "weight": 1,
+          "range": [
+            6,
+            7
+          ]
+        },
+        {
+          "id": "e_sxb0s28kkh8",
+          "text": "路边有人坐着，看见你就站起来，又坐下",
+          "weight": 1,
+          "range": [
+            8,
+            8
+          ]
+        },
+        {
+          "id": "e_w0gvlmtkkh8",
+          "text": "一队兵从对面来，问你去哪里，问了两次",
+          "weight": 1,
+          "range": [
+            9,
+            9
+          ]
+        },
+        {
+          "id": "e_rmhkt7bkkh8",
+          "text": "天边掠过巨大的影子——有什么东西正飞向山脉",
+          "weight": 1,
+          "range": [
+            10,
+            10
+          ]
+        },
+        {
+          "id": "e_c56zjzikkh8",
+          "text": "一头驮兽倒在路边，货还在，人不在",
+          "weight": 1,
+          "range": [
+            11,
+            11
+          ]
+        },
+        {
+          "id": "e_i9akchkkkh8",
+          "text": "一座烧过的村子，还有烟，但一个人也没有",
+          "weight": 1,
+          "range": [
+            12,
+            12
+          ]
+        },
+        {
+          "id": "e_2il9u3dkkh8",
+          "text": "河上的桥断了，水里有东西在动",
+          "weight": 1,
+          "range": [
+            13,
+            13
+          ]
+        },
+        {
+          "id": "e_fw7q1s8kkh8",
+          "text": "一个孩子跟着你们走了很久，问他什么他都不答",
+          "weight": 1,
+          "range": [
+            14,
+            14
+          ]
+        },
+        {
+          "id": "e_fo9omdtkkh8",
+          "text": "一具刚死不久的人，身上没有伤",
+          "weight": 1,
+          "range": [
+            15,
+            15
+          ]
+        },
+        {
+          "id": "e_5m0cxdgkkh8",
+          "text": "路中间放着一只箱子，摆得很正",
+          "weight": 1,
+          "range": [
+            16,
+            16
+          ]
+        },
+        {
+          "id": "e_wbp81xvkkh8",
+          "text": "有人向你兜售一件他说不清来历的东西",
+          "weight": 1,
+          "range": [
+            17,
+            17
+          ]
+        },
+        {
+          "id": "e_nt2werakkh8",
+          "text": "天色忽然变了，所有人都得先找地方躲",
+          "weight": 1,
+          "range": [
+            18,
+            18
+          ]
+        },
+        {
+          "id": "e_ztlum5gkkh8",
+          "text": "前方传来哀乐，不像是在办丧事",
+          "weight": 1,
+          "range": [
+            19,
+            19
+          ]
+        },
+        {
+          "id": "e_xq24wlmkkh8",
+          "text": "一个和你长得很像的人从对面经过，谁都没说话",
+          "weight": 1,
+          "range": [
+            20,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t_rs219pzkkh8",
+      "name": "营地事件",
+      "folderId": "fd_fz1ef6rkkh7",
+      "tags": [
+        "事件",
+        "营地"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_bowyk2kkkh8",
+          "text": "守夜的人说看见了火光，但那边什么都没有",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9lr2j1bkkh8",
+          "text": "天还没亮，有人已经走了，包袱也没带",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_eesln7zkkh8",
+          "text": "早上发现带来的玉米少了一半，袋口是解开的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1acdsrwkkh8",
+          "text": "有人在篝火旁讲了一个故事，讲完谁都没接",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cmroz96kkh8",
+          "text": "一头野兽在营地外绕了一夜，天亮才走",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_agqyaswkkh8",
+          "text": "值夜的人打瞌睡，醒来时火已经灭了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_stj5yq5kkh8",
+          "text": "他们在分东西，看见你走近就不说了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_l9a7naxkkh8",
+          "text": "半夜下雨，所有的柴都湿了，火是重新生的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_484dqdckkh8",
+          "text": "有人在睡梦里喊了一个名字，第二天没人承认",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vu5ac7vkkh8",
+          "text": "有一匹马不肯靠近营地，一直站在远处",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_uzxw8gykkh8",
+          "text": "天亮前有人从林子里走出来，说是迷路了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5a9kr2fkkh8",
+          "text": "早上的水有股怪味，谁都不肯先喝",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7d11a5vkkh8",
+          "text": "有人把地图摊开在火边，看了很久，没说话",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_e8lnuqfkkh8",
+          "text": "一夜无事，这正是最让人不安的地方",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_ly3yzgakkh8",
+      "name": "任务·委托人",
+      "folderId": "fd_c2daxctkkh7",
+      "tags": [
+        "事件",
+        "任务"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_b5lq7sakkh8",
+          "text": "一个手上没有茧的女人，说话时一直在看门",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g9uh7q3kkh8",
+          "text": "一个孩子，替别人跑腿，但说不清是谁",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8oa31wkkkh8",
+          "text": "一个穿着干净衣服的男人，脏的只有鞋",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_azx3f3vkkh8",
+          "text": "一个老人，从怀里掏出一张很旧的纸",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_si0rp07kkh8",
+          "text": "一个不肯说名字的女人，只说要找一个人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_l4uq4m5kkh8",
+          "text": "一个当地的差役，说这是官家的样子，其实不是",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_tn75qxkkkh8",
+          "text": "一个商人，把话说得很绕，但目的很明",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5l813inkkh8",
+          "text": "一个已经哭过的人，还在努力把话说完",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_d2c5xr3kkh8",
+          "text": "一个陌生人，说的第一句就是价钱",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_9qksvxrkkh8",
+          "text": "一个客栈老板，说这事关系到他的房子",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_6hvu4o8kkh8",
+          "text": "一个猎户，腿上有伤，来不了第二次",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ajtaogqkkh8",
+          "text": "一个穿制服的人，把帽子摘了才开口",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5yedsxkkkh8",
+          "text": "一个自称路过的人，却知道所有人的名字",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xt5it52kkh8",
+          "text": "一个孩子和一个老人一起来，老人不说话",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_ung1q04kkh8",
+      "name": "任务·目标",
+      "folderId": "fd_c2daxctkkh7",
+      "tags": [
+        "事件",
+        "任务"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_98sm1rnkkh8",
+          "text": "去某个地方取回一样东西，别问那是什么",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_o23l94nkkh8",
+          "text": "找到一个人，把这句话当面说完",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_bt3p5dzkkh8",
+          "text": "在三天内把一封信送到，不许经手第二个人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_p2dgmpgkkh8",
+          "text": "把一具尸体带回来，别在路上打开",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_awmwpo3kkh8",
+          "text": "看着他，直到某个人出现，然后走开",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_fhd5vazkkh8",
+          "text": "从一口井里把东西捞出来，井很深",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_w12wff4kkh8",
+          "text": "把一个人从某个地方带出来，那个人可能不愿意",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_nduvkujkkh8",
+          "text": "查清楚是谁在做这件事，但不要惊动任何人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_som3ep1kkh8",
+          "text": "送一批货过桥，别让守备的人看见",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_wx7u0omkkh8",
+          "text": "找到一份名单，把它烧掉",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_uiurxz9kkh8",
+          "text": "把一群人不声不响地带出城",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_n0s0zfykkh8",
+          "text": "在某个时刻站在某个位置，别的什么也不用做",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5yzkq9zkkh8",
+          "text": "把一头牲畜送回主人家，别问为什么",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_y04tsbjkkh8",
+          "text": "找一个人问一句话，只问这一句",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_p3sv3x7kkh8",
+      "name": "任务·报酬",
+      "folderId": "fd_c2daxctkkh7",
+      "tags": [
+        "事件",
+        "任务"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_9gnifzqkkh8",
+          "text": "一袋银币，数过了，一分不少",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_h2ak1rhkkh8",
+          "text": "一半现在给，另一半回来再给",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dmr6zbykkh8",
+          "text": "一枚有家徽的戒指，说比钱值钱",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_g9l4gj8kkh8",
+          "text": "三天的口粮和一张已经写好的通行文书",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4f7cpzckkh8",
+          "text": "一分钱没有，但有人会在你需要的时候记得",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3p1ekvfkkh8",
+          "text": "一匹能用但不好看的马",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2xt9avrkkh8",
+          "text": "一份在城里能当身份用的凭证",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_h5nny43kkh8",
+          "text": "地窖里随便挑一样东西，只有一次机会",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5yqec4pkkh8",
+          "text": "他欠你一次，随时可以来收",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cshabrxkkh8",
+          "text": "一柄很旧的刀，说这刀杀过什么",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_uy907rpkkh8",
+          "text": "一个名字，说是这个名字能帮你办事",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0x4kqb7kkh8",
+          "text": "什么都不给，只说「你现在知道了」",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_a6r8w2vkkh8",
+      "name": "任务·隐患",
+      "folderId": "fd_c2daxctkkh7",
+      "tags": [
+        "事件",
+        "任务"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_puze2bvkkh8",
+          "text": "委托人说的那扇门，其实是别人家的后门",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dzgyc1okkh8",
+          "text": "报酬的那袋钱，来源不干净",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8cyazyrkkh8",
+          "text": "要送的那封信，收信人已经死了三个月",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1q3j4fzkkh8",
+          "text": "目标所在地，是官府不让去的地方",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_8krj7pikkh8",
+          "text": "另一个接了同样委托的人，比你早一天出发",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_3vf57c9kkh8",
+          "text": "需要带出来的那个人，会认路，也会记仇",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_2nnptwekkh8",
+          "text": "委托人的身份经得起查，但他身边的人经不起",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_iirjvzskkh8",
+          "text": "那个地方夜里会有别的访客",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1lqq2ofkkh8",
+          "text": "事成之后，最想知道结果的不是委托人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_d0ipsvkkkh8",
+          "text": "这份活儿在本地已经有人做过，做得不好",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_irjtf9qkkh8",
+          "text": "委托人给的路线图上少了一条河",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lj7mnsskkh8",
+          "text": "报酬里那枚戒指，原本的主人还在找它",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_zaf5ldkkkh8",
+          "text": "委托人明天就会否认见过你",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_xe32dyskkh8",
+          "text": "这件事真正要处理的不是目标，是想让你去的人",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_frzi4lfkkh8",
+      "name": "尸体·随身物",
+      "folderId": "fd_83m080ykkh7",
+      "tags": [
+        "事件",
+        "尸体"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_a1m5mprkkh8",
+          "text": "一枚铜钱和半块饼",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_4isllaykkh8",
+          "text": "一身粗布衣裳，里面衬着细麻的里衣",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gc7r1f7kkh8",
+          "text": "腰带上挂着一把没有鞘的小刀",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_f0626pukkh8",
+          "text": "三颗骰子，其中一颗灌了铅",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_1jvdws0kkh8",
+          "text": "一件外衣，肩上的补丁是别人的针脚",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7ylyn1jkkh8",
+          "text": "一根绳子的断头，还攥在手里",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_de7v5p3kkh8",
+          "text": "一双鞋，鞋底是新换的，鞋面很旧",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_k147q2ckkh8",
+          "text": "一格空的腰包，边缘有绒",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cfne8n8kkh8",
+          "text": "一个装干草的小布袋",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vps8rchkkh8",
+          "text": "一件洗得很干净的衬衫，和外面的衣服不配",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dpjbdxkkkh8",
+          "text": "一枚印，边角磕掉了，还带着印泥",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ktw62x8kkh8",
+          "text": "一小截蜡烛、火石，还有一片引火的东西",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_mw0ad32kkh8",
+          "text": "一个空的药瓶，塞子被咬得变形",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dhjh7nzkkh8",
+          "text": "一只手套，只有一只，另一只在包里",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_hu796bnkkh8",
+      "name": "尸体·贴身藏物",
+      "folderId": "fd_83m080ykkh7",
+      "tags": [
+        "事件",
+        "尸体"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_p4dj8k3kkh8",
+          "text": "一个缝在衬里的小袋，里面是几枚外地的银币",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_n7vhar5kkh8",
+          "text": "一张折了四次的纸，字迹很小",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_drmrn37kkh8",
+          "text": "一缕用线扎着的头发",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_7sc6ncokkh8",
+          "text": "一段缠在腰上的布带，布带里有一个金属薄片",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_t6jjt67kkh8",
+          "text": "一张塞在靴筒里的地图，只画了一条路",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_0n2uryokkh8",
+          "text": "一枚贴在胸口的铜牌，牌上的名字被划掉了",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_ld8fjg9kkh8",
+          "text": "一根藏在袖子里的细针，针尖有颜色",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qrlqn5zkkh8",
+          "text": "一行缝在腰带内侧的名字和日期",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_lncki7ikkh8",
+          "text": "一颗握在手心里的牙齿，不是他自己的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_cbd6l8zkkh8",
+          "text": "一枚别在领口的纽扣，样式和整件衣服都不一样",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_qq7wwk3kkh8",
+          "text": "半块手掌大的布，上面有血和印",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_t4ul8pukkh8",
+          "text": "一张卷在袜子里的借据，金额被改过两次",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_j1uuf3bkkh8",
+          "text": "一枚挂在脖子上的钥匙，钥匙上没有编号",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_dl2ec5nkkh8",
+          "text": "一块磨得很平的石头，藏在腰带夹层",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    },
+    {
+      "id": "t_lo9akmskkh8",
+      "name": "尸体·故事线索",
+      "folderId": "fd_83m080ykkh7",
+      "tags": [
+        "事件",
+        "尸体"
+      ],
+      "dice": null,
+      "entries": [
+        {
+          "id": "e_rzz2olykkh8",
+          "text": "他想把这个东西带出去，而不是带进来",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_j2ug420kkh8",
+          "text": "那张纸上的字迹很急，最后几个字挤在一起",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_uagxke4kkh8",
+          "text": "从伤口的形状看，动手的人站在他正面",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_5ylt0d9kkh8",
+          "text": "他的鞋上有两种泥，一种这里的，一种不是",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_vha7mx1kkh8",
+          "text": "那缕头发的颜色和这里所有人的都不一样",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_e52oubqkkh8",
+          "text": "铜牌上的名字被划掉，但没有刮干净",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_u8nre5akkh8",
+          "text": "那枚纽扣是官服上的，这身衣服不是官服",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_m2d0y7pkkh8",
+          "text": "借据上的日期是明天",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_m4zguf9kkh8",
+          "text": "他是自己走进来的，没有人拖他",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_w3i3i98kkh8",
+          "text": "那把钥匙能开这里的某一扇门，他不该有",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_jv6uv5mkkh8",
+          "text": "他手里那颗牙齿属于一个还活着的人",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gqh8oymkkh8",
+          "text": "地图上那条路，是五年前就被封了的那条",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_gr5oy7xkkh8",
+          "text": "布上的印是火漆的痕，但看不出是哪家的",
+          "weight": 1,
+          "range": null
+        },
+        {
+          "id": "e_q440mbnkkh8",
+          "text": "那只手套上的血是干的，说明他先动的手",
+          "weight": 1,
+          "range": null
+        }
+      ]
+    }
+  ],
+  "combos": [
+    {
+      "id": "c_m6jyjimkkh8",
+      "name": "酒馆一夜",
+      "fields": [
+        {
+          "id": "f_4nfggb1kkh8",
+          "tableId": "t_go8amvgkkh7",
+          "label": "店名",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_ybi9gu7kkh8",
+          "tableId": "t_h2n15ntkkh7",
+          "label": "氛围",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_gmsv027kkh8",
+          "tableId": "t_3xf727bkkh7",
+          "label": "店主",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_aq9gkhhkkh8",
+          "tableId": "t_ge5ctjnkkh7",
+          "label": "顾客",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_9hogvqmkkh8",
+          "tableId": "t_yql2ntrkkh7",
+          "label": "传闻",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_qpqlrazkkh8",
+          "tableId": "t_imwpiqbkkh7",
+          "label": "事件",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        }
+      ],
+      "template": "{店名}。{氛围}。\n吧台后，{店主}。\n{顾客}。\n你刚坐下，就听见旁边有人压低声音说：{传闻}\n不多时——{事件}"
+    },
+    {
+      "id": "c_t2djl4bkkh8",
+      "name": "地牢房间",
+      "fields": [
+        {
+          "id": "f_hx8ihi0kkh8",
+          "tableId": "t_m386n1skkh7",
+          "label": "入口",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_3u9hnqzkkh8",
+          "tableId": "t_pd3lydmkkh7",
+          "label": "房间类型",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_den4jv8kkh8",
+          "tableId": "t_937ho57kkh7",
+          "label": "房间细节",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_7zoxquckkh8",
+          "tableId": "t_0240dwmkkh7",
+          "label": "气味与声音",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_wsgv44kkkh8",
+          "tableId": "t_b7m8xgwkkh7",
+          "label": "陷阱或残骸",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_opzkx6ekkh8",
+          "tableId": "t_s8dtkx6kkh7",
+          "label": "可搜刮",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        }
+      ],
+      "template": "{入口}。\n走进去，{房间类型}。{房间细节}。\n{气味与声音}。\n{陷阱或残骸}\n搜过之后：{可搜刮}。"
+    },
+    {
+      "id": "c_e9kw2vvkkh8",
+      "name": "旅途一天",
+      "fields": [
+        {
+          "id": "f_wg7sa7qkkh8",
+          "tableId": "t_qc936pfkkh7",
+          "label": "天气",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_nec5qbqkkh8",
+          "tableId": "t_wyzukc7kkh7",
+          "label": "地形与路况",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_v2kz527kkh8",
+          "tableId": "t_45cuvmgkkh8",
+          "label": "旅途遭遇",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_g0mou4jkkh8",
+          "tableId": "t_joac4b3kkh7",
+          "label": "露营",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        }
+      ],
+      "template": "{天气}。{地形与路况}。\n{旅途遭遇}\n入夜后，{露营}。"
+    },
+    {
+      "id": "c_wj7xcmqkkh8",
+      "name": "城市街区",
+      "fields": [
+        {
+          "id": "f_p3ifqn5kkh8",
+          "tableId": "t_kzju3qgkkh7",
+          "label": "城镇",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_gkhvlz4kkh8",
+          "tableId": "t_vwa3vsbkkh7",
+          "label": "摊位",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_k6z73l3kkh8",
+          "tableId": "t_bd04f4fkkh7",
+          "label": "街道",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_8lzfvv9kkh8",
+          "tableId": "t_sviiy5ikkh7",
+          "label": "麻烦",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        }
+      ],
+      "template": "{城镇}。\n{摊位}。\n{街道}。\n在这里待不了多久你就会发现：{麻烦}。"
+    },
+    {
+      "id": "c_6axcbm9kkh8",
+      "name": "完整 NPC",
+      "fields": [
+        {
+          "id": "f_brqepnukkh8",
+          "tableId": "t_x9jh0pakkh7",
+          "label": "姓名",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_57xxv3zkkh8",
+          "tableId": "t_9j552jjkkh7",
+          "label": "外貌",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_dqu3gg0kkh8",
+          "tableId": "t_cdq4tm7kkh7",
+          "label": "气质",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_6gj1fynkkh8",
+          "tableId": "t_c25ft9lkkh7",
+          "label": "当前行为",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_t1322iokkh8",
+          "tableId": "t_a6rc4e6kkh7",
+          "label": "动机",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_5jt7d66kkh8",
+          "tableId": "t_frjxujukkh7",
+          "label": "秘密",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_bdeu1jykkh8",
+          "tableId": "t_gkug5mbkkh7",
+          "label": "弱点",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_k3bfl83kkh8",
+          "tableId": "t_4yiwkmxkkh7",
+          "label": "口癖",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_xsvgs28kkh8",
+          "tableId": "t_kb2y2ipkkh7",
+          "label": "随身物件",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        }
+      ],
+      "template": "{姓名}，{外貌}。\n气质：{气质}。\n此刻{当前行为}。\n他{动机}，但{秘密}。\n弱点：{弱点}。口癖：{口癖}。\n随身：{随身物件}。"
+    },
+    {
+      "id": "c_cfk1cepkkh8",
+      "name": "战斗片段",
+      "fields": [
+        {
+          "id": "f_vptbro5kkh8",
+          "tableId": "t_182u2gpkkh7",
+          "label": "命中",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_jnf49sskkh8",
+          "tableId": "t_5impxmekkh8",
+          "label": "反应",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        }
+      ],
+      "template": "{命中}\n{反应}。"
+    },
+    {
+      "id": "c_dkm9655kkh8",
+      "name": "任务委托",
+      "fields": [
+        {
+          "id": "f_nhdmaidkkh8",
+          "tableId": "t_ly3yzgakkh8",
+          "label": "委托人",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_02cy0d2kkh8",
+          "tableId": "t_ung1q04kkh8",
+          "label": "目标",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_hbshdtekkh8",
+          "tableId": "t_p3sv3x7kkh8",
+          "label": "报酬",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_7bmclx9kkh8",
+          "tableId": "t_a6r8w2vkkh8",
+          "label": "隐患",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        }
+      ],
+      "template": "{委托人}想请你{目标}，报酬是{报酬}。\n但{隐患}。"
+    },
+    {
+      "id": "c_rxzdd52kkh8",
+      "name": "尸体搜刮",
+      "fields": [
+        {
+          "id": "f_5zdy1g6kkh8",
+          "tableId": "t_frzi4lfkkh8",
+          "label": "随身物",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_mv7iv4okkh8",
+          "tableId": "t_hu796bnkkh8",
+          "label": "贴身藏物",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_yfchop8kkh8",
+          "tableId": "t_lo9akmskkh8",
+          "label": "故事线索",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        }
+      ],
+      "template": "身上只有{随身物}。\n贴身藏着{贴身藏物}，看起来{故事线索}。"
+    },
+    {
+      "id": "c_8mpqu23kkh8",
+      "name": "初遇一个陌生人",
+      "fields": [
+        {
+          "id": "f_o6vh3oukkh8",
+          "tableId": "t_x9jh0pakkh7",
+          "label": "姓名",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_ec2xgxikkh8",
+          "tableId": "t_34x87nikkh7",
+          "label": "态度",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_dk7ewrdkkh8",
+          "tableId": "t_c25ft9lkkh7",
+          "label": "当前行为",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_74pb6qakkh8",
+          "tableId": "t_kb2y2ipkkh7",
+          "label": "随身物件",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        },
+        {
+          "id": "f_6bho7hakkh8",
+          "tableId": "t_0o8erlqkkh7",
+          "label": "钩子",
+          "rolls": 1,
+          "sep": "、",
+          "locked": false,
+          "lockedValue": ""
+        }
+      ],
+      "template": "{姓名}。你走近的时候，他{当前行为}。\n{态度}。\n你注意到：{随身物件}。\n后来你才知道：{钩子}。"
+    }
+  ],
+  "favorites": [],
+  "history": []
+}
