@@ -1,4 +1,4 @@
-const CACHE = 'random-generator-v6';
+const CACHE = 'random-generator-v12';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', function (event) {

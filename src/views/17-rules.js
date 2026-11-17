@@ -33,6 +33,24 @@
     RT.state.ui.rulesId = id;
   }
 
+  // 大型规则文档可能有上千个标题；侧栏和正文会在同一次刷新中各取一次
+  // 渲染结果。按规则包版本缓存，避免把整份 Markdown 重复解析两遍。
+  const renderCache = Object.create(null);
+  const renderCacheOrder = [];
+
+  function renderedPack(pack) {
+    if (!pack) return { html: '', toc: [], search: [] };
+    const md = pack.md || '';
+    const key = [pack.id, Number(pack.ts) || 0, md.length, md.slice(0, 48), md.slice(-48),
+      Array.isArray(pack.blocks) ? pack.blocks.length : 0].join(':');
+    if (!renderCache[key]) {
+      renderCache[key] = RT.md.renderPack(pack);
+      renderCacheOrder.push(key);
+      while (renderCacheOrder.length > 4) delete renderCache[renderCacheOrder.shift()];
+    }
+    return renderCache[key];
+  }
+
   function addPack(pack) {
     const st = state();
     let name = String(pack.name || '').trim() || '未命名规则包';
@@ -59,6 +77,109 @@
     return np;
   }
 
+  /* ---------------- 全文模糊搜索 ---------------- */
+
+  function searchableChars(value) {
+    const chars = [];
+    const map = [];
+    const text = String(value || '');
+    for (let i = 0; i < text.length; i++) {
+      const c = text.charAt(i).toLowerCase();
+      if (/\s|[\-_—–·，。！？、；：,.!?;:'"“”‘’（）()\[\]{}<>《》]/.test(c)) continue;
+      chars.push(c);
+      map.push(i);
+    }
+    return { value: chars.join(''), map: map };
+  }
+
+  function fuzzyFind(hay, needle) {
+    if (!needle || needle.length > hay.value.length) return null;
+
+    const exactAt = hay.value.indexOf(needle);
+    if (exactAt >= 0) {
+      return {
+        score: 10000 - exactAt,
+        positions: hay.map.slice(exactAt, exactAt + needle.length),
+      };
+    }
+
+    let best = null;
+    for (let start = 0; start < hay.value.length; start++) {
+      if (hay.value.charAt(start) !== needle.charAt(0)) continue;
+      const positions = [hay.map[start]];
+      let at = start + 1;
+      let ni = 1;
+      while (at < hay.value.length && ni < needle.length) {
+        if (hay.value.charAt(at) === needle.charAt(ni)) {
+          positions.push(hay.map[at]);
+          ni++;
+        }
+        at++;
+      }
+      if (ni !== needle.length) continue;
+      const span = positions[positions.length - 1] - positions[0] + 1;
+      const density = needle.length / span;
+      if (density < 0.45) continue;
+      const candidate = { score: Math.round(density * 1000) - span, positions: positions };
+      if (!best || candidate.score > best.score) best = candidate;
+    }
+    return best;
+  }
+
+  function snippetHtml(text, positions) {
+    const value = String(text || '');
+    if (!positions || !positions.length) return esc(value.slice(0, 110));
+    const first = positions[0];
+    const last = positions[positions.length - 1];
+    const from = Math.max(0, first - 42);
+    const to = Math.min(value.length, Math.max(last + 43, from + 110));
+    const hits = {};
+    positions.forEach(function (p) { hits[p] = true; });
+    let html = from > 0 ? '…' : '';
+    let marked = false;
+    for (let i = from; i < to; i++) {
+      if (hits[i] && !marked) { html += '<mark class="md-mark">'; marked = true; }
+      if (!hits[i] && marked) { html += '</mark>'; marked = false; }
+      html += esc(value.charAt(i));
+    }
+    if (marked) html += '</mark>';
+    if (to < value.length) html += '…';
+    return html;
+  }
+
+  function searchDocument(rendered, query) {
+    const found = [];
+    const needle = searchableChars(query).value;
+    if (!needle) return found;
+    (rendered.search || []).forEach(function (entry, index) {
+      // 渲染结果会缓存；规范化文本也随索引缓存，连续输入时无需重复处理全文。
+      entry._fuzzy = entry._fuzzy || searchableChars(entry.text);
+      const match = fuzzyFind(entry._fuzzy, needle);
+      if (match) found.push({ entry: entry, match: match, index: index });
+    });
+    found.sort(function (a, b) { return b.match.score - a.match.score || a.index - b.index; });
+    return found;
+  }
+
+  function renderSearchResults(rendered, query) {
+    const found = searchDocument(rendered, query);
+    const shown = found.slice(0, 200);
+    let html = '<aside class="rules-search-results" aria-label="搜索结果">' +
+      '<div class="rules-results-head"><strong>搜索结果</strong><span>' + found.length + ' 条</span></div>';
+    if (!shown.length) {
+      html += '<div class="rules-results-empty">没有找到相近内容，试试更短的关键词。</div>';
+    } else {
+      html += '<div class="rules-results-list">' + shown.map(function (hit) {
+        const e = hit.entry;
+        return '<button class="rules-hit" data-act="rules-jump" data-id="' + e.id + '">' +
+          '<span class="rules-hit-head">' + esc(e.heading || (e.type === 'heading' ? e.text : '文档开头')) + '</span>' +
+          '<span class="rules-hit-preview">' + snippetHtml(e.text, hit.match.positions) + '</span></button>';
+      }).join('') + '</div>';
+      if (found.length > shown.length) html += '<div class="rules-results-more">结果较多，仅显示最相关的前 200 条。</div>';
+    }
+    return html + '</aside>';
+  }
+
   /* ---------------- 主区 ---------------- */
 
   RT.viewRules = function () {
@@ -81,11 +202,13 @@
     }
 
     const q = RT.state.ui.rulesQuery || '';
-    const rendered = RT.md.renderPack(pack);
-    const html = q ? RT.md.highlight(rendered.html, q) : rendered.html;
+    const query = q.trim();
+    const rendered = renderedPack(pack);
+    const html = rendered.html;
 
     return (
       '<div class="view rules-view">' +
+      '<div class="rules-sticky">' +
       '<div class="rules-head">' +
       '<div class="head-main">' +
       '<h2 class="page-title">' + esc(pack.name) + '</h2>' +
@@ -101,21 +224,53 @@
       '</div>' +
       '</div>' +
       '<div class="rules-bar">' +
-      '<input id="rules-search" class="grow" data-act="rules-search" placeholder="在本规则包里搜索（标题、关键词）" value="' + RT.attr(q) + '">' +
+      '<input id="rules-search" class="grow" data-act="rules-search" placeholder="模糊搜索标题与正文，点击右侧结果跳转" value="' + RT.attr(q) + '">' +
       '<button class="btn ghost small" data-act="rules-import">' + RT.icon('upload', 14) + ' 导入新的</button>' +
       '<button class="btn ghost small" data-act="rules-print">' + RT.icon('download', 14) + ' 打印</button>' +
       '</div>' +
+      '</div>' +
+      '<div class="rules-content' + (query ? ' has-results' : '') + '">' +
       '<div class="rules-doc md">' + (html || '<p class="dim">这个规则包是空的。</p>') + '</div>' +
+      (query ? renderSearchResults(rendered, query) : '') +
+      '</div>' +
       '</div>'
     );
   };
 
   /* ---------------- 侧栏 ---------------- */
 
+  function tocButton(t) {
+    return '<button class="side-toc lv' + t.level + '" data-act="rules-jump" data-id="' + t.id +
+      '" title="' + RT.attr(t.text) + '">' + esc(t.text) + '</button>';
+  }
+
+  function tocTree(items) {
+    const roots = [];
+    const stack = [];
+    items.forEach(function (item) {
+      const node = { item: item, children: [] };
+      while (stack.length && stack[stack.length - 1].item.level >= item.level) stack.pop();
+      if (stack.length) stack[stack.length - 1].children.push(node);
+      else roots.push(node);
+      stack.push(node);
+    });
+    return roots;
+  }
+
+  function renderTocNodes(nodes, expanded) {
+    return nodes.map(function (node) {
+      const t = node.item;
+      if (!node.children.length) return tocButton(t);
+      return '<details class="side-toc-group lv' + t.level + '"' + (expanded ? ' open' : '') + '>' +
+        '<summary class="side-toc lv' + t.level + '" data-act="rules-jump" data-id="' + t.id +
+        '" title="' + RT.attr(t.text) + '">' + esc(t.text) + '</summary>' +
+        '<div class="side-toc-children">' + renderTocNodes(node.children, expanded) + '</div></details>';
+    }).join('');
+  }
+
   RT.rulesSide = function () {
     const st = state();
     const pack = active();
-    const q = RT.state.ui.rulesQuery || '';
     let html = '<div class="side-summary">规则包 <strong>' + st.packs.length + '</strong> 个</div>';
     html += st.packs.map(function (p) {
       return '<button class="side-row' + (pack && p.id === pack.id ? ' active' : '') +
@@ -124,14 +279,12 @@
         '<span class="side-meta">' + (p.md ? Math.round(p.md.length / 100) / 10 + 'k' : 'JSON') + '</span></button>';
     }).join('');
     if (pack) {
-      const toc = RT.md.renderPack(pack).toc.filter(function (t) {
-        return t.level <= 3 && (!q || t.text.toLowerCase().indexOf(q.toLowerCase()) >= 0);
-      });
+      const toc = renderedPack(pack).toc.filter(function (t) { return t.level <= 3; });
       if (toc.length) {
-        html += '<div class="side-toc-head">目录</div>' + toc.map(function (t) {
-          return '<button class="side-toc lv' + t.level + '" data-act="rules-jump" data-id="' + t.id + '">' +
-            esc(t.text) + '</button>';
-        }).join('');
+        // 小文档维持一眼可见；大文档按章节折叠，避免上千项平铺挤满侧栏。
+        const expanded = toc.length <= 80;
+        html += '<div class="side-toc-head">目录 <span>' + toc.length + '</span></div>' +
+          renderTocNodes(tocTree(toc), expanded);
       }
     }
     return html;
@@ -154,7 +307,7 @@
     const id = el.getAttribute('data-id');
     const target = document.getElementById(id);
     if (!target) return;
-    target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    target.scrollIntoView({ block: 'start', behavior: 'auto' });
     target.classList.add('flash');
     setTimeout(function () { target.classList.remove('flash'); }, 900);
   };
@@ -323,14 +476,22 @@
 
   /* ---------------- 搜索 ---------------- */
 
+  function updateSearchPanel() {
+    const content = document.querySelector('.rules-content');
+    if (!content) return;
+    const old = content.querySelector('.rules-search-results');
+    if (old) old.remove();
+    const query = String(RT.state.ui.rulesQuery || '').trim();
+    content.classList.toggle('has-results', !!query);
+    if (!query) return;
+    const pack = active();
+    if (!pack) return;
+    content.insertAdjacentHTML('beforeend', renderSearchResults(renderedPack(pack), query));
+  }
+
   RT.inputActs['rules-search'] = function (el) {
     RT.state.ui.rulesQuery = el.value;
-    RT.debouncedRulesSearch = RT.debouncedRulesSearch || RT.debounce(function () {
-      RT.rerender('main');
-      RT.rerender('sidebar');
-      const s = document.querySelector('#rules-search');
-      if (s) { s.focus(); s.setSelectionRange(s.value.length, s.value.length); }
-    }, 220);
+    RT.debouncedRulesSearch = RT.debouncedRulesSearch || RT.debounce(updateSearchPanel, 220);
     RT.debouncedRulesSearch();
   };
 

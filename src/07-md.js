@@ -30,6 +30,17 @@
     return out;
   }
 
+  function plain(s) {
+    return String(s == null ? '' : s)
+      .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/`([^`]+)`/g, '$1')
+      .replace(/\*\*([^*]+)\*\*/g, '$1')
+      .replace(/(^|[^*])\*([^*\n]+)\*/g, '$1$2')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
   function slug(text, used) {
     let base = 'h-' + String(text).replace(/[\s\u3000]+/g, '-').replace(/[^\w\u4e00-\u9fa5-]/g, '').slice(0, 40);
     if (!base || base === 'h-') base = 'h-sec';
@@ -60,8 +71,21 @@
     const lines = String(text == null ? '' : text).replace(/^\uFEFF/, '').replace(/\r\n?/g, '\n').split('\n');
     const used = {};
     const toc = [];
+    const search = [];
     const out = [];
+    let currentHeading = '';
+    let blockSeq = 0;
     let i = 0;
+
+    function blockId() {
+      blockSeq++;
+      return 'md-b-' + blockSeq;
+    }
+
+    function addSearch(id, value, type) {
+      const text = plain(value);
+      if (text) search.push({ id: id, text: text, heading: currentHeading, type: type || 'text' });
+    }
 
     while (i < lines.length) {
       const line = lines[i];
@@ -75,7 +99,10 @@
           i++;
         }
         i++;
-        out.push('<pre class="md-code">' + esc(buf.join('\n')) + '</pre>');
+        const id = blockId();
+        const code = buf.join('\n');
+        addSearch(id, code, 'code');
+        out.push('<pre class="md-code" id="' + id + '">' + esc(code) + '</pre>');
         continue;
       }
 
@@ -98,7 +125,9 @@
         const level = Math.min(4, m[1].length);
         const t = m[2].trim();
         const id = slug(t, used);
+        currentHeading = plain(t);
         toc.push({ level: level, text: t, id: id });
+        addSearch(id, t, 'heading');
         out.push('<h' + level + ' class="md-h md-h' + level + '" id="' + id + '">' + inline(t) + '</h' + level + '>');
         i++;
         continue;
@@ -113,12 +142,16 @@
           rows.push(splitRow(lines[i]));
           i++;
         }
+        const tableId = blockId();
+        addSearch(tableId, head.join(' · '), 'table');
         out.push(
-          '<div class="md-tablewrap"><table class="md-table"><thead><tr>' +
+          '<div class="md-tablewrap"><table class="md-table"><thead><tr id="' + tableId + '">' +
           head.map(function (h) { return '<th>' + inline(h) + '</th>'; }).join('') +
           '</tr></thead><tbody>' +
           rows.map(function (r) {
-            return '<tr>' + r.map(function (c) { return '<td>' + inline(c) + '</td>'; }).join('') + '</tr>';
+            const rowId = blockId();
+            addSearch(rowId, r.join(' · '), 'table');
+            return '<tr id="' + rowId + '">' + r.map(function (c) { return '<td>' + inline(c) + '</td>'; }).join('') + '</tr>';
           }).join('') +
           '</tbody></table></div>'
         );
@@ -132,7 +165,9 @@
           buf.push(lines[i].replace(/^\s{0,3}>\s?/, ''));
           i++;
         }
-        out.push('<blockquote class="md-quote">' + buf.map(function (b) { return inline(b); }).join('<br>') + '</blockquote>');
+        const id = blockId();
+        addSearch(id, buf.join(' '), 'quote');
+        out.push('<blockquote class="md-quote" id="' + id + '">' + buf.map(function (b) { return inline(b); }).join('<br>') + '</blockquote>');
         continue;
       }
 
@@ -143,7 +178,11 @@
           items.push(lines[i].match(RE_UL)[1]);
           i++;
         }
-        out.push('<ul class="md-ul">' + items.map(function (t) { return '<li>' + inline(t) + '</li>'; }).join('') + '</ul>');
+        out.push('<ul class="md-ul">' + items.map(function (t) {
+          const id = blockId();
+          addSearch(id, t, 'list');
+          return '<li id="' + id + '">' + inline(t) + '</li>';
+        }).join('') + '</ul>');
         continue;
       }
 
@@ -154,7 +193,11 @@
           items.push(lines[i].match(RE_OL)[2]);
           i++;
         }
-        out.push('<ol class="md-ol">' + items.map(function (t) { return '<li>' + inline(t) + '</li>'; }).join('') + '</ol>');
+        out.push('<ol class="md-ol">' + items.map(function (t) {
+          const id = blockId();
+          addSearch(id, t, 'list');
+          return '<li id="' + id + '">' + inline(t) + '</li>';
+        }).join('') + '</ol>');
         continue;
       }
 
@@ -166,16 +209,32 @@
         buf.push(lines[i]);
         i++;
       }
-      out.push('<p class="md-p">' + buf.map(inline).join('<br>') + '</p>');
+      const id = blockId();
+      addSearch(id, buf.join(' '), 'text');
+      out.push('<p class="md-p" id="' + id + '">' + buf.map(inline).join('<br>') + '</p>');
     }
 
-    return { html: out.join('\n'), toc: toc };
+    return { html: out.join('\n'), toc: toc, search: search };
   }
 
   /* JSON 结构块：{t:'h',level,text} / {t:'p'} / {t:'ul',items} / {t:'table',head,rows} … */
   function blocksToHtml(blocks) {
     const used = {};
     const toc = [];
+    const search = [];
+    let currentHeading = '';
+    let blockSeq = 0;
+
+    function blockId() {
+      blockSeq++;
+      return 'md-b-' + blockSeq;
+    }
+
+    function addSearch(id, value, type) {
+      const text = plain(value);
+      if (text) search.push({ id: id, text: text, heading: currentHeading, type: type || 'text' });
+    }
+
     const html = (blocks || []).map(function (b) {
       if (!b || !b.t) return '';
       switch (b.t) {
@@ -183,39 +242,58 @@
           const level = Math.min(4, Math.max(1, Number(b.level) || 2));
           const text = b.text || '';
           const id = slug(text, used);
+          currentHeading = plain(text);
           toc.push({ level: level, text: text, id: id });
+          addSearch(id, text, 'heading');
           return '<h' + level + ' class="md-h md-h' + level + '" id="' + id + '">' + inline(text) + '</h' + level + '>';
         }
-        case 'p':
-          return '<p class="md-p">' + inline(b.text || '') + '</p>';
+        case 'p': {
+          const id = blockId();
+          addSearch(id, b.text || '', 'text');
+          return '<p class="md-p" id="' + id + '">' + inline(b.text || '') + '</p>';
+        }
         case 'ul':
-          return '<ul class="md-ul">' + (b.items || []).map(function (t) { return '<li>' + inline(t) + '</li>'; }).join('') + '</ul>';
+          return '<ul class="md-ul">' + (b.items || []).map(function (t) {
+            const id = blockId(); addSearch(id, t, 'list');
+            return '<li id="' + id + '">' + inline(t) + '</li>';
+          }).join('') + '</ul>';
         case 'ol':
-          return '<ol class="md-ol">' + (b.items || []).map(function (t) { return '<li>' + inline(t) + '</li>'; }).join('') + '</ol>';
-        case 'table':
-          return '<div class="md-tablewrap"><table class="md-table"><thead><tr>' +
+          return '<ol class="md-ol">' + (b.items || []).map(function (t) {
+            const id = blockId(); addSearch(id, t, 'list');
+            return '<li id="' + id + '">' + inline(t) + '</li>';
+          }).join('') + '</ol>';
+        case 'table': {
+          const headId = blockId();
+          addSearch(headId, (b.head || []).join(' · '), 'table');
+          return '<div class="md-tablewrap"><table class="md-table"><thead><tr id="' + headId + '">' +
             (b.head || []).map(function (h) { return '<th>' + inline(h) + '</th>'; }).join('') +
             '</tr></thead><tbody>' + (b.rows || []).map(function (r) {
-              return '<tr>' + r.map(function (c) { return '<td>' + inline(c) + '</td>'; }).join('') + '</tr>';
+              const id = blockId(); addSearch(id, r.join(' · '), 'table');
+              return '<tr id="' + id + '">' + r.map(function (c) { return '<td>' + inline(c) + '</td>'; }).join('') + '</tr>';
             }).join('') + '</tbody></table></div>';
-        case 'quote':
-          return '<blockquote class="md-quote">' + inline(b.text || '') + '</blockquote>';
+        }
+        case 'quote': {
+          const id = blockId(); addSearch(id, b.text || '', 'quote');
+          return '<blockquote class="md-quote" id="' + id + '">' + inline(b.text || '') + '</blockquote>';
+        }
         case 'hr':
           return '<hr class="md-hr">';
-        case 'code':
-          return '<pre class="md-code">' + esc(b.text || '') + '</pre>';
+        case 'code': {
+          const id = blockId(); addSearch(id, b.text || '', 'code');
+          return '<pre class="md-code" id="' + id + '">' + esc(b.text || '') + '</pre>';
+        }
         default:
           return '';
       }
     }).join('\n');
-    return { html: html, toc: toc };
+    return { html: html, toc: toc, search: search };
   }
 
   /** 包内容统一转 html：优先 md，其次 blocks */
   function renderPack(pack) {
     if (pack && typeof pack.md === 'string' && pack.md.trim()) return render(pack.md);
     if (pack && Array.isArray(pack.blocks)) return blocksToHtml(pack.blocks);
-    return { html: '', toc: [] };
+    return { html: '', toc: [], search: [] };
   }
 
   /** 在正文纯文本区间里加高亮（不动标签与属性） */
