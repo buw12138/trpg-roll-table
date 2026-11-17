@@ -43,6 +43,8 @@
     grid: '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>',
     layers: '<path d="M12 4l8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 16l8 4 8-4"/>',
     file: '<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/>',
+    book: '<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5"/>',
+    pin: '<path d="M12 3v9"/><path d="M8 12h8l-1.5 4h-5z"/><path d="M12 16v5"/>',
   };
 
   RT.icon = function (name, size) {

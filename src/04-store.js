@@ -22,6 +22,13 @@
       search: '',
       sidebarOpen: false,
       tableTimes: 1,
+      campaignId: null,
+      campaignModule: null,
+      sheetTab: 'session',
+      notesFilter: 'all',
+      notesQuery: '',
+      rulesId: null,
+      rulesQuery: '',
     },
     results: { table: null, combo: null },
     firstRun: false,
@@ -35,7 +42,17 @@
     RT.storage.set(KEYS.prefs, JSON.stringify(S.prefs));
     RT.storage.set(
       KEYS.ui,
-      JSON.stringify({ view: S.ui.view, tableId: S.ui.tableId, comboId: S.ui.comboId, tableTimes: S.ui.tableTimes })
+      JSON.stringify({
+        view: S.ui.view,
+        tableId: S.ui.tableId,
+        comboId: S.ui.comboId,
+        tableTimes: S.ui.tableTimes,
+        campaignId: S.ui.campaignId,
+        campaignModule: S.ui.campaignModule,
+        sheetTab: S.ui.sheetTab,
+        notesFilter: S.ui.notesFilter,
+        rulesId: S.ui.rulesId,
+      })
     );
   }
   RT.saveNow = saveNow;
@@ -129,10 +146,15 @@
     if (rawUi) {
       try {
         const u = JSON.parse(rawUi);
-        if (['tables', 'combos', 'favorites', 'history'].indexOf(u.view) >= 0) S.ui.view = u.view;
+        if (['tables', 'combos', 'favorites', 'history', 'campaign', 'rules'].indexOf(u.view) >= 0) S.ui.view = u.view;
         if (typeof u.tableId === 'string') S.ui.tableId = u.tableId;
         if (typeof u.comboId === 'string') S.ui.comboId = u.comboId;
         if (isFinite(u.tableTimes)) S.ui.tableTimes = Math.min(50, Math.max(1, Number(u.tableTimes)));
+        if (typeof u.campaignId === 'string') S.ui.campaignId = u.campaignId;
+        if (typeof u.campaignModule === 'string') S.ui.campaignModule = u.campaignModule;
+        if (typeof u.sheetTab === 'string') S.ui.sheetTab = u.sheetTab;
+        if (typeof u.notesFilter === 'string') S.ui.notesFilter = u.notesFilter;
+        if (typeof u.rulesId === 'string') S.ui.rulesId = u.rulesId;
       } catch (e) { /* ignore */ }
     }
 

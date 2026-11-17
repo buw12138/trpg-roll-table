@@ -71,6 +71,7 @@
         ['import', '导入'],
         ['csv', 'CSV'],
         ['backup', '备份'],
+        ['workspace', '工作区'],
       ];
       let tab = initialTab || 'export';
 
@@ -102,7 +103,7 @@
         const body = m.querySelector('#io-body');
         if (!body) return;
         body.innerHTML = '';
-        ({ export: renderExport, import: renderImport, csv: renderCsv, backup: renderBackup })[tab](body);
+        ({ export: renderExport, import: renderImport, csv: renderCsv, backup: renderBackup, workspace: renderWorkspace })[tab](body);
       }
 
       function renderExport(body) {
@@ -255,6 +256,95 @@
             RT.dialogs.close();
             RT.toast('已载入即兴核心包');
           }, true);
+        });
+      }
+
+      function renderWorkspace(body) {
+        const camps = RT.ws.campaigns();
+        const notesN = camps.reduce(function (n, c) {
+          const m = RT.ws.module('notes');
+          return n + (m ? m.count(c.id) : 0);
+        }, 0);
+        const sheetsN = camps.reduce(function (n, c) {
+          const m = RT.ws.module('sheets');
+          return n + (m ? m.count(c.id) : 0);
+        }, 0);
+        const rulesN = RT.ws.rulesState().packs.length;
+        const json = RT.ws.exportWorkspace();
+        const kb = (new Blob([json]).size / 1024).toFixed(1);
+
+        body.innerHTML =
+          '<p class="modal-note">工作区 = 全部表组 + 战役（含笔记 / 记录表）+ 规则包。' +
+          '换设备、重装浏览器时，导出这个文件就能整体搬走。</p>' +
+          '<div class="ws-stat">' +
+          '<span>表 <strong>' + S.set.tables.length + '</strong></span>' +
+          '<span>组合 <strong>' + S.set.combos.length + '</strong></span>' +
+          '<span>战役 <strong>' + camps.length + '</strong></span>' +
+          '<span>笔记 <strong>' + notesN + '</strong></span>' +
+          '<span>记录 <strong>' + sheetsN + '</strong></span>' +
+          '<span>规则包 <strong>' + rulesN + '</strong></span>' +
+          '</div>' +
+          '<textarea class="textarea mono" id="ws-export-text" rows="8" readonly>' + esc(json) + '</textarea>' +
+          '<div class="modal-actions wrap">' +
+          '<button class="btn gold" id="ws-download">' + RT.icon('download', 15) + ' 下载工作区 .json</button>' +
+          '<button class="btn ghost" id="ws-copy">' + RT.icon('copy', 15) + ' 复制</button>' +
+          '<span class="dim grow right">' + kb + ' KB</span>' +
+          '</div>' +
+          '<hr class="md-hr">' +
+          '<p class="modal-note">导入工作区：选择之前导出的 .json，或把内容粘进来。</p>' +
+          '<div class="file-row">' +
+          '<label class="btn ghost small file-btn">' + RT.icon('upload', 14) + ' 选择 .json 文件' +
+          '<input type="file" id="ws-file" accept=".json,application/json" hidden></label>' +
+          '<span class="dim">合并 = 保留现有内容，按战役 id 追加缺失项</span>' +
+          '</div>' +
+          '<textarea class="textarea mono" id="ws-import-text" rows="5" placeholder="工作区 JSON"></textarea>' +
+          '<div class="radio-row">' +
+          '<label><input type="radio" name="ws-strategy" value="merge" checked> 合并</label>' +
+          '<label><input type="radio" name="ws-strategy" value="replace"> 覆盖（先存快照）</label>' +
+          '</div>' +
+          '<div class="modal-actions wrap">' +
+          '<button class="btn gold" id="ws-do-import">' + RT.icon('check', 15) + ' 导入工作区</button>' +
+          '<button class="btn ghost" id="ws-install-pack">' + RT.icon('wand', 15) +
+          ' 载入懒人DM工具书表包（33 表 / 14 组合）</button>' +
+          '</div>';
+
+        body.querySelector('#ws-download').addEventListener('click', function () {
+          RT.download('随机生成器-工作区-' + RT.dateStamp() + '.json', json);
+        });
+        body.querySelector('#ws-copy').addEventListener('click', function () { RT.copyText(json); });
+
+        const ta = body.querySelector('#ws-import-text');
+        body.querySelector('#ws-file').addEventListener('change', function (e) {
+          const f = e.target.files && e.target.files[0];
+          if (!f) return;
+          const reader = new FileReader();
+          reader.onload = function () { ta.value = String(reader.result || ''); };
+          reader.readAsText(f, 'utf-8');
+        });
+
+        body.querySelector('#ws-do-import').addEventListener('click', function () {
+          const text = ta.value.trim();
+          if (!text) { RT.toast('先选择文件或粘贴内容', 'warn'); return; }
+          const strategy = (body.querySelector('input[name="ws-strategy"]:checked') || {}).value || 'merge';
+          try {
+            const info = RT.ws.importWorkspace(text, strategy);
+            RT.dialogs.close();
+            RT.toast('工作区已导入：战役 ' + info.total + ' 个（新增 ' + info.campaigns + '）');
+          } catch (err) {
+            RT.toast(err.message || '导入失败', 'warn');
+          }
+        });
+
+        body.querySelector('#ws-install-pack').addEventListener('click', function () {
+          if (!RT.lazyDmSet) { RT.toast('未找到内置表包', 'warn'); return; }
+          RT.dialogs.confirm('载入懒人DM工具书表包',
+            '会把 33 张表 / 14 个组合并进当前表组；已存在的同名表会自动跳过，不会覆盖你现有的表。',
+            function () {
+              const rep = RT.ws.installPack(RT.lazyDmSet(), { label: '载入懒人DM表包' });
+              RT.dialogs.close();
+              RT.toast('新增 ' + rep.tables + ' 张表、' + rep.combos + ' 个组合；跳过同名 ' +
+                (rep.skippedTables + rep.skippedCombos) + ' 项');
+            });
         });
       }
 

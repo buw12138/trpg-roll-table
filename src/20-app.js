@@ -44,6 +44,8 @@
     ['combos', '组合', 'layers'],
     ['favorites', '收藏', 'star'],
     ['history', '历史', 'clock'],
+    ['rules', '速查', 'book'],
+    ['campaign', '战役', 'folder'],
   ];
 
   function tableItems() {
@@ -168,6 +170,10 @@
         '<div class="side-summary">收藏 <strong>' + S.set.favorites.length + '</strong> 条</div>' +
         '<div class="side-summary">历史 <strong>' + S.set.history.length + '</strong> 次</div>' +
         '<div class="side-tip">收藏与历史会随表组一起导出。</div>';
+    } else if (S.ui.view === 'campaign') {
+      list.innerHTML = RT.campaignSide ? RT.campaignSide() : '<div class="side-empty">战役模块未加载</div>';
+    } else if (S.ui.view === 'rules') {
+      list.innerHTML = RT.rulesSide ? RT.rulesSide() : '<div class="side-empty">规则模块未加载</div>';
     }
 
     list.scrollTop = keepTop;
@@ -203,7 +209,13 @@
           '<button class="side-new" data-act="new-table">' + RT.icon('plus', 15) + ' 新建表</button>' +
           '<button class="side-new compact" data-act="new-folder" title="新建分组">' + RT.icon('plus', 15) + ' 分组</button>' +
           '</div>'
-        : '';
+        : S.ui.view === 'campaign'
+          ? (RT.campaignNewBtn ? RT.campaignNewBtn() : '')
+          : S.ui.view === 'rules'
+            ? (RT.rulesNewBtn ? RT.rulesNewBtn() : '')
+            : '';
+
+    const showSearch = S.ui.view === 'tables' || S.ui.view === 'combos';
 
     const treeBar = S.ui.view === 'tables' && S.set.folders.length && !S.ui.search.trim()
       ? '<div class="side-tree-bar">' +
@@ -217,8 +229,10 @@
         return '<button class="side-tab' + (S.ui.view === v[0] ? ' active' : '') + '" data-act="view" data-view="' + v[0] + '" title="' + v[1] + '">' +
           RT.icon(v[2], 15) + '<span>' + v[1] + '</span></button>';
       }).join('') + '</div>' +
-      '<div class="side-search">' + RT.icon('search', 14) +
-      '<input id="side-search-input" data-act="search" placeholder="搜索" value="' + RT.attr(S.ui.search) + '"></div>' +
+      (showSearch
+        ? '<div class="side-search">' + RT.icon('search', 14) +
+          '<input id="side-search-input" data-act="search" placeholder="搜索" value="' + RT.attr(S.ui.search) + '"></div>'
+        : '') +
       treeBar +
       '<div class="side-list" id="side-list"></div>' +
       newBtn +
@@ -245,6 +259,8 @@
     main.className = 'main view-' + view;
     if (view === 'tables') main.innerHTML = RT.viewTable();
     else if (view === 'combos') main.innerHTML = RT.viewCombo();
+    else if (view === 'campaign') main.innerHTML = RT.viewCampaign();
+    else if (view === 'rules') main.innerHTML = RT.viewRules();
     else main.innerHTML = RT.viewLibrary();
   }
 
@@ -256,6 +272,9 @@
     app.applyTheme();
   };
 
+  /* 视图模块里统一用 RT.rerender */
+  RT.rerender = function (scope) { app.rerender(scope); };
+
   /* ---------------- 事件 ---------------- */
 
   function tableIdFrom(el) {
@@ -266,6 +285,10 @@
     const el = e.target.closest('[data-act]');
     if (!el) return;
     const act = el.getAttribute('data-act');
+    if (RT.inputActs && typeof RT.inputActs[act] === 'function') {
+      RT.inputActs[act](el, e);
+      return;
+    }
     const t = RT.currentTable();
     const c = RT.currentCombo();
 
@@ -354,6 +377,10 @@
     const el = e.target.closest('[data-act]');
     if (!el) return;
     const act = el.getAttribute('data-act');
+    if (RT.changeActs && typeof RT.changeActs[act] === 'function') {
+      RT.changeActs[act](el, e);
+      return;
+    }
     if (act === 'table-dice') {
       RT.rerender('main');
     } else if (act === 'table-tags') {
@@ -395,6 +422,10 @@
     const el = e.target.closest('[data-act]');
     if (!el) return;
     const act = el.getAttribute('data-act');
+    if (RT.acts && typeof RT.acts[act] === 'function') {
+      RT.acts[act](el, e);
+      return;
+    }
     const t = RT.currentTable();
     const c = RT.currentCombo();
 
@@ -994,6 +1025,26 @@
 
   app.init = function () {
     RT.loadState();
+
+    /* 战役 / 规则包：把上次的选择对齐到真实数据 */
+    const camp = RT.ws.activeCampaign();
+    if (camp) {
+      RT.ws.setActiveCampaign(camp.id);
+      RT.state.ui.campaignId = camp.id;
+    } else {
+      RT.state.ui.campaignId = null;
+    }
+    if (!RT.ws.module(RT.state.ui.campaignModule)) {
+      RT.state.ui.campaignModule = RT.ws.modules[0] ? RT.ws.modules[0].id : null;
+    }
+    const rs = RT.ws.rulesState();
+    if (RT.state.ui.rulesId && rs.packs.some(function (p) { return p.id === RT.state.ui.rulesId; })) {
+      rs.activeId = RT.state.ui.rulesId;
+      RT.ws.saveRules(rs);
+    } else if (rs.packs[0]) {
+      RT.state.ui.rulesId = rs.activeId || rs.packs[0].id;
+    }
+
     app.applyTheme();
     const setname = qs('#setname');
     if (setname) {
