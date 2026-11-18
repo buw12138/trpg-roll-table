@@ -31,6 +31,7 @@
           '<div class="fav-actions">' +
           '<button class="btn ghost small" data-act="fav-copy" data-text="' + RT.attr(f.text) + '">' + RT.icon('copy', 13) + ' 复制</button>' +
           '<button class="btn ghost small" data-act="fav-save" data-text="' + RT.attr(f.text) + '">存入表</button>' +
+          '<button class="btn ghost small" data-act="fav-to-dmtext" data-id="' + f.id + '">加入文本卡库</button>' +
           '<button class="btn ghost small danger" data-act="fav-del" data-id="' + f.id + '">' + RT.icon('trash', 13) + '</button>' +
           '</div></article>'
         );
@@ -74,6 +75,22 @@
 
   RT.viewLibrary = function () {
     return RT.state.ui.view === 'favorites' ? RT.viewFavorites() : RT.viewHistory();
+  };
+
+  function plainName(text) {
+    const line = String(text || '').trim().split(/\r?\n/)[0] || '';
+    return line.replace(/[#>*_`\-\[\]]/g, '').trim().slice(0, 30) || '收藏文本';
+  }
+
+  RT.acts = RT.acts || {};
+
+  RT.acts['fav-to-dmtext'] = function (el) {
+    if (!RT.dmLib) { RT.toast('卡片库未加载', 'warn'); return; }
+    const id = el.getAttribute('data-id');
+    const f = RT.state.set.favorites.filter(function (x) { return x.id === id; })[0];
+    if (!f) return;
+    RT.dmLib.addText(plainName(f.text), f.text + (f.note ? '\n\n' + f.note : ''), '收藏');
+    RT.toast('已加入文本卡库');
   };
 
 })(window.RT = window.RT || {});

@@ -33,6 +33,96 @@
     RT.state.ui.rulesId = id;
   }
 
+  /* ---------------- 把规则内容送去收藏 / 文本卡库 ---------------- */
+
+  function plainName(text) {
+    const line = String(text || '').trim().split(/\r?\n/)[0] || '';
+    return line.replace(/[#>*_`\-\[\]]/g, '').trim().slice(0, 30) || '规则摘录';
+  }
+
+  function addFav(text, label) {
+    const body = String(text || '').trim();
+    if (!body) { RT.toast('没有内容可加', 'warn'); return false; }
+    RT.actions.addFavorite({
+      sourceLabel: '规则速查 · ' + (label || (active() ? active().name : '')),
+      text: body,
+    });
+    return true;
+  }
+
+  function addTextLib(text, label) {
+    const body = String(text || '').trim();
+    if (!body) { RT.toast('没有内容可加', 'warn'); return false; }
+    if (!RT.dmLib) { RT.toast('卡片库未加载', 'warn'); return false; }
+    RT.dmLib.addText(label || plainName(body), body, '规则速查');
+    RT.toast('已加入文本卡库');
+    return true;
+  }
+
+  function headingName(id) {
+    const el = document.getElementById(id);
+    return el ? el.textContent.trim() : '';
+  }
+
+  /** 取某个标题到下一个同级/更高级标题之间的全部可见文本 */
+  function sectionText(id) {
+    const head = document.getElementById(id);
+    if (!head) return '';
+    const m = /^H([1-6])$/.exec(head.tagName);
+    const level = m ? Number(m[1]) : 2;
+    const parts = [head.textContent.trim()];
+    let el = head.nextElementSibling;
+    while (el) {
+      const hm = /^H([1-6])$/.exec(el.tagName);
+      if (hm && Number(hm[1]) <= level) break;
+      const t = el.textContent.trim();
+      if (t) parts.push(t);
+      el = el.nextElementSibling;
+    }
+    return parts.filter(Boolean).join('\n\n');
+  }
+
+  let rulesMenu = null;
+
+  function closeRulesMenu() {
+    if (rulesMenu) { rulesMenu.remove(); rulesMenu = null; }
+  }
+
+  function openRulesMenu(anchor, items) {
+    closeRulesMenu();
+    const el = document.createElement('div');
+    el.className = 'menu-pop';
+    el.innerHTML = items.map(function (it, i) {
+      if (it.sep) return '<div class="menu-sep"></div>';
+      return '<button class="menu-item' + (it.danger ? ' danger' : '') + '" data-rmi="' + i + '">' +
+        (it.icon ? RT.icon(it.icon, 14) : '<span class="mi-dot"></span>') +
+        '<span class="mi-label">' + esc(it.label) + '</span></button>';
+    }).join('');
+    document.body.appendChild(el);
+    const rect = anchor.getBoundingClientRect();
+    const w = el.offsetWidth;
+    const h = el.offsetHeight;
+    let left = Math.min(rect.right - w, window.innerWidth - w - 10);
+    let top = rect.bottom + 6;
+    if (top + h > window.innerHeight - 10) top = Math.max(10, rect.top - h - 6);
+    el.style.left = Math.max(10, left) + 'px';
+    el.style.top = top + 'px';
+    el.addEventListener('click', function (e) {
+      const btn = e.target.closest('[data-rmi]');
+      if (!btn) return;
+      const it = items[Number(btn.getAttribute('data-rmi'))];
+      closeRulesMenu();
+      if (it && it.onClick) it.onClick();
+    });
+    rulesMenu = el;
+  }
+
+  document.addEventListener('click', function (e) {
+    if (!rulesMenu) return;
+    if (e.target.closest('.menu-pop')) return;
+    closeRulesMenu();
+  }, true);
+
   // 大型规则文档可能有上千个标题；侧栏和正文会在同一次刷新中各取一次
   // 渲染结果。按规则包版本缓存，避免把整份 Markdown 重复解析两遍。
   const renderCache = Object.create(null);
@@ -240,8 +330,12 @@
   /* ---------------- 侧栏 ---------------- */
 
   function tocButton(t) {
-    return '<button class="side-toc lv' + t.level + '" data-act="rules-jump" data-id="' + t.id +
-      '" title="' + RT.attr(t.text) + '">' + esc(t.text) + '</button>';
+    return '<div class="side-toc-wrap">' +
+      '<button class="side-toc lv' + t.level + '" data-act="rules-jump" data-id="' + t.id +
+      '" title="' + RT.attr(t.text) + '">' + esc(t.text) + '</button>' +
+      '<button class="side-toc-more" data-act="rules-toc-menu" data-id="' + t.id +
+      '" title="加入收藏 / 文本卡库">＋</button>' +
+      '</div>';
   }
 
   function tocTree(items) {
@@ -261,10 +355,14 @@
     return nodes.map(function (node) {
       const t = node.item;
       if (!node.children.length) return tocButton(t);
-      return '<details class="side-toc-group lv' + t.level + '"' + (expanded ? ' open' : '') + '>' +
+      return '<div class="side-toc-wrap">' +
+        '<details class="side-toc-group lv' + t.level + '"' + (expanded ? ' open' : '') + '>' +
         '<summary class="side-toc lv' + t.level + '" data-act="rules-jump" data-id="' + t.id +
         '" title="' + RT.attr(t.text) + '">' + esc(t.text) + '</summary>' +
-        '<div class="side-toc-children">' + renderTocNodes(node.children, expanded) + '</div></details>';
+        '<div class="side-toc-children">' + renderTocNodes(node.children, expanded) + '</div></details>' +
+        '<button class="side-toc-more" data-act="rules-toc-menu" data-id="' + t.id +
+        '" title="加入收藏 / 文本卡库">＋</button>' +
+        '</div>';
     }).join('');
   }
 
@@ -474,7 +572,78 @@
     });
   };
 
-  /* ---------------- 搜索 ---------------- */
+  RT.acts['rules-toc-menu'] = function (el, e) {
+    if (e) e.stopPropagation();
+    const id = el.getAttribute('data-id');
+    const text = sectionText(id);
+    const label = headingName(id) || plainName(text);
+    if (!text) { RT.toast('这一段没有可提取的内容', 'warn'); return; }
+    openRulesMenu(el, [
+      { label: '加入收藏', icon: 'star', onClick: function () { addFav(text, label); } },
+      { label: '加入文本卡库', icon: 'file', onClick: function () { addTextLib(text, label); } },
+    ]);
+  };
+
+  /* ---------------- 选中文本 → 收藏 / 文本卡库 ---------------- */
+
+  let selBar = null;
+  let selText = '';
+
+  function hideSelBar() {
+    if (selBar) selBar.classList.remove('show');
+  }
+
+  function ensureSelBar() {
+    if (selBar) return selBar;
+    selBar = document.createElement('div');
+    selBar.className = 'rules-selbar';
+    selBar.innerHTML =
+      '<button data-sel="fav">' + RT.icon('star', 13) + ' 加入收藏</button>' +
+      '<button data-sel="text">' + RT.icon('file', 13) + ' 文本卡库</button>';
+    selBar.addEventListener('click', function (e) {
+      const btn = e.target.closest('[data-sel]');
+      if (!btn) return;
+      const text = selText;
+      if (!text) return;
+      if (btn.getAttribute('data-sel') === 'fav') addFav(text, plainName(text));
+      else addTextLib(text, plainName(text));
+      hideSelBar();
+    });
+    document.body.appendChild(selBar);
+    return selBar;
+  }
+
+  function updateSelectionBar() {
+    const sel = window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.rangeCount) { hideSelBar(); return; }
+    const range = sel.getRangeAt(0);
+    const doc = document.querySelector('.rules-doc');
+    if (!doc || !doc.contains(range.commonAncestorContainer)) { hideSelBar(); return; }
+    const text = String(sel.toString() || '').trim();
+    if (!text) { hideSelBar(); return; }
+    selText = text;
+    const rect = range.getBoundingClientRect();
+    if (!rect || (!rect.width && !rect.height)) { hideSelBar(); return; }
+    const bar = ensureSelBar();
+    bar.style.left = Math.max(8, Math.min(window.innerWidth - 230, rect.left + rect.width / 2 - 110)) + 'px';
+    bar.style.top = Math.max(8, Math.min(window.innerHeight - 46, rect.bottom + 8)) + 'px';
+    bar.classList.add('show');
+  }
+
+  document.addEventListener('mouseup', function (e) {
+    if (selBar && selBar.contains(e.target)) return;
+    setTimeout(updateSelectionBar, 0);
+  });
+  document.addEventListener('keyup', function (e) {
+    if (e.key === 'Escape') { hideSelBar(); return; }
+    setTimeout(updateSelectionBar, 0);
+  });
+  document.addEventListener('mousedown', function (e) {
+    if (selBar && !selBar.contains(e.target)) hideSelBar();
+  }, true);
+  window.addEventListener('scroll', hideSelBar, true);
+
+
 
   function updateSearchPanel() {
     const content = document.querySelector('.rules-content');

@@ -10,7 +10,10 @@
     campaigns: 'trpg_rt_campaigns_v1',
     notes: 'trpg_rt_notes_v1',
     sheets: 'trpg_rt_sheets_v1',
-    sheetTemplates: 'trpg_rt_sheet_templates_v1',
+    templates: 'trpg_rt_templates_v1',
+    sheetTemplates: 'trpg_rt_sheet_templates_v1', // 旧 key，仅用于兼容导入
+    dmBoard: 'trpg_rt_dm_board_v1',
+    dmLib: 'trpg_rt_dm_lib_v1',
     rules: 'trpg_rt_rules_v1',
   };
 
@@ -223,7 +226,8 @@
       set: RT.state.set,
       campaigns: campState(),
       modules: mods,
-      sheetTemplates: read(KEYS.sheetTemplates, { list: [] }),
+      templates: RT.tpl ? RT.tpl.exportData() : { list: [] },
+      dmLib: RT.dmLib ? RT.dmLib.read() : read(KEYS.dmLib, { items: [] }),
       rules: ws.rulesState(),
       prefs: { theme: RT.state.prefs.theme, fontScale: RT.state.prefs.fontScale },
     }, null, 2);
@@ -309,27 +313,32 @@
       write(key, dst);
     });
 
-    // 记录表模板（内置模板由代码维护，这里只并入自定义模板）
-    if (parsed.sheetTemplates && Array.isArray(parsed.sheetTemplates.list)) {
-      const cur = read(KEYS.sheetTemplates, { list: [] });
-      if (!Array.isArray(cur.list)) cur.list = [];
-      const seenTpl = {};
-      cur.list.forEach(function (t) { seenTpl[t.name] = true; });
-      parsed.sheetTemplates.list.forEach(function (t) {
-        if (!t || !t.name || !Array.isArray(t.layout) || t.builtin) return;
-        if (!replace && seenTpl[t.name]) return;
-        cur.list.push({
-          id: uid('st'),
-          name: t.name + (seenTpl[t.name] ? '（导入）' : ''),
-          icon: t.icon || 'layers',
-          builtin: false,
-          version: 1,
-          layout: t.layout,
-          ts: Date.now(),
-        });
-        seenTpl[t.name] = true;
+    // 模板（记录表 + 卡片）：新格式直接并入；旧工作区的 sheetTemplates 现场转布局
+    if (RT.tpl) {
+      const incoming = [];
+      if (parsed.templates && Array.isArray(parsed.templates.list)) {
+        incoming.push.apply(incoming, parsed.templates.list);
+      }
+      if (parsed.sheetTemplates && Array.isArray(parsed.sheetTemplates.list)) {
+        incoming.push.apply(incoming, parsed.sheetTemplates.list);
+      }
+      incoming.forEach(function (t) {
+        if (!t || !t.name) return;
+        const isCard = t.kind === 'card';
+        const hasTree = t.layout && !Array.isArray(t.layout) && Array.isArray(t.layout.children);
+        const layout = hasTree ? t.layout
+          : Array.isArray(t.layout) ? RT.tpl.convertV1(t.layout) : null;
+        if (!layout) return;
+        const copy = JSON.parse(JSON.stringify(t));
+        copy.id = uid('st');
+        copy.name = t.name + '（导入）';
+        copy.builtin = false;
+        copy.version = 1;
+        copy.layout = layout;
+        copy.kind = isCard ? 'card' : 'sheet';
+        copy.cardKind = isCard ? (t.cardKind === 'custom' || !t.cardKind ? 'special' : t.cardKind) : null;
+        RT.tpl.save(copy);
       });
-      write(KEYS.sheetTemplates, cur);
     }
 
     // 规则包
@@ -351,6 +360,25 @@
       });
       if (!cur.activeId && cur.packs[0]) cur.activeId = cur.packs[0].id;
       ws.saveRules(cur);
+    }
+
+    // DM 库（全局）：按 库 + 名称 去重合并
+    if (parsed.dmLib && Array.isArray(parsed.dmLib.items) && RT.dmLib) {
+      const seen = {};
+      RT.dmLib.read().items.forEach(function (it) { seen[it.lib + '/' + it.name] = true; });
+      parsed.dmLib.items.forEach(function (it) {
+        if (!it || !it.lib || !it.name) return;
+        const key = it.lib + '/' + it.name;
+        if (seen[key]) return;
+        RT.dmLib.add({
+          lib: it.lib,
+          tplId: it.tplId || '',
+          name: it.name,
+          meta: it.meta && typeof it.meta === 'object' ? it.meta : {},
+          values: it.values && typeof it.values === 'object' ? it.values : {},
+        });
+        seen[key] = true;
+      });
     }
 
     RT.touch && RT.touch();

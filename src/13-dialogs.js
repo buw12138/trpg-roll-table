@@ -28,7 +28,7 @@
       document.body.classList.add('modal-open');
       r.innerHTML =
         '<div class="modal-backdrop" data-close="1"></div>' +
-        '<div class="modal' + (opts.wide ? ' wide' : '') + '" role="dialog" aria-modal="true">' +
+        '<div class="modal' + (opts.wide ? ' wide' : '') + (opts.full ? ' full' : '') + '" role="dialog" aria-modal="true">' +
         '<div class="modal-head"><h3>' + esc(opts.title) + '</h3>' +
         '<button class="mini" data-close="1" title="关闭">' + RT.icon('x', 16) + '</button></div>' +
         '<div class="modal-body">' + (opts.body || '') + '</div>' +
@@ -270,11 +270,16 @@
           return n + (m ? m.count(c.id) : 0);
         }, 0);
         const rulesN = RT.ws.rulesState().packs.length;
+        const boardN = camps.reduce(function (n, c) {
+          const m = RT.ws.module('dmboard');
+          return n + (m ? m.count(c.id) : 0);
+        }, 0);
+        const libN = RT.dmLib ? RT.dmLib.count() : 0;
         const json = RT.ws.exportWorkspace();
         const kb = (new Blob([json]).size / 1024).toFixed(1);
 
         body.innerHTML =
-          '<p class="modal-note">工作区 = 全部表组 + 战役（含笔记 / 记录表）+ 规则包。' +
+          '<p class="modal-note">工作区 = 全部表组 + 战役（含笔记 / 记录表 / 追踪面板）+ 模板（记录表 / 卡片）+ 库（敌人 / 环境 / 文本）+ 规则包。' +
           '换设备、重装浏览器时，导出这个文件就能整体搬走。</p>' +
           '<div class="ws-stat">' +
           '<span>表 <strong>' + S.set.tables.length + '</strong></span>' +
@@ -282,6 +287,9 @@
           '<span>战役 <strong>' + camps.length + '</strong></span>' +
           '<span>笔记 <strong>' + notesN + '</strong></span>' +
           '<span>记录 <strong>' + sheetsN + '</strong></span>' +
+          '<span>面板 <strong>' + boardN + '</strong></span>' +
+          '<span>库 <strong>' + libN + '</strong></span>' +
+          '<span>模板 <strong>' + (RT.tpl ? RT.tpl.list().length : 0) + '</strong></span>' +
           '<span>规则包 <strong>' + rulesN + '</strong></span>' +
           '</div>' +
           '<textarea class="textarea mono" id="ws-export-text" rows="8" readonly>' + esc(json) + '</textarea>' +

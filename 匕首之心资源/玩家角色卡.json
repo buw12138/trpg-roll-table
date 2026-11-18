@@ -1,0 +1,842 @@
+{
+  "ruleSetId": "daggerheart",
+  "name": "泽拉斯",
+  "characterImage": "",
+  "level": "1",
+  "proficiency": [
+    true,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "ancestry1": "Human-HighStamina",
+  "ancestry2": "Human-Adaptability",
+  "mixedAncestryEnabled": false,
+  "profession": "Wizard",
+  "community": "LOREBORNE",
+  "subclass": "School-of-War-Foundation",
+  "professionRef": {
+    "id": "Wizard",
+    "name": "法师  -  典籍&辉耀"
+  },
+  "ancestry1Ref": {
+    "id": "Human-HighStamina",
+    "name": "精力充沛"
+  },
+  "ancestry2Ref": {
+    "id": "Human-Adaptability",
+    "name": "随机应变"
+  },
+  "communityRef": {
+    "id": "LOREBORNE",
+    "name": "博识之民"
+  },
+  "subclassRef": {
+    "id": "School-of-War-Foundation",
+    "name": "战争学派基石"
+  },
+  "evasion": "11",
+  "evasionManualModifier": "0",
+  "gold": [
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "experience": [
+    "书虫",
+    "法术工程",
+    "",
+    "",
+    ""
+  ],
+  "experienceValues": [
+    "+2",
+    "+2",
+    "+2",
+    "+2",
+    "+2"
+  ],
+  "ancestryExperience": [],
+  "ancestryExperienceValues": [],
+  "hope": 2,
+  "hopeMax": 6,
+  "hp": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "stress": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "hpMax": 5,
+  "stressMax": 7,
+  "armorBoxes": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "armorValue": "3",
+  "armorValueManualModifier": "0",
+  "armorBonus": "",
+  "armorMax": 3,
+  "minorThreshold": "6",
+  "majorThreshold": "13",
+  "minorThresholdManualModifier": "0",
+  "majorThresholdManualModifier": "0",
+  "inventory": [
+    "一支火把、50 英尺长的绳索、基本补给品。",
+    "- 一瓶小型治疗药剂（恢复 1d4 生命点）或一瓶小型精力药剂（清除 1d4 压力点）",
+    "- 一枚低语宝珠或一件传家宝",
+    "- 一台巴掌大的黄铜匣子：法术预先编译在符文片上，插卡即可施放（职业物品）",
+    "- 一本你正在尝试翻译的书，或一只无害的小型元素宠物"
+  ],
+  "characterBackground": "人类，博识之民，编译所的前维护者。他不相信“天赋”，只相信可复现的流程：法术在他手里被拆成指令、编译成符文片，插进那台黄铜匣子里就能生效——快、准、可重复。代价是他只会打自己写过的仗。东南角结界事故之后，他带着匣子和半卷《第一编译》离开博识之民的地界，一边找另外半卷，一边在真实的战场上给没写过的情况做现场编译。",
+  "characterAppearance": "",
+  "characterMotivation": "三十岁上下，短发，眼底有长期熬夜的青色。外套内衬缝满窄口袋，插着一排薄薄的符文片，边缘被磨得发亮。左手食指到虎口有一道旧灼痕。随身机是一台巴掌大的黄铜匣子，合上时像首饰盒，打开时里面的水晶会嗡嗡发热；施法时他抽出一张符文片插进去，咔哒一声，空中浮出一行行发光的字，字读完，目标就烧起来了。",
+  "cards": [
+    {
+      "standarized": true,
+      "id": "Wizard",
+      "name": "法师",
+      "class": "法师",
+      "type": "profession",
+      "description": "魔法伎俩：你可以随意施展无害、微妙的魔法效果。例如，你可以改变物体的颜色、制造气味、点燃蜡烛、让小物体漂浮、照亮房间或修复小物件。\n\n奇异规律：选择一个介于 1 到 12 之间的数字。当你在一次二元骰掷骰中掷出该数字时，**获得 1 希望点**或**清除 1 压力点**。你可以在进行一次长休时改变这个数字。",
+      "cardSelectDisplay": {
+        "item1": "典籍",
+        "item2": "辉耀"
+      },
+      "professionSpecial": {
+        "起始生命": 5,
+        "起始闪避": 11,
+        "起始物品": "",
+        "希望特性": "死期未至：**花费 3 希望点**，迫使远距离范围内的某个敌人重掷一次攻击掷骰或伤害掷骰。"
+      },
+      "headerDisplay": "法师",
+      "ruleset": "daggerheart",
+      "batchId": "SYSTEM_BUILTIN_CARDS",
+      "source": "builtin"
+    },
+    {
+      "standarized": true,
+      "id": "School-of-War-Foundation",
+      "name": "战争学派基石",
+      "type": "subclass",
+      "class": "法师",
+      "description": "战斗法师：你专注于研究，以成为战场上不可战胜的力量。获得一个额外生命槽。\n\n直面恐惧：当你在攻击掷骰中获得恐惧成功时，额外造成 **1d10** 点魔法伤害。",
+      "level": 1,
+      "headerDisplay": "战争学派",
+      "cardSelectDisplay": {
+        "item1": "法师",
+        "item2": "基石",
+        "item3": "知识"
+      },
+      "ruleset": "daggerheart",
+      "batchId": "SYSTEM_BUILTIN_CARDS",
+      "source": "builtin"
+    },
+    {
+      "standarized": true,
+      "id": "Human-HighStamina",
+      "name": "精力充沛",
+      "type": "ancestry",
+      "level": 1,
+      "class": "人类",
+      "description": "在角色创建时，获得一个额外的压力槽。",
+      "cardSelectDisplay": {
+        "item1": "人类"
+      },
+      "headerDisplay": "精力充沛",
+      "ruleset": "daggerheart",
+      "batchId": "SYSTEM_BUILTIN_CARDS",
+      "source": "builtin"
+    },
+    {
+      "standarized": true,
+      "id": "Human-Adaptability",
+      "name": "随机应变",
+      "type": "ancestry",
+      "level": 2,
+      "class": "人类",
+      "description": "当你在运用某个经历进行的掷骰失败时，你可以**标记 1 压力点**进行重掷。",
+      "cardSelectDisplay": {
+        "item1": "人类"
+      },
+      "headerDisplay": "随机应变",
+      "ruleset": "daggerheart",
+      "batchId": "SYSTEM_BUILTIN_CARDS",
+      "source": "builtin"
+    },
+    {
+      "standarized": true,
+      "id": "LOREBORNE",
+      "name": "博识之民",
+      "type": "community",
+      "class": "博识之民",
+      "description": "博览群书：你在关于重要人物或地点的历史、文化和政治的掷骰中具有优势。",
+      "cardSelectDisplay": {
+        "item1": "博览群书"
+      },
+      "headerDisplay": "博识之民",
+      "ruleset": "daggerheart",
+      "batchId": "SYSTEM_BUILTIN_CARDS",
+      "source": "builtin"
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-1",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-2",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-3",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-4",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-5",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-6",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-7",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-8",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-9",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-10",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-11",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-12",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-13",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-14",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-card-15",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    }
+  ],
+  "inventory_cards": [
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-1",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-2",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-3",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-4",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-5",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-6",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-7",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-8",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-9",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-10",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-11",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-12",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-13",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-14",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-15",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-16",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-17",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-18",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-19",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    },
+    {
+      "standarized": true,
+      "id": "empty-inventory-card-20",
+      "name": "",
+      "type": "unknown",
+      "class": "",
+      "description": "",
+      "cardSelectDisplay": {}
+    }
+  ],
+  "checkedUpgrades": {
+    "tier1": {},
+    "tier2": {},
+    "tier3": {}
+  },
+  "primaryWeaponName": "魔杖",
+  "primaryWeaponSelection": "",
+  "primaryWeaponTrait": "魔法/单手/远距离",
+  "primaryWeaponDamage": "知识: d6+1",
+  "primaryWeaponFeature": "",
+  "secondaryWeaponName": "小匕首",
+  "secondaryWeaponSelection": "",
+  "secondaryWeaponTrait": "物理/单手/近战",
+  "secondaryWeaponDamage": "灵巧: d8",
+  "secondaryWeaponFeature": "成对：用主武器攻击近战范围内的目标时，伤害骰获得 +2 加值。",
+  "armorName": "皮甲",
+  "armorSelection": "",
+  "armorBaseScore": "",
+  "armorThreshold": "",
+  "armorFeature": "重度阈值 6 / 严重阈值 13",
+  "inventoryWeapon1Name": "",
+  "inventoryWeapon1Trait": "",
+  "inventoryWeapon1Damage": "",
+  "inventoryWeapon1Feature": "",
+  "inventoryWeapon1Primary": false,
+  "inventoryWeapon1Secondary": false,
+  "inventoryWeapon2Name": "",
+  "inventoryWeapon2Trait": "",
+  "inventoryWeapon2Damage": "",
+  "inventoryWeapon2Feature": "",
+  "inventoryWeapon2Primary": false,
+  "inventoryWeapon2Secondary": false,
+  "companionImage": "",
+  "companionName": "",
+  "companionDescription": "",
+  "companionRange": "近战",
+  "companionStress": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "companionEvasion": "10",
+  "companionStressMax": 3,
+  "companionWeapon": "d6",
+  "companionExperience": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "companionExperienceValue": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "trainingOptions": {
+    "intelligent": [
+      false,
+      false,
+      false
+    ],
+    "radiantInDarkness": [
+      false
+    ],
+    "creatureComfort": [
+      false
+    ],
+    "armored": [
+      false
+    ],
+    "vicious": [
+      false,
+      false,
+      false
+    ],
+    "resilient": [
+      false,
+      false,
+      false
+    ],
+    "bonded": [
+      false
+    ],
+    "aware": [
+      false,
+      false,
+      false
+    ]
+  },
+  "includePageThreeInExport": true,
+  "pageVisibility": {
+    "rangerCompanion": false,
+    "armorTemplate": false,
+    "adventureNotes": false
+  },
+  "armorTemplate": {
+    "weaponName": "",
+    "description": "",
+    "upgradeSlots": [
+      {
+        "checked": false,
+        "text": ""
+      },
+      {
+        "checked": false,
+        "text": ""
+      },
+      {
+        "checked": false,
+        "text": ""
+      },
+      {
+        "checked": false,
+        "text": ""
+      },
+      {
+        "checked": false,
+        "text": ""
+      }
+    ],
+    "upgrades": {
+      "basic": {},
+      "tier2": {},
+      "tier3": {},
+      "tier4": {}
+    },
+    "scrapMaterials": {
+      "fragments": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metals": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relics": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "electronicCoins": 0
+  },
+  "adventureNotes": {
+    "characterProfile": {},
+    "playerInfo": {},
+    "backstory": "",
+    "milestones": "",
+    "adventureLog": [
+      {
+        "name": "",
+        "levelRange": "",
+        "trauma": "",
+        "date": ""
+      },
+      {
+        "name": "",
+        "levelRange": "",
+        "trauma": "",
+        "date": ""
+      },
+      {
+        "name": "",
+        "levelRange": "",
+        "trauma": "",
+        "date": ""
+      },
+      {
+        "name": "",
+        "levelRange": "",
+        "trauma": "",
+        "date": ""
+      },
+      {
+        "name": "",
+        "levelRange": "",
+        "trauma": "",
+        "date": ""
+      },
+      {
+        "name": "",
+        "levelRange": "",
+        "trauma": "",
+        "date": ""
+      },
+      {
+        "name": "",
+        "levelRange": "",
+        "trauma": "",
+        "date": ""
+      },
+      {
+        "name": "",
+        "levelRange": "",
+        "trauma": "",
+        "date": ""
+      }
+    ]
+  },
+  "notebook": {
+    "pages": [
+      {
+        "id": "page-1",
+        "lines": []
+      }
+    ],
+    "currentPageIndex": 0,
+    "isOpen": false
+  },
+  "presetEquipmentCalcVersion": 1,
+  "domainCardAutomation": {},
+  "branchUpgradeCount": {},
+  "rulesetAutomationVersions": {},
+  "agility": {
+    "checked": false,
+    "value": "1",
+    "spellcasting": false
+  },
+  "strength": {
+    "checked": false,
+    "value": "0",
+    "spellcasting": false
+  },
+  "finesse": {
+    "checked": false,
+    "value": "0",
+    "spellcasting": false
+  },
+  "instinct": {
+    "checked": false,
+    "value": "1",
+    "spellcasting": false
+  },
+  "presence": {
+    "checked": false,
+    "value": "-1",
+    "spellcasting": false
+  },
+  "knowledge": {
+    "checked": false,
+    "value": "2",
+    "spellcasting": false
+  }
+}

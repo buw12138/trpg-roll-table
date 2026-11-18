@@ -256,12 +256,17 @@
     const main = qs('#main');
     if (!main) return;
     const view = S.ui.view;
+    const prevView = main.getAttribute('data-view');
+    const keepTop = main.scrollTop;
     main.className = 'main view-' + view;
     if (view === 'tables') main.innerHTML = RT.viewTable();
     else if (view === 'combos') main.innerHTML = RT.viewCombo();
     else if (view === 'campaign') main.innerHTML = RT.viewCampaign();
     else if (view === 'rules') main.innerHTML = RT.viewRules();
     else main.innerHTML = RT.viewLibrary();
+    main.setAttribute('data-view', view);
+    /* 同一视图内重渲染（加行、改卡、掷骰结果等）保持滚动位置；换视图回顶 */
+    main.scrollTop = prevView === view ? keepTop : 0;
   }
 
   app.rerender = function (scope) {

@@ -46,6 +46,137 @@
     };
   };
 
+  /** 完整骰式：多骰项、加减乘除、括号、kh/kl/dh/dl、优势/劣势、d66 */
+  RT.rollExpr = function (expr, rand, opts) {
+    const rnd = typeof rand === 'function' ? rand : Math.random;
+    let src = String(expr == null ? '' : expr).trim().toLowerCase();
+    let adv = 0;
+    if (opts && opts.advantage) adv = Number(opts.advantage) > 0 ? 1 : -1;
+    if (/(^|[\s(])(adv|advantage)([\s)]|$)/.test(src) || src.indexOf('优势') >= 0) adv = 1;
+    if (/(^|[\s(])(dis|disadvantage)([\s)]|$)/.test(src) || src.indexOf('劣势') >= 0) adv = -1;
+    src = src.replace(/(^|[\s(])(adv|advantage|dis|disadvantage)(?=[\s)]|$)/g, ' ')
+      .replace(/优势|劣势/g, '');
+    src = src.replace(/\s+/g, '');
+    if (!src) return null;
+
+    if (adv && /(^|[+\-(])1?d20(?![a-z0-9])/.test(src)) {
+      src = src.replace(/(^|[+\-(])1?d20(?![a-z0-9])/, function (full, pre) {
+        return pre + '2d20' + (adv > 0 ? 'kh1' : 'kl1');
+      });
+    } else if (adv) {
+      src += adv > 0 ? '+1d6' : '-1d6';
+    }
+
+    let pos = 0;
+    const len = src.length;
+    const cap = 100;
+
+    function fail() { throw new Error('bad dice'); }
+    function clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
+    function joinDice(rolls, keep, k) {
+      const arr = rolls.map(function (v, i) { return { v: v, i: i }; });
+      let kept = arr.slice();
+      const lower = keep.slice(0, 2);
+      if (lower === 'kh') kept = arr.slice().sort(function (a, b) { return b.v - a.v; }).slice(0, k);
+      else if (lower === 'kl') kept = arr.slice().sort(function (a, b) { return a.v - b.v; }).slice(0, k);
+      else if (lower === 'dh') kept = arr.slice().sort(function (a, b) { return a.v - b.v; }).slice(0, Math.max(0, arr.length - k));
+      else if (lower === 'dl') kept = arr.slice().sort(function (a, b) { return b.v - a.v; }).slice(0, Math.max(0, arr.length - k));
+      const set = {};
+      kept.forEach(function (x) { set[x.i] = true; });
+      const total = kept.reduce(function (n, x) { return n + x.v; }, 0);
+      return { total: total, kept: set, rolls: rolls };
+    }
+
+    function parseExpression() {
+      let v = parseTerm();
+      while (pos < len) {
+        const c = src.charAt(pos);
+        if (c !== '+' && c !== '-') break;
+        pos++;
+        const r = parseTerm();
+        if (c === '+') v = { value: v.value + r.value, detail: v.detail + ' + ' + r.detail };
+        else v = { value: v.value - r.value, detail: v.detail + ' − ' + r.detail };
+      }
+      return v;
+    }
+
+    function parseTerm() {
+      let v = parseFactor();
+      while (pos < len) {
+        const c = src.charAt(pos);
+        if (c !== '*' && c !== '/') break;
+        pos++;
+        const r = parseFactor();
+        if (c === '*') v = { value: v.value * r.value, detail: v.detail + ' × ' + r.detail };
+        else v = { value: v.value / (r.value || 1), detail: v.detail + ' ÷ ' + r.detail };
+      }
+      return v;
+    }
+
+    function parseFactor() {
+      if (src.charAt(pos) === '-') { pos++; const v = parseFactor(); return { value: -v.value, detail: '−' + v.detail }; }
+      if (src.charAt(pos) === '+') { pos++; return parseFactor(); }
+      if (src.charAt(pos) === '(') {
+        pos++;
+        const v = parseExpression();
+        if (src.charAt(pos) === ')') pos++;
+        return { value: v.value, detail: '(' + v.detail + ')' };
+      }
+      return parsePrimary();
+    }
+
+    function parsePrimary() {
+      const dm = /^(\d*)d(\d+)(kh\d+|kl\d+|dh\d+|dl\d+)?/.exec(src.slice(pos));
+      if (dm) {
+        pos += dm[0].length;
+        const n = clamp(parseInt(dm[1] || '1', 10) || 1, 1, cap);
+        const faces = clamp(parseInt(dm[2], 10) || 6, 1, 1000);
+        const keep = dm[3] || '';
+        if (faces === 66 && n === 1) {
+          const a = 1 + Math.floor(rnd() * 6);
+          const b = 1 + Math.floor(rnd() * 6);
+          const total = a * 10 + b;
+          return { value: total, detail: 'd66(' + a + ',' + b + ')' };
+        }
+        const rolls = [];
+        for (let i = 0; i < n; i++) rolls.push(1 + Math.floor(rnd() * faces));
+        if (keep) {
+          const k = clamp(parseInt(keep.slice(2), 10) || 1, 1, n);
+          const r = joinDice(rolls, keep, k);
+          const marks = rolls.map(function (v, i) { return r.kept[i] ? String(v) : '(' + v + ')'; });
+          return {
+            value: r.total,
+            detail: n + 'd' + faces + keep + '[' + marks.join(',') + ']',
+          };
+        }
+        const total = rolls.reduce(function (a, b) { return a + b; }, 0);
+        return {
+          value: total,
+          detail: n === 1 ? 'd' + faces + '(' + rolls[0] + ')' : n + 'd' + faces + '[' + rolls.join(',') + ']',
+        };
+      }
+      const nm = /^\d+(\.\d+)?/.exec(src.slice(pos));
+      if (nm) {
+        pos += nm[0].length;
+        return { value: Number(nm[0]), detail: nm[0] };
+      }
+      fail();
+    }
+
+    try {
+      const v = parseExpression();
+      if (pos < len) return null;
+      const total = Math.round(v.value * 100) / 100;
+      return {
+        expr: src,
+        total: total,
+        detail: src + ' → ' + v.detail + ' = ' + total,
+      };
+    } catch (e) {
+      return null;
+    }
+  };
+
   /** 展开条目文本中的 {表名} / [[表名]]，带深度限制与环检测 */
   /** 表所在的分组路径，如「NPC 人物 / 名字组件」；用于同名表提示 */
   function folderPathOf(table) {

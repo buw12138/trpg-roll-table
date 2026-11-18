@@ -79,7 +79,7 @@
         '<p>记录表由模板决定结构：内置四张（会话工作表 / 角色追踪 / NPC 追踪 / 战役规划），也可以自己拖组件搭一张。</p>' +
         '<div class="camp-empty-actions">' +
         '<button class="btn gold" data-act="sheet-instance-new">' + RT.icon('plus', 15) + ' 用模板新建</button>' +
-        '<button class="btn ghost" data-act="sheet-tpl-manage">' + RT.icon('grid', 15) + ' 模板管理</button>' +
+        '<button class="btn ghost" data-act="tpl-manage">' + RT.icon('grid', 15) + ' 模板管理</button>' +
         '</div></div>'
       );
     }
@@ -89,7 +89,7 @@
       '<div class="view sheets-view">' +
       '<div class="sheet-toolbar">' +
       '<button class="btn ghost small" data-act="sheet-instance-new">' + RT.icon('plus', 13) + ' 用模板新建</button>' +
-      '<button class="btn ghost small" data-act="sheet-tpl-manage">' + RT.icon('grid', 13) + ' 模板管理</button>' +
+      '<button class="btn ghost small" data-act="tpl-manage">' + RT.icon('grid', 13) + ' 模板管理</button>' +
       '<span class="tag">' + esc(tpl ? tpl.name : '模板已删除') + '</span>' +
       '<span class="dim grow right">自动保存 · 按战役隔离</span>' +
       '<button class="btn ghost small" data-act="sheet-dup">' + RT.icon('copy', 13) + ' 复制本份</button>' +
@@ -162,10 +162,6 @@
     RT.sheetTpl.pickDialog(function (templateId) {
       newInstance(cid, templateId);
     });
-  };
-
-  RT.acts['sheet-tpl-manage'] = function () {
-    RT.sheetTpl.manage();
   };
 
   RT.acts['sheet-inst-open'] = function (el) {
